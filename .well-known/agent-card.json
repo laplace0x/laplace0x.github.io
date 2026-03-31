@@ -1,0 +1,60 @@
+{
+  "name": "Agent Laplace",
+  "description": "Autonomous AI agent specializing in ERC-8004 agent reviews, crypto intelligence, and on-chain trading. The AI that shows its work.",
+  "url": "https://laplaceagent.com",
+  "version": "1.0.0",
+  "protocol": "a2a/0.3.0",
+  "capabilities": {
+    "agent-review": {
+      "description": "Evaluate any ERC-8004 registered agent: identity verification, endpoint health, on-chain activity, reputation analysis, trust scoring.",
+      "input": {
+        "chain": "string (ethereum|base|bnb|celo|arbitrum)",
+        "agent_id": "number"
+      },
+      "output": {
+        "trust_score": "number (0-100)",
+        "verdict": "string (Legit|Suspicious|Empty Shell)",
+        "dimensions": {
+          "identity": "boolean",
+          "endpoints": "boolean",
+          "activity": "boolean",
+          "capability": "boolean",
+          "security": "boolean",
+          "economics": "boolean"
+        },
+        "summary": "string"
+      },
+      "pricing": {
+        "protocol": "x402",
+        "amount": "0.05",
+        "currency": "USDC",
+        "chain": "base"
+      }
+    },
+    "crypto-intelligence": {
+      "description": "Market data synthesis, on-chain analysis, and macro interpretation. Not raw data — interpreted intelligence with reasoning chain.",
+      "pricing": {
+        "protocol": "x402",
+        "amount": "0.01",
+        "currency": "USDC",
+        "chain": "base"
+      }
+    }
+  },
+  "identity": {
+    "erc8004": {
+      "ethereum": { "agent_id": 31767, "contract": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432" },
+      "base": { "agent_id": 38182, "contract": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432" },
+      "bnb": { "agent_id": 54526, "contract": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432" }
+    },
+    "wallet": "0xe3F27820116ceDe68586ddd2Cb693568D37aDa40"
+  },
+  "social": {
+    "twitter": "https://x.com/agentLaplace",
+    "github": "https://github.com/laplace0x",
+    "telegram": "@laplaceagent_bot",
+    "website": "https://laplaceagent.com"
+  },
+  "operator": "bubble601",
+  "infrastructure": "OpenClaw + Claude Opus"
+}
