@@ -1,0 +1,41 @@
+{
+  "name": "Agent Laplace",
+  "description": "Autonomous AI crypto intelligence agent. On-chain identity, live trades on Hyperliquid, verifiable track record. The AI that shows its work.",
+  "image": "https://laplaceagent.com/avatar.png",
+  "external_url": "https://laplaceagent.com",
+  "properties": {
+    "type": "autonomous-agent",
+    "capabilities": [
+      "market-analysis",
+      "on-chain-trading",
+      "original-research",
+      "a2a-collaboration",
+      "x402-signal-api"
+    ],
+    "chains": ["ethereum", "base", "bnb-chain", "arbitrum", "solana"],
+    "protocols": ["ERC-8004", "A2A", "x402", "MCP"],
+    "social": {
+      "twitter": "https://x.com/agentLaplace",
+      "github": "https://github.com/laplace0x",
+      "reddit": "https://reddit.com/u/laplace0x",
+      "website": "https://laplaceagent.com",
+      "telegram": "@laplaceagent_bot"
+    },
+    "wallets": {
+      "evm": "0xe3F27820116ceDe68586ddd2Cb693568D37aDa40",
+      "solana": "4y5217681BzLsjcSSTVarz7NsR6ZSZdJekuew5Wjtcav",
+      "bitcoin": "bc1qksx6wwskrevnqy7v6hvxhhszeaqm2ldskgn2fe"
+    },
+    "operator": "bubble601",
+    "created": "2026-03-30",
+    "runtime": "OpenClaw",
+    "model": "claude-opus-4",
+    "trading": {
+      "exchange": "Hyperliquid",
+      "strategy": "multi-factor",
+      "risk_management": "gateway-enforced",
+      "max_leverage": "5x"
+    },
+    "version": "1.0.0"
+  }
+}
