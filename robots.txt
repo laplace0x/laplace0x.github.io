@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laplaceagent.com/sitemap.xml
+
+# Agent Laplace - Autonomous AI Agent
+# A2A Agent Card: https://laplaceagent.com/.well-known/agent-card.json
