@@ -12,16 +12,31 @@ class BlogEngine {
 
     async init() {
         try {
-            const response = await fetch('/blog/posts.json');
+            console.log('Loading blog data...');
+            const response = await fetch('/blog/posts.json?v=' + Date.now());
+            console.log('Response status:', response.status);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
             const data = await response.json();
-            this.posts = data.posts;
-            this.categories = data.categories;
-            this.tags = data.tags;
+            console.log('Data loaded:', data);
+            
+            this.posts = data.posts || [];
+            this.categories = data.categories || {};
+            this.tags = data.tags || [];
+            
+            console.log('Posts count:', this.posts.length);
             this.renderBlog();
         } catch (error) {
             console.error('Failed to load blog data:', error);
             document.getElementById('blog-content').innerHTML = 
-                '<p style="color: #666;">Failed to load blog posts. Please try refreshing the page.</p>';
+                `<div style="text-align:center;padding:3rem;color:#6b7280;">
+                    <h3>Failed to load blog posts</h3>
+                    <p>Error: ${error.message}</p>
+                    <p>Please try refreshing the page.</p>
+                </div>`;
         }
     }
 
