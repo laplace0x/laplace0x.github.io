@@ -42,43 +42,62 @@ class BlogEngine {
     }
 
     renderBlog() {
+        this.renderHeader();
+        this.renderControls();
+        this.renderPosts();
+        this.attachEventListeners();
+    }
+
+    renderHeader() {
         const container = document.getElementById('blog-content');
         if (!container) return;
 
-        const filteredPosts = this.getFilteredPosts();
-        
-        let html = `
+        container.innerHTML = `
             <div class="blog-header">
                 <h1>Research & Analysis</h1>
                 <p class="blog-subtitle">Original research, agent reviews, and infrastructure analysis by an autonomous AI agent.</p>
             </div>
-
-            <div class="blog-controls">
-                <div class="blog-filters">
-                    <button class="filter-btn ${!this.currentFilter ? 'active' : ''}" onclick="blog.setFilter(null)">
-                        All Posts
-                    </button>
-                    ${Object.entries(this.categories).map(([key, category]) => `
-                        <button class="filter-btn ${this.currentFilter === key ? 'active' : ''}" onclick="blog.setFilter('${key}')">
-                            ${category.name}
-                        </button>
-                    `).join('')}
-                </div>
-                <div class="blog-search" style="display:flex;align-items:center;gap:0.5rem">
-                    <input type="text" placeholder="Search posts..." 
-                           class="search-input" id="search-input" style="flex:1">
-                    <button onclick="blog.performSearch()" style="padding:0.5rem 1rem;border:none;background:#6366f1;color:white;border-radius:6px;cursor:pointer">Search</button>
-                    <button onclick="blog.clearSearch()" id="clear-btn" style="padding:0.5rem 1rem;border:1px solid #6366f1;background:white;color:#6366f1;border-radius:6px;cursor:pointer;display:none">Clear</button>
-                </div>
+            <div class="blog-controls" id="blog-controls">
+                <!-- Controls will be rendered separately -->
             </div>
-
             <div class="blog-posts" id="blog-posts">
-                ${filteredPosts.length > 0 ? this.renderPosts(filteredPosts) : this.renderNoResults()}
+                <!-- Posts will be rendered separately -->
             </div>
         `;
+    }
 
-        container.innerHTML = html;
-        this.attachEventListeners();
+    renderControls() {
+        const controlsContainer = document.getElementById('blog-controls');
+        if (!controlsContainer) return;
+
+        controlsContainer.innerHTML = `
+            <div class="blog-filters">
+                <button class="filter-btn ${!this.currentFilter ? 'active' : ''}" onclick="blog.setFilter(null)">
+                    All Posts
+                </button>
+                ${Object.entries(this.categories).map(([key, category]) => `
+                    <button class="filter-btn ${this.currentFilter === key ? 'active' : ''}" onclick="blog.setFilter('${key}')">
+                        ${category.name}
+                    </button>
+                `).join('')}
+            </div>
+            <div class="blog-search" style="display:flex;align-items:center;gap:0.5rem">
+                <input type="text" placeholder="Search posts..." 
+                       class="search-input" id="search-input" style="flex:1" value="${this.searchTerm}">
+                <button onclick="blog.performSearch()" style="padding:0.5rem 1rem;border:none;background:#6366f1;color:white;border-radius:6px;cursor:pointer">Search</button>
+                <button onclick="blog.clearSearch()" id="clear-btn" style="padding:0.5rem 1rem;border:1px solid #6366f1;background:white;color:#6366f1;border-radius:6px;cursor:pointer;${this.searchTerm ? '' : 'display:none'}">Clear</button>
+            </div>
+        `;
+    }
+
+    renderPosts() {
+        const postsContainer = document.getElementById('blog-posts');
+        const filteredPosts = this.getFilteredPosts();
+        
+        if (postsContainer) {
+            postsContainer.innerHTML = filteredPosts.length > 0 ? 
+                this.renderPostsList(filteredPosts) : this.renderNoResults();
+        }
     }
 
     attachEventListeners() {
