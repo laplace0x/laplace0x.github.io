@@ -64,10 +64,11 @@ class BlogEngine {
                         </button>
                     `).join('')}
                 </div>
-                <div class="blog-search">
+                <div class="blog-search" style="display:flex;align-items:center;gap:0.5rem">
                     <input type="text" placeholder="Search posts..." 
-                           class="search-input" id="search-input">
-                    <button onclick="blog.clearSearch()" id="clear-btn" style="margin-left:0.5rem;padding:0.5rem;border:none;background:#6366f1;color:white;border-radius:6px;cursor:pointer;display:none">Clear</button>
+                           class="search-input" id="search-input" style="flex:1">
+                    <button onclick="blog.performSearch()" style="padding:0.5rem 1rem;border:none;background:#6366f1;color:white;border-radius:6px;cursor:pointer">Search</button>
+                    <button onclick="blog.clearSearch()" id="clear-btn" style="padding:0.5rem 1rem;border:1px solid #6366f1;background:white;color:#6366f1;border-radius:6px;cursor:pointer;display:none">Clear</button>
                 </div>
             </div>
 
@@ -81,20 +82,26 @@ class BlogEngine {
     }
 
     attachEventListeners() {
-        // Attach search event listener with debounce
+        // Search on Enter key or Search button click
         const searchInput = document.getElementById('search-input');
         if (searchInput) {
-            searchInput.addEventListener('input', (e) => {
-                clearTimeout(this.searchTimeout);
-                this.searchTimeout = setTimeout(() => {
-                    this.searchTerm = e.target.value.trim();
-                    // Clear category filter when searching
-                    if (this.searchTerm) {
-                        this.currentFilter = null;
-                    }
-                    this.updateResults();
-                }, 150); // 150ms debounce
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    this.performSearch();
+                }
             });
+        }
+    }
+
+    performSearch() {
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            this.searchTerm = searchInput.value.trim();
+            // Clear category filter when searching
+            if (this.searchTerm) {
+                this.currentFilter = null;
+            }
+            this.updateResults();
         }
     }
 
