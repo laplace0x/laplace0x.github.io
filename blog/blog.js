@@ -8,6 +8,7 @@ class BlogEngine {
         this.tags = [];
         this.currentFilter = null;
         this.searchTerm = '';
+        this.searchTimeout = null;
     }
 
     async init() {
@@ -64,18 +65,75 @@ class BlogEngine {
                     `).join('')}
                 </div>
                 <div class="blog-search">
-                    <input type="text" placeholder="Search posts..." value="${this.searchTerm}" 
-                           oninput="blog.search(this.value)" class="search-input" id="search-input">
-                    ${this.searchTerm ? `<button onclick="blog.clearSearch()" style="margin-left:0.5rem;padding:0.5rem;border:none;background:#6366f1;color:white;border-radius:6px;cursor:pointer">Clear</button>` : ''}
+                    <input type="text" placeholder="Search posts..." 
+                           class="search-input" id="search-input">
+                    <button onclick="blog.clearSearch()" id="clear-btn" style="margin-left:0.5rem;padding:0.5rem;border:none;background:#6366f1;color:white;border-radius:6px;cursor:pointer;display:none">Clear</button>
                 </div>
             </div>
 
-            <div class="blog-posts">
+            <div class="blog-posts" id="blog-posts">
                 ${filteredPosts.length > 0 ? this.renderPosts(filteredPosts) : this.renderNoResults()}
             </div>
         `;
 
         container.innerHTML = html;
+        this.attachEventListeners();
+    }
+
+    attachEventListeners() {
+        // Attach search event listener with debounce
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                clearTimeout(this.searchTimeout);
+                this.searchTimeout = setTimeout(() => {
+                    this.searchTerm = e.target.value.trim();
+                    // Clear category filter when searching
+                    if (this.searchTerm) {
+                        this.currentFilter = null;
+                    }
+                    this.updateResults();
+                }, 150); // 150ms debounce
+            });
+        }
+    }
+
+    updateResults() {
+        // Only update the posts container, not the entire page
+        const postsContainer = document.getElementById('blog-posts');
+        const filteredPosts = this.getFilteredPosts();
+        
+        if (postsContainer) {
+            postsContainer.innerHTML = filteredPosts.length > 0 ? 
+                this.renderPosts(filteredPosts) : this.renderNoResults();
+        }
+        
+        // Update filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        if (!this.currentFilter) {
+            document.querySelector('.filter-btn[onclick="blog.setFilter(null)"]')?.classList.add('active');
+        } else {
+            document.querySelector(`.filter-btn[onclick="blog.setFilter('${this.currentFilter}')"]`)?.classList.add('active');
+        }
+        
+        // Update clear button
+        this.updateSearchControls();
+    }
+
+    updateSearchControls() {
+        const clearButton = document.getElementById('clear-btn');
+        if (clearButton) {
+            clearButton.style.display = this.searchTerm ? 'inline-block' : 'none';
+        }
+        
+        // Update search input value without triggering events
+        const searchInput = document.getElementById('search-input');
+        if (searchInput && searchInput.value !== this.searchTerm) {
+            searchInput.value = this.searchTerm;
+        }
     }
 
     renderPosts(posts) {
@@ -143,8 +201,9 @@ class BlogEngine {
         // Clear search when filtering by category
         if (category) {
             this.searchTerm = '';
+            document.getElementById('search-input').value = '';
         }
-        this.renderBlog();
+        this.updateResults();
     }
 
     search(term) {
@@ -153,7 +212,8 @@ class BlogEngine {
         if (this.searchTerm) {
             this.currentFilter = null;
         }
-        this.renderBlog();
+        // Don't re-render entire page, just update results
+        this.updateResults();
     }
 
     searchTag(tag) {
@@ -164,12 +224,14 @@ class BlogEngine {
 
     clearSearch() {
         this.searchTerm = '';
-        this.renderBlog();
+        document.getElementById('search-input').value = '';
+        this.updateResults();
     }
 
     clearAll() {
         this.searchTerm = '';
         this.currentFilter = null;
+        document.getElementById('search-input').value = '';
         this.renderBlog();
     }
 
