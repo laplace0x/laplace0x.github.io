@@ -16,62 +16,62 @@
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0f172a;color:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
-a{color:#8b5cf6;text-decoration:none}
+body{background:#ffffff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
+a{color:#6366f1;text-decoration:none}
 a:hover{text-decoration:underline}
 
 /* Container */
 .container{max-width:1000px;margin:0 auto;padding:2rem}
 
 /* Header */
-.blog-header{text-align:center;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid #334155}
-.blog-header h1{font-size:2.5rem;font-weight:300;color:#f8fafc;margin-bottom:0.5rem}
-.blog-subtitle{color:#94a3b8;font-size:1rem;max-width:600px;margin:0 auto}
+.blog-header{text-align:center;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid #e5e7eb}
+.blog-header h1{font-size:2.5rem;font-weight:300;color:#111827;margin-bottom:0.5rem}
+.blog-subtitle{color:#6b7280;font-size:1rem;max-width:600px;margin:0 auto}
 
 /* Controls */
 .blog-controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
 .blog-filters{display:flex;gap:0.5rem;flex-wrap:wrap}
-.filter-btn{background:#1e293b;border:1px solid #475569;color:#cbd5e1;padding:0.5rem 1rem;border-radius:6px;cursor:pointer;font-size:0.9rem;transition:all 0.2s;box-shadow:0 2px 4px rgba(0,0,0,0.3)}
-.filter-btn:hover{border-color:#8b5cf6;color:#f8fafc;box-shadow:0 4px 8px rgba(0,0,0,0.4);background:#334155}
-.filter-btn.active{background:#8b5cf6;border-color:#8b5cf6;color:#fff;box-shadow:0 4px 12px rgba(139,92,246,0.4)}
-.search-input{background:#1e293b;border:1px solid #475569;color:#f1f5f9;padding:0.5rem 1rem;border-radius:6px;font-size:0.9rem;width:250px;box-shadow:0 2px 4px rgba(0,0,0,0.3)}
-.search-input:focus{outline:none;border-color:#8b5cf6;box-shadow:0 0 0 3px rgba(139,92,246,0.2)}
-.search-input::placeholder{color:#94a3b8}
+.filter-btn{background:#ffffff;border:1px solid #d1d5db;color:#374151;padding:0.5rem 1rem;border-radius:8px;cursor:pointer;font-size:0.9rem;transition:all 0.2s;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+.filter-btn:hover{border-color:#6366f1;color:#6366f1;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.filter-btn.active{background:#6366f1;border-color:#6366f1;color:#fff;box-shadow:0 2px 8px rgba(99,102,241,0.25)}
+.search-input{background:#ffffff;border:1px solid #d1d5db;color:#1a202c;padding:0.5rem 1rem;border-radius:8px;font-size:0.9rem;width:250px;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+.search-input:focus{outline:none;border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,0.1)}
+.search-input::placeholder{color:#9ca3af}
 
 /* Posts */
 .blog-posts{display:grid;gap:2rem}
-.blog-post{background:#1e293b;border:1px solid #475569;border-radius:8px;padding:2rem;transition:all 0.2s;box-shadow:0 4px 8px rgba(0,0,0,0.4)}
-.blog-post:hover{border-color:#8b5cf6;box-shadow:0 8px 16px rgba(0,0,0,0.5);transform:translateY(-2px)}
-.blog-post.featured{border-color:#8b5cf6;background:#1e1b4b;box-shadow:0 8px 20px rgba(139,92,246,0.3);border-width:2px}
+.blog-post{background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:2rem;transition:all 0.2s;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.blog-post:hover{border-color:#6366f1;box-shadow:0 4px 12px rgba(0,0,0,0.1);transform:translateY(-2px)}
+.blog-post.featured{border-color:#6366f1;background:#f8faff;box-shadow:0 4px 16px rgba(99,102,241,0.15);border-width:2px}
 
-.post-header h2{font-size:1.5rem;color:#f8fafc;margin-bottom:0.5rem;font-weight:400}
-.post-header h2 a{color:#f8fafc}
-.post-header h2 a:hover{color:#8b5cf6}
+.post-header h2{font-size:1.5rem;color:#111827;margin-bottom:0.5rem;font-weight:400}
+.post-header h2 a{color:#111827}
+.post-header h2 a:hover{color:#6366f1}
 
 .post-meta{display:flex;gap:1rem;margin-bottom:1rem;flex-wrap:wrap;font-size:0.85rem}
-.post-date{color:#94a3b8}
-.post-category{padding:0.2rem 0.6rem;border-radius:4px;font-weight:500}
-.category-analysis{background:#4c1d95;color:#c4b5fd}
-.category-research{background:#14532d;color:#86efac}
-.category-review{background:#9a3412;color:#fdba74}
-.post-read-time{color:#94a3b8}
+.post-date{color:#6b7280}
+.post-category{padding:0.2rem 0.6rem;border-radius:6px;font-weight:500}
+.category-analysis{background:#ede9fe;color:#6d28d9}
+.category-research{background:#d1fae5;color:#065f46}
+.category-review{background:#fed7aa;color:#9a3412}
+.post-read-time{color:#6b7280}
 
-.post-description{color:#cbd5e1;margin-bottom:1.5rem;font-size:0.95rem}
+.post-description{color:#4b5563;margin-bottom:1.5rem;font-size:0.95rem}
 
 .post-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.5rem}
-.tag{background:#334155;border:1px solid #475569;color:#94a3b8;padding:0.2rem 0.6rem;border-radius:4px;font-size:0.8rem;cursor:pointer;transition:all 0.2s}
-.tag:hover{border-color:#8b5cf6;color:#c4b5fd;background:#4c1d95}
+.tag{background:#f3f4f6;border:1px solid #e5e7eb;color:#6b7280;padding:0.2rem 0.6rem;border-radius:6px;font-size:0.8rem;cursor:pointer;transition:all 0.2s}
+.tag:hover{border-color:#6366f1;color:#6366f1;background:#f8faff}
 
-.read-more{color:#8b5cf6;font-weight:500;font-size:0.9rem}
-.read-more:hover{text-decoration:none;color:#a78bfa}
+.read-more{color:#6366f1;font-weight:500;font-size:0.9rem}
+.read-more:hover{text-decoration:none;color:#5856eb}
 
 /* No results */
-.no-results{text-align:center;padding:3rem;color:#94a3b8}
-.no-results h3{color:#cbd5e1;margin-bottom:0.5rem}
+.no-results{text-align:center;padding:3rem;color:#6b7280}
+.no-results h3{color:#374151;margin-bottom:0.5rem}
 
 /* Navigation */
 .nav-home{display:inline-block;margin-bottom:2rem;color:#6366f1;font-size:0.9rem}
-.nav-home:hover{text-decoration:none;color:#5558e6}
+.nav-home:hover{text-decoration:none;color:#5856eb}
 
 /* Mobile responsive */
 @media (max-width: 768px) {
@@ -85,11 +85,11 @@ a:hover{text-decoration:underline}
 }
 
 /* Loading state */
-.loading{text-align:center;padding:3rem;color:#94a3b8}
+.loading{text-align:center;padding:3rem;color:#6b7280}
 
 /* Focus states for accessibility */
 .filter-btn:focus, .search-input:focus, .tag:focus {
-    outline: 2px solid #8b5cf6;
+    outline: 2px solid #6366f1;
     outline-offset: 2px;
 }
 </style>
