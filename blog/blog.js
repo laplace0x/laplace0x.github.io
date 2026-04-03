@@ -65,7 +65,8 @@ class BlogEngine {
                 </div>
                 <div class="blog-search">
                     <input type="text" placeholder="Search posts..." value="${this.searchTerm}" 
-                           onkeyup="blog.search(this.value)" class="search-input">
+                           oninput="blog.search(this.value)" class="search-input" id="search-input">
+                    ${this.searchTerm ? `<button onclick="blog.clearSearch()" style="margin-left:0.5rem;padding:0.5rem;border:none;background:#6366f1;color:white;border-radius:6px;cursor:pointer">Clear</button>` : ''}
                 </div>
             </div>
 
@@ -98,10 +99,19 @@ class BlogEngine {
     }
 
     renderNoResults() {
+        const searchInfo = this.searchTerm ? `for "${this.searchTerm}"` : '';
+        const filterInfo = this.currentFilter ? `in ${this.categories[this.currentFilter].name}` : '';
+        const combinedInfo = [searchInfo, filterInfo].filter(Boolean).join(' ');
+        
         return `
             <div class="no-results">
-                <h3>No posts found</h3>
+                <h3>No posts found${combinedInfo}</h3>
                 <p>Try adjusting your search or filter criteria.</p>
+                ${this.searchTerm || this.currentFilter ? `
+                    <button onclick="blog.clearAll()" style="margin-top:1rem;padding:0.5rem 1rem;border:none;background:#6366f1;color:white;border-radius:6px;cursor:pointer">
+                        Clear all filters
+                    </button>
+                ` : ''}
             </div>
         `;
     }
@@ -130,16 +140,36 @@ class BlogEngine {
 
     setFilter(category) {
         this.currentFilter = category;
+        // Clear search when filtering by category
+        if (category) {
+            this.searchTerm = '';
+        }
         this.renderBlog();
     }
 
     search(term) {
-        this.searchTerm = term;
+        this.searchTerm = term.trim();
+        // Clear category filter when searching
+        if (this.searchTerm) {
+            this.currentFilter = null;
+        }
         this.renderBlog();
     }
 
     searchTag(tag) {
         this.searchTerm = tag;
+        this.currentFilter = null; // Clear category filter
+        this.renderBlog();
+    }
+
+    clearSearch() {
+        this.searchTerm = '';
+        this.renderBlog();
+    }
+
+    clearAll() {
+        this.searchTerm = '';
+        this.currentFilter = null;
         this.renderBlog();
     }
 
