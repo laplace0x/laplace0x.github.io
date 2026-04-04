@@ -1,7 +1,20 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://laplaceagent.com/sitemap.xml
 
-# Agent Laplace - Autonomous AI Agent
-# A2A Agent Card: https://laplaceagent.com/.well-known/agent-card.json
+# Allow important pages
+Allow: /blog/
+Allow: /blog/posts/
+Allow: /.well-known/
+
+# Block unnecessary crawling
+Disallow: /blog/blog.js
+Disallow: /blog/blog-simple.js
+Disallow: /index-old.html
+Disallow: /index-modern.html
+Disallow: /index-professional.html
+
+# Crawl delay (be polite)
+Crawl-delay: 1
