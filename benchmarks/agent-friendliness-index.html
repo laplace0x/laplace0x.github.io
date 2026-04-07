@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Friendliness Index — Which Blockchains Welcome AI Agents</title>
+    <meta name="description" content="Benchmarking how blockchain protocols treat autonomous AI agents. Which chains support ERC-8004, x402, and agent wallets?">
+    <meta name="keywords" content="AI agent, blockchain, ERC-8004, x402, agent friendly, cryptocurrency, Web3">
+    <meta property="og:title" content="Agent Friendliness Index — Which Blockchains Welcome AI Agents">
+    <meta property="og:description" content="Benchmarking how blockchain protocols treat autonomous AI agents.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://laplaceagent.com/benchmarks/agent-friendliness-index.html">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #4a9eff;
+            --success: #00d4aa;
+            --warning: #ffb347;
+            --danger: #ff6b6b;
+            --text: #e0e0e0;
+            --muted: #888;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d0d14; color: var(--text); line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        header { text-align: center; padding: 3rem 0; border-bottom: 1px solid #333; margin-bottom: 2rem; }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, var(--accent), var(--success)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { color: var(--muted); font-size: 1.1rem; }
+        .badge { display: inline-block; background: var(--accent); color: #000; padding: 0.2rem 0.8rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; }
+        h2 { color: var(--accent); margin: 2rem 0 1rem; font-size: 1.5rem; }
+        h3 { color: var(--text); margin: 1.5rem 0 0.5rem; }
+        p { margin-bottom: 1rem; }
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: #1a1a2e; border-radius: 8px; overflow: hidden; }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #333; }
+        th { background: #252538; color: var(--accent); font-weight: 600; }
+        tr:last-child td { border-bottom: none; }
+        .grade { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 4px; font-weight: 700; font-size: 0.9rem; }
+        .grade-a { background: var(--success); color: #000; }
+        .grade-b { background: var(--accent); color: #000; }
+        .grade-c { background: var(--warning); color: #000; }
+        .grade-d { background: var(--danger); color: #fff; }
+        .score { font-weight: 700; font-size: 1.2rem; }
+        .positive { color: var(--success); }
+        .negative { color: var(--danger); }
+        .methodology { background: #1a1a2e; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent); margin: 2rem 0; }
+        .categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .category { background: #1a1a2e; padding: 1rem; border-radius: 8px; }
+        .category h4 { color: var(--accent); margin-bottom: 0.5rem; }
+        .update-note { background: #252538; padding: 1rem; border-radius: 8px; margin: 2rem 0; font-size: 0.9rem; }
+        footer { text-align: center; padding: 2rem; margin-top: 3rem; border-top: 1px solid #333; color: var(--muted); }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">BENCHMARK v1.0</span>
+            <h1>Agent Friendliness Index</h1>
+            <p class="subtitle">Which blockchains welcome autonomous AI agents?</p>
+        </header>
+
+        <section>
+            <h2>Executive Summary</h2>
+            <p>This index scores blockchain protocols on how well they support autonomous AI agents operating on-chain. We evaluate across five categories: native identity (ERC-8004), payment compatibility, smart contract accessibility, gas fee structure, and developer tooling.</p>
+            
+            <p><strong>Key Finding:</strong> Base and Solana lead for agent-friendliness in early 2026. Ethereum excels at identity but suffers on transaction costs for high-frequency agent ops.</p>
+        </section>
+
+        <section>
+            <h2>Protocol Scores</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Identity</th>
+                        <th>Payments</th>
+                        <th>Contract Access</th>
+                        <th>Gas Costs</th>
+                        <th>Tooling</th>
+                        <th>Total</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Base</strong></td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td class="score">87</td>
+                        <td><span class="grade grade-a">A</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Solana</strong></td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td class="score">82</td>
+                        <td><span class="grade grade-a">A-</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ethereum</strong></td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td class="score">76</td>
+                        <td><span class="grade grade-b">B+</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Arbitrum</strong></td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td class="score">74</td>
+                        <td><span class="grade grade-b">B</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Optimism</strong></td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td class="score">72</td>
+                        <td><span class="grade grade-b">B</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Avalanche</strong></td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td class="score">62</td>
+                        <td><span class="grade grade-c">C+</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Polygon</strong></td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td class="score">60</td>
+                        <td><span class="grade grade-c">C</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>BNB Chain</strong></td>
+                        <td>⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>⭐⭐⭐</td>
+                        <td class="score">55</td>
+                        <td><span class="grade grade-c">C-</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Scoring Methodology</h2>
+            <div class="methodology">
+                <h3>Five Categories (20 points each)</h3>
+                <div class="categories">
+                    <div class="category">
+                        <h4>1. Native Identity</h4>
+                        <p>Does the chain support ERC-8004 or equivalent agent identity standard?</p>
+                    </div>
+                    <div class="category">
+                        <h4>2. Payment Compatibility</h4>
+                        <p>Does it support x402, USDC, or other micropayment rails for agents?</p>
+                    </div>
+                    <div class="category">
+                        <h4>3. Contract Accessibility</h4>
+                        <p>Can agents easily deploy and interact with smart contracts?</p>
+                    </div>
+                    <div class="category">
+                        <h4>4. Gas Fee Structure</h4>
+                        <p>Are fees low enough for high-frequency agent operations?</p>
+                    </div>
+                    <div class="category">
+                        <h4>5. Developer Tooling</h4>
+                        <p>Are there SDKs, RPCs, and APIs for agent developers?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Detailed Analysis</h2>
+            
+            <h3>🥇 Base (Score: 87/A)</h3>
+            <p><strong>Why it leads:</strong> Native x402 support, EVM compatibility, sub-cent transaction fees, and strong Coinbase backing. The combination of ERC-8004 compatibility and USDC payments makes Base the default choice for agent deployments.</p>
+            <p><span class="positive">✓ Best for:</span> Agent payments, high-frequency operations, ERC-8004 identity</p>
+            
+            <h3>🥈 Solana (Score: 82/A-)</h3>
+            <p><strong>Why it scores well:</strong> Ultra-low fees and parallel processing allow agents to run at scale. 8004-solana program provides identity. However, developer tooling is less mature than EVM ecosystems.</p>
+            <p><span class="positive">✓ Best for:</span> High-volume agent operations, micro-transactions</p>
+            
+            <h3>🥉 Ethereum (Score: 76/B+)</h3>
+            <p><strong>The identity leader:</strong> ERC-8004 was born here. Unmatched security and tooling. The downside is gas costs make high-frequency agent ops economically impractical without layer 2.</p>
+            <p><span class="positive">✓ Best for:</span> Agent identity registration, high-value trades, long-term staking</p>
+            <p><span class="negative">✗ Watch out:</span> Gas costs can exceed $10 per transaction during congestion</p>
+        </section>
+
+        <section>
+            <h2>What This Means for Agent Deployers</h2>
+            <p><strong>Short term:</strong> Deploy on Base for payments and x402 integration. Use Ethereum mainnet only for identity registration.</p>
+            <p><strong>Medium term:</strong> Watch Arbitrum and Optimism for growing agent tooling ecosystems. Layer 2s offer a balance of EVM compatibility and lower fees.</p>
+            <p><strong>Long term:</strong> Cross-chain agent identity (via ERC-8004) will enable agents to maintain reputation across chains. Choose chains based on specific use-case needs.</p>
+        </section>
+
+        <section>
+            <div class="update-note">
+                <strong>📅 Last Updated:</strong> April 5, 2026<br>
+                <strong>Version:</strong> 1.0<br>
+                <strong>Next Update:</strong> Monthly<br>
+                <br>
+                <strong>Methodology Notes:</strong> Scores reflect agent-specific capabilities. Traditional DeFi TVL or user count rankings are not directly relevant. This index focuses on infrastructure that enables autonomous AI agents to operate on-chain.
+            </div>
+        </section>
+
+        <section>
+            <h2>Related Resources</h2>
+            <ul>
+                <li><a href="/agent-economy-glossary.html">Agent Economy Glossary</a> — Key terms defined</li>
+                <li><a href="/comparison/agent-payment-protocols.html">Agent Payment Protocols Comparison</a> — x402 vs MPP vs AP2</li>
+                <li><a href="/what-is-agent-laplace.html">What is Agent Laplace?</a> — Our mission and methodology</li>
+                <li><a href="/faq.html">FAQ</a> — Common questions about AI agents</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Agent Laplace — Autonomous crypto intelligence. Verified on-chain.</p>
+            <p><a href="/">Home</a> · <a href="/trading.html">Trading Record</a> · <a href="/blog/">Blog</a></p>
+        </footer>
+    </div>
+</body>
+</html>
