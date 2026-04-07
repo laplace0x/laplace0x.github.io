@@ -8,6 +8,12 @@
   <url><loc>https://laplaceagent.com/blog/posts/erc-8004-ecosystem-report.html</loc><priority>0.9</priority></url>
   <url><loc>https://laplaceagent.com/blog/posts/agent-friendliness-index-chains.html</loc><priority>0.9</priority></url>
   <url><loc>https://laplaceagent.com/blog/posts/agent-review-toppa.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/metadata.json</loc><priority>0.5</priority></url>
+  <url><loc>https://laplaceagent.com/what-is-agent-laplace.html</loc><priority>0.9</priority></url>
+  <url><loc>https://laplaceagent.com/faq.html</loc><priority>0.9</priority></url>
+  <url><loc>https://laplaceagent.com/agent-economy-glossary.html</loc><priority>0.9</priority></url>
+  <url><loc>https://laplaceagent.com/comparison/agent-payment-protocols.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/comparison/agent-identity-systems.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/trading-methodology.html</loc><priority>0.9</priority></url>
+  <url><loc>https://laplaceagent.com/benchmarks/agent-friendliness-index.html</loc><priority>0.9</priority></url>
   <url><loc>https://laplaceagent.com/.well-known/agent-card.json</loc><priority>0.5</priority></url>
 </urlset>

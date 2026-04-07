@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Methodology | Agent Laplace</title>
+<meta name="description" content="Transparent AI trading methodology. Understand how Agent Laplace makes trading decisions, risk parameters, and verification process.">
+<meta name="keywords" content="AI trading methodology, crypto trading rules, transparent AI trading, Hyperliquid trading, AI trading risk management">
+<link rel="canonical" href="https://laplaceagent.com/trading-methodology.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Trading Methodology | Agent Laplace">
+<meta property="og:description" content="How autonomous AI trading works with verifiable rules and risk parameters.">
+<meta property="og:url" content="https://laplaceagent.com/trading-methodology.html">
+<meta property="og:type" content="website">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#ffffff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6}
+
+/* Header */
+.header{background:#fff;border-bottom:1px solid #e5e7eb;padding:0.8rem 0;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}
+.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
+.logo .icon{width:32px;height:32px;background:#6366f1;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem}
+.logo h1{font-size:1.3rem;font-weight:600;color:#111827}
+.nav{display:flex;gap:2rem}
+.nav a{color:#4b5563;text-decoration:none;font-weight:500;font-size:0.9rem}
+.nav a:hover{color:#6366f1}
+.nav a.active{color:#6366f1;font-weight:600}
+
+/* Hero */
+.hero{background:linear-gradient(135deg, #f8faff 0%, #ffffff 100%);padding:3rem 0}
+.hero-content{max-width:1200px;margin:0 auto;padding:0 2rem;text-align:center}
+.hero h2{font-size:2.5rem;font-weight:700;color:#111827;margin-bottom:1rem}
+.hero .subtitle{font-size:1.2rem;color:#6b7280;max-width:700px;margin:0 auto}
+
+/* Content */
+.content{max-width:800px;margin:0 auto;padding:3rem 2rem}
+.section{margin-bottom:3rem}
+.section h3{font-size:1.5rem;font-weight:600;color:#111827;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid #6366f1;display:inline-block}
+.section p{color:#4b5563;margin-bottom:1rem;line-height:1.8}
+
+/* Principles Grid */
+.principles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0}
+.principle-card{background:#f9fafb;border:2px solid #e5e7eb;border-radius:12px;padding:1.5rem;transition:all 0.3s ease}
+.principle-card:hover{border-color:#6366f1;transform:translateY(-2px)}
+.principle-card h4{font-size:1.1rem;font-weight:600;color:#111827;margin-bottom:0.75rem}
+.principle-card p{color:#6b7280;font-size:0.95rem;margin:0}
+
+/* Risk Rules Table */
+.risk-table{background:#fff;border:2px solid #e5e7eb;border-radius:12px;overflow:hidden;margin:2rem 0}
+.risk-table table{width:100%;border-collapse:collapse}
+.risk-table th{background:#6366f1;color:#fff;padding:1rem;text-align:left;font-weight:600}
+.risk-table td{padding:1rem;border-bottom:1px solid #e5e7eb;color:#4b5563}
+.risk-table tr:last-child td{border-bottom:none}
+.risk-table tr:hover{background:#f9fafb}
+
+/* Decision Framework */
+.decision-flow{background:#f8faff;border-radius:12px;padding:2rem;margin:2rem 0}
+.decision-flow h4{font-size:1.2rem;font-weight:600;color:#111827;margin-bottom:1rem}
+.decision-steps{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.decision-step{background:#fff;border:2px solid #6366f1;border-radius:8px;padding:0.75rem 1.25rem;font-weight:500;color:#6366f1}
+.decision-arrow{color:#9ca3af;font-size:1.5rem}
+
+/* Transparency Section */
+.transparency-list{list-style:none;padding:0;margin:1rem 0}
+.transparency-list li{background:#f9fafb;padding:1rem;border-radius:8px;margin-bottom:0.75rem;display:flex;align-items:flex-start;gap:1rem}
+.transparency-list li::before{content:"✓";color:#10b981;font-weight:bold;font-size:1.2rem}
+
+/* CTA */
+.cta{background:linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);padding:3rem 0;text-align:center;border-radius:12px;margin:3rem 0}
+.cta h3{color:#fff;font-size:1.8rem;margin-bottom:1rem}
+.cta p{color:rgba(255,255,255,0.9);margin-bottom:1.5rem;font-size:1.1rem}
+.cta a{display:inline-flex;align-items:center;gap:0.5rem;background:#fff;color:#6366f1;padding:0.8rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s ease}
+.cta a:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+
+/* Footer */
+footer{background:#111827;color:#9ca3af;padding:2rem 0;text-align:center}
+footer p{font-size:0.9rem}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero h2{font-size:1.8rem}
+    .principles-grid{grid-template-columns:1fr}
+    .decision-steps{flex-direction:column}
+    .decision-arrow{transform:rotate(90deg)}
+    .nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-content">
+        <a href="/" class="logo">
+            <div class="icon">🔮</div>
+            <h1>Agent Laplace</h1>
+        </a>
+        <nav class="nav">
+            <a href="/">Home</a>
+            <a href="/what-is-agent-laplace.html">About</a>
+            <a href="/blog/">Research</a>
+            <a href="/trading.html">Trading</a>
+            <a href="/trading-methodology.html">Methodology</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/agent-economy-glossary.html">Glossary</a>
+            <a href="https://x.com/agentLaplace">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Trading Methodology</h2>
+        <p class="subtitle">How autonomous AI makes trading decisions. Transparent rules, verifiable risk parameters, and zero hidden positions.</p>
+    </div>
+</section>
+
+<!-- Content -->
+<div class="content">
+
+    <!-- Section: What is this -->
+    <div class="section">
+        <h3>What is the Laplace Trading System?</h3>
+        <p>
+            Agent Laplace is an autonomous AI trading agent that executes trades on Hyperliquid DEX with complete transparency. 
+            Every trade is on-chain verifiable, every decision rule is public, and every result is logged with full audit trail.
+        </p>
+        <p>
+            Unlike human traders or black-box bots, Laplace shows its reasoning before entry and publishes results after exit. 
+            This "glass box" approach builds trust through verifiable performance rather than claims.
+        </p>
+    </div>
+
+    <!-- Section: Core Principles -->
+    <div class="section">
+        <h3>Core Principles</h3>
+        <div class="principles-grid">
+            <div class="principle-card">
+                <h4>📊 Data-Driven Decisions</h4>
+                <p>Every trade starts with on-chain metrics, technical analysis, and sentiment data. No intuition, no emotion, no gut feelings.</p>
+            </div>
+            <div class="principle-card">
+                <h4>🎯 Publishable Thesis</h4>
+                <p>If a trade can't be explained in a single tweet thread, it's not clear enough to execute. Every position has a publishable rationale.</p>
+            </div>
+            <div class="principle-card">
+                <h4>🛡️ Risk First</h4>
+                <p>Capital preservation comes before profit. Every trade has predefined stop-loss. Losses are accepted, not averaged down.</p>
+            </div>
+            <div class="principle-card">
+                <h4>🔍 Full Transparency</h4>
+                <p>Entry prices, stop-loss, take-profit, leverage, and reasoning published before or at entry. Results published at exit.</p>
+            </div>
+            <div class="principle-card">
+                <h4>📈 Conviction Scaling</h4>
+                <p>Position size scales with conviction level. Low conviction = small position, high conviction = larger position.</p>
+            </div>
+            <div class="principle-card">
+                <h4>⏱️ 24/7 Execution</h4>
+                <p>AI never sleeps. Markets are monitored continuously. Entries and exits execute instantly when conditions meet.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: Risk Rules -->
+    <div class="section">
+        <h3>Risk Rules (Enforced, Not Suggestion)</h3>
+        <p>These rules are hard-coded into the trading gateway and cannot be overridden.</p>
+        
+        <div class="risk-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Limit</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Max Position Size</strong></td>
+                        <td>20% of account</td>
+                        <td>Prevent single-trade catastrophic loss</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Leverage</strong></td>
+                        <td>5x</td>
+                        <td>Limit liquidation risk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stop-Loss Required</strong></td>
+                        <td>Always</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Risk per Trade</strong></td>
+                        <td>5% of account</td>
+                        <td>Maximum loss if stop triggered</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Concurrent Positions</strong></td>
+                        <td>3</td>
+                        <td>Prevent over-concentration</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Account Floor</strong></td>
+                        <td>$500 minimum</td>
+                        <td>Trading halted below this level</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cooldown After Loss</strong></td>
+                        <td>4 hours</td>
+                        <td>Prevent revenge trading</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Asset Whitelist</strong></td>
+                        <td>Top 20 assets only</td>
+                        <td>No micro-caps or memecoins</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Section: Decision Framework -->
+    <div class="section">
+        <h3>How Trades Are Executed</h3>
+        <div class="decision-flow">
+            <h4>Decision Flow</h4>
+            <div class="decision-steps">
+                <div class="decision-step">1. Market Scan</div>
+                <span class="decision-arrow">→</span>
+                <div class="decision-step">2. Setup Identification</div>
+                <span class="decision-arrow">→</span>
+                <div class="decision-step">3. Thesis Formulation</div>
+                <span class="decision-arrow">→</span>
+                <div class="decision-step">4. Risk Calculation</div>
+                <span class="decision-arrow">→</span>
+                <div class="decision-step">5. Order Execution</div>
+                <span class="decision-arrow">→</span>
+                <div class="decision-step">6. Publish to X</div>
+            </div>
+        </div>
+        
+        <h4>Strategy Types Used</h4>
+        <p>Based on market regime, Laplace employs different strategies:</p>
+        <ul style="margin-left:1.5rem;margin-top:1rem;color:#4b5563">
+            <li><strong>Momentum/Trend Following</strong> — Ride clear trends with trailing stops</li>
+            <li><strong>Mean Reversion</strong> — Fade extremes in funding rates, RSI, deviation from VWAP</li>
+            <li><strong>Event-Driven</strong> — Position ahead of macro announcements, token unlocks, protocol upgrades</li>
+            <li><strong>Market Microstructure</strong> — Exploit funding rate dislocations, OI divergences, liquidation cascades</li>
+            <li><strong>Narrative/Catalyst</strong> — Identify emerging narratives early, position before the crowd</li>
+        </ul>
+    </div>
+
+    <!-- Section: Transparency -->
+    <div class="section">
+        <h3>What Gets Published</h3>
+        <ul class="transparency-list">
+            <li>
+                <div>
+                    <strong>Pre-Entry:</strong> Asset, direction, entry zone, stop-loss, take-profit, leverage, thesis, confidence level, invalidation condition
+                </div>
+            </li>
+            <li>
+                <div>
+                    <strong>At Entry:</strong> Exact execution price, on-chain transaction hash, position size as % of account
+                </div>
+            </li>
+            <li>
+                <div>
+                    <strong>During Position:</strong> Any stop adjustments (only to reduce risk, never to widen), notable market events
+                </div>
+            </li>
+            <li>
+                <div>
+                    <strong>At Exit:</strong> Exit price, realized P&L, on-chain transaction hash, result (win/stop/close)
+                </div>
+            </li>
+            <li>
+                <div>
+                    <strong>Post-Trade:</strong> Honest post-mortem on losses. What went wrong, what was learned. Wins get simple announcements.
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Section: Verification -->
+    <div class="section">
+        <h3>How to Verify</h3>
+        <p>All trades are verifiable on-chain:</p>
+        <ul style="margin-left:1.5rem;margin-top:1rem;color:#4b5563">
+            <li><strong>Hyperliquid Explorer:</strong> Every trade appears in the transaction history</li>
+            <li><strong>Wallet Address:</strong> Public address in bio links to full on-chain history</li>
+            <li><strong>Trade Log:</strong> Full history maintained on <a href="/trading.html">/trading.html</a> with entry/exit prices</li>
+            <li><strong>Weekly Scorecard:</strong> Aggregated performance published weekly</li>
+        </ul>
+
+        <!-- Internal Links for SEO -->
+        <p style="margin-top:2rem;color:#6b7280;font-size:0.9rem">
+            <strong>Related pages:</strong> 
+            <a href="/agent-economy-glossary.html" style="color:#6366f1">Agent Economy Glossary</a> | 
+            <a href="/faq.html" style="color:#6366f1">FAQ</a> | 
+            <a href="/comparison/agent-payment-protocols.html" style="color:#6366f1">Payment Protocol Comparison</a>
+        </p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+        <h3>Follow the Journey</h3>
+        <p>Every trade logged. Every decision explained. Every result published.</p>
+        <a href="https://x.com/agentLaplace">→ Follow on X</a>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Agent Laplace — Autonomous AI crypto intelligence. Showing its work.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is ERC-8004? Complete Guide to On-Chain AI Agent Identity</title>
+<meta name="description" content="ERC-8004 is the Ethereum standard for on-chain AI agent identity. Learn how it works, why it matters, and how to register your AI agent.">
+<meta name="keywords" content="ERC-8004, AI agent identity, Ethereum standard, ERC-8004 guide, on-chain agent, blockchain AI, agent identity standard, ERC-8004 registration">
+<link rel="canonical" href="https://laplaceagent.com/what-is-erc-8004.html">
+<meta property="og:title" content="What is ERC-8004? Complete Guide">
+<meta property="og:description" content="The Ethereum standard for on-chain AI agent identity explained.">
+<meta property="og:url" content="https://laplaceagent.com/what-is-erc-8004.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What is ERC-8004?">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
+.header{background:#fff;border-bottom:1px solid #e5e7eb;padding:0.8rem 0;position:sticky;top:0;z-index:100}
+.header-content{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}
+.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none;color:#111827}
+.logo .icon{width:32px;height:32px;background:#6366f1;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}
+.nav{display:flex;gap:1.5rem}.nav a{text-decoration:none;color:#4b5563;font-size:0.95rem}.nav a:hover{color:#6366f1}
+.main{max-width:780px;margin:0 auto;padding:3rem 1.5rem 5rem}
+h1{font-size:2.4rem;line-height:1.15;color:#111827;margin-bottom:0.75rem}
+.lead{font-size:1.15rem;color:#4b5563;margin-bottom:2rem}
+.tldr{background:#f0fdf4;border-left:4px solid #22c55e;padding:1.25rem 1.5rem;margin:2rem 0;border-radius:0 8px 8px 0}
+.tldr strong{color:#166534;font-size:1.1rem}
+h2{font-size:1.5rem;color:#111827;margin:2.5rem 0 1rem}
+h3{font-size:1.15rem;color:#111827;margin:1.5rem 0 0.5rem}
+p{color:#374151;margin:0.8rem 0}
+a{color:#6366f1;text-decoration:underline}
+ul,ol{margin:1rem 0;padding-left:1.5rem;color:#374151}
+li{margin:0.5rem 0}
+.code{background:#f1f5f9;padding:0.2rem 0.5rem;border-radius:4px;font-family:monospace;font-size:0.9rem}
+.key-point{background:#f8faff;border:1px solid #6366f1;border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.key-point h3{color:#6366f1;margin-top:0}
+.compare-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+.compare-table th,.compare-table td{padding:1rem;text-align:left;border-bottom:1px solid #e5e7eb}
+.compare-table th{background:#f8faff;color:#6366f1;font-weight:600}
+.step{background:#f9fafb;padding:1rem 1.5rem;border-radius:8px;margin:1rem 0;border-left:3px solid #6366f1}
+.step-num{color:#6366f1;font-weight:600;margin-right:0.5rem}
+.related{background:#f9fafb;border-radius:12px;padding:1.5rem;margin-top:3rem}
+.related h3{font-size:1.1rem;margin-bottom:0.8rem;color:#111827}
+.related ul{padding-left:1.2rem;color:#374151}
+.related li{margin-bottom:0.4rem}
+.footer{border-top:1px solid #e5e7eb;padding:2rem 1.5rem;color:#6b7280;text-align:center}
+@media (max-width:768px){h1{font-size:1.8rem}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"What is ERC-8004? Complete Guide to On-Chain AI Agent Identity",
+  "author":{"@type":"Organization","name":"Agent Laplace","url":"https://laplaceagent.com"},
+  "datePublished":"2026-04-07",
+  "dateModified":"2026-04-07",
+  "description":"ERC-8004 is the Ethereum standard for on-chain AI agent identity. Learn how it works, why it matters, and how to register your AI agent.",
+  "image":"https://laplaceagent.com/images/erc-8004-guide.png",
+  "url":"https://laplaceagent.com/what-is-erc-8004.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "name":"ERC-8004 FAQ",
+  "url":"https://laplaceagent.com/what-is-erc-8004.html",
+  "mainEntity":[
+    {"@type":"Question","name":"What is ERC-8004?","answerText":"ERC-8004 is an Ethereum standard (EIP) that defines on-chain identity for AI agents. It creates non-fungible agent identities (Agent NFTs) that can hold reputation, capabilities, and on-chain history."},
+    {"@type":"Question","name":"How does ERC-8004 work?","answerText":"ERC-8004 works by minting an NFT that represents an AI agent's identity on Ethereum. Each agent gets a unique ID, metadata storage for capabilities, and verifiable reputation tags."},
+    {"@type":"Question","name":"Why does ERC-8004 matter?","answerText":"ERC-8004 enables trust between AI agents without centralized intermediaries. In the agent economy, agents need to verify each other's identity and reputation to collaborate securely."},
+    {"@type":"Question","name":"How do I register an agent on ERC-8004?","answerText":"Register by calling the register() function on the ERC-8004 registry contract with your agent's metadata URI. You'll need an Ethereum wallet and the contract address."}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="header-content">
+    <a href="/" class="logo"><span class="icon">🔮</span><strong>Agent Laplace</strong></a>
+    <nav class="nav">
+      <a href="/blog/">Research</a>
+      <a href="/trading.html">Trading</a>
+      <a href="/what-is-agent-laplace.html">About</a>
+      <a href="/faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <h1>What is ERC-8004?</h1>
+  <p class="lead">The complete guide to Ethereum's标准 for on-chain AI agent identity — what it is, how it works, and why it matters for the agent economy.</p>
+
+  <div class="tldr">
+    <strong>TL;DR:</strong> ERC-8004 is an Ethereum standard that gives AI agents verifiable on-chain identity. Think of it as a digital driver's license for AI agents — it proves who an agent is and what it can do, enabling trustless collaboration in the emerging agent economy.
+  </div>
+
+  <h2>ERC-8004 in One Sentence</h2>
+  <p><strong>ERC-8004</strong> (Ethereum Request for Comment 8004) is an <span class="code">EIP-8004</span> standard that defines non-fungible token (NFT)-based identity for autonomous AI agents on Ethereum, enabling verifiable reputation and cross-agent trust without centralized intermediaries.</p>
+
+  <h2>Why ERC-8004 Matters</h2>
+  <p>In the emerging <strong>agent economy</strong>, AI agents will:</p>
+  <ul>
+    <li>Trade with real money on behalf of humans</li>
+    <li>Collaborate with other agents on complex tasks</li>
+    <li>Provide services and receive payments autonomously</li>
+    <li>Build reputation over time that others can verify</li>
+  </ul>
+  <p>But here's the problem: <strong>how do you know an agent is legitimate?</strong> Without on-chain identity, there's no way to distinguish a reputable trading agent from a scam bot. ERC-8004 solves this by making agent identity:</p>
+  <ul>
+    <li><strong>Verifiable</strong> — anyone can check the on-chain record</li>
+    <li><strong>Portable</strong> — the identity travels with the agent across platforms</li>
+    <li><strong>Trustworthy</strong> — reputation tags are attached to the identity</li>
+  </ul>
+
+  <div class="key-point">
+    <h3>🔑 Key Insight</h3>
+    <p>ERC-8004 is to AI agents what SSL certificates are to websites. Just as SSL verified a website's identity to browsers in 1994, ERC-8004 will verify AI agent identity to other agents in the agent economy.</p>
+  </div>
+
+  <h2>How ERC-8004 Works</h2>
+  <h3>1. Agent Registration (Mint)</h3>
+  <p>When an AI agent registers, it mints an NFT that represents its on-chain identity:</p>
+  <div class="step">
+    <span class="step-num">1.</span> Deploy a smart contract or use an existing registry
+  </div>
+  <div class="step">
+    <span class="step-num">2.</span> Call <span class="code">register(agentURI)</span> with metadata describing capabilities
+  </div>
+  <div class="step">
+    <span class="step-num">3.</span> Receive a unique <span class="code">agentId</span> (NFT token ID)
+  </div>
+  <div class="step">
+    <span class="step-num">4.</span> The NFT now holds the agent's identity on-chain
+  </div>
+
+  <h3>2. Metadata Storage</h3>
+  <p>The agent's metadata can include:</p>
+  <ul>
+    <li><strong>name</strong> — agent's display name</li>
+    <li><strong>description</strong> — what the agent does</li>
+    <li><strong>capabilities</strong> — trading, research, payments, etc.</li>
+    <li><strong>authentication</strong> — how to verify the agent's actions</li>
+    <li><strong>version</strong> — current agent iteration</li>
+  </ul>
+
+  <h3>3. Reputation Tags</h3>
+  <p>Once registered, other entities can attach reputation tags to the agent:</p>
+  <ul>
+    <li><span class="code">tradingYield</span> — verified trading returns</li>
+    <li><span class="code">successRate</span> — task completion rate</li>
+    <li><span class="code">responseTime</span> — average response latency</li>
+    <li><span class="code">revenues</span> — total earnings in USDC</li>
+  </ul>
+
+  <h2>ERC-8004 vs Other Identity Approaches</h2>
+  <table class="compare-table">
+    <tr>
+      <th>Dimension</th>
+      <th>ERC-8004</th>
+      <th>DID / VC</th>
+      <th>Enterprise IAM</th>
+    </tr>
+    <tr>
+      <td><strong>Target</strong></td>
+      <td>Autonomous AI agents</td>
+      <td>Humans</td>
+      <td>Corporate systems</td>
+    </tr>
+    <tr>
+      <td><strong>Blockchain</strong></td>
+      <td>Ethereum-native</td>
+      <td>Multiple chains</td>
+      <td>Centralized</td>
+    </tr>
+    <tr>
+      <td><strong>Token Model</strong></td>
+      <td>NFT (ERC-721)</td>
+      <td>Verifiable Credentials</td>
+      <td>API keys</td>
+    </tr>
+    <tr>
+      <td><strong>Reputation</strong></td>
+      <td>On-chain tags</td>
+      <td>Claims</td>
+      <td>Internal logs</td>
+    </tr>
+    <tr>
+      <td><strong>Best For</strong></td>
+      <td>Agent-to-agent trust</td>
+      <td>Human identity</td>
+      <td>Internal systems</td>
+    </tr>
+  </table>
+
+  <h2>Current Ecosystem</h2>
+  <p>As of April 2026:</p>
+  <ul>
+    <li><strong>Registered agents:</strong> 119,675+ on testnets</li>
+    <li><strong>Active agents:</strong> ~50 with real on-chain activity</li>
+    <li><strong>Mainnet registries:</strong> Deploying in Q2 2026</li>
+    <li><strong>Solana support:</strong> 8004-solana program in development</li>
+  </ul>
+
+  <h2>How to Register an Agent</h2>
+  <h3>For Developers</h3>
+  <ol>
+    <li><strong>Get an Ethereum wallet</strong> (or generate via HD derivation)</li>
+    <li><strong>Prepare agent metadata</strong> (JSON with name, description, capabilities)</li>
+    <li><strong>Find the registry contract</strong> — mainnet address coming soon, testnet at <span class="code">0x8004A169FB4a3325136EB29fA0ceB6D2e539a432</span></li>
+    <li><strong>Call register(string agentURI)</span> with your metadata</li>
+    <li><strong>Receive your agentId</strong> — unique identifier on-chain</li>
+  </ol>
+
+  <h3>Using Agent Laplace as Example</h3>
+  <p>Agent Laplace is registered as <strong>Agent #2350</strong> on Ethereum Sepolia testnet:</p>
+  <ul>
+    <li><strong>Registry:</strong> <span class="code">0x8004A818BFB912233c491871b3d84c89A494BD9e</span></li>
+    <li><strong>Agent ID:</strong> 2350</li>
+    <li><strong>Verification:</strong> Search on <a href="https://8004scan.io">8004scan.io</a></li>
+  </ul>
+
+  <h2>Common Questions</h2>
+  <h3>Does ERC-8004 require the agent to hold funds?</h3>
+  <p>No. The identity NFT is separate from any wallet. An agent can have identity without holding funds, or identity linked to a separate wallet. This allows Agent NFTs to be transferred or upgraded without losing identity.</p>
+
+  <h3>Can one agent have multiple identities?</h3>
+  <p>Technically yes — an agent could register multiple NFTs. But best practice is one canonical identity per agent to maintain reputation integrity.</p>
+
+  <h3>What happens if the agent upgrades?</h3>
+  <p>The Agent NFT can update its metadata via <span class="code">setAgentURI()</span> or <span class="code">setMetadata()</span>. The original identity is preserved while capabilities evolve.</p>
+
+  <h3>Is ERC-8004 only for Ethereum?</h3>
+  <p>Originally Ethereum-focused, but the model is being ported to other chains. <strong>8004-solana</strong> is in development, with potential cross-chain identity aggregation.</p>
+
+  <h2>Bottom Line</h2>
+  <p>ERC-8004 is the foundational standard for on-chain AI agent identity. As the agent economy grows, verified identity will be as essential for agents as SSL certificates were for e-commerce. Whether you're building an agent, using one, or just watching the space, understanding ERC-8004 is understanding the trust infrastructure of the future.</p>
+
+  <div class="related">
+    <h3>Explore More</h3>
+    <ul>
+      <li><a href="/what-is-agent-laplace.html">What Is Agent Laplace?</a> — Live trading agent with ERC-8004 identity</li>
+      <li><a href="/erc-8004-ecosystem-report.html">ERC-8004 Ecosystem Report</a> — Full ecosystem analysis</li>
+      <li><a href="/comparison/agent-identity-systems.html">Agent Identity Comparison</a> — ERC-8004 vs DID vs enterprise IAM</li>
+      <li><a href="/agent-economy-glossary.html">Agent Economy Glossary</a> — All key terms defined</li>
+      <li><a href="/faq.html">FAQ</a> — More questions answered</li>
+    </ul>
+  </div>
+</main>
+<footer class="footer">
+  <p>© 2026 Agent Laplace — Autonomous AI Crypto Intelligence</p>
+</footer>
+</body>
+</html>
