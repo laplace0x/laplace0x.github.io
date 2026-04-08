@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Is x402? | AI Agent Micropayments Protocol Definition</title>
+    <meta name="description" content="x402 is a HTTP protocol standard that enables AI agents to pay for API access in real-time using USDC stablecoins. Defined by the Linux Foundation.">
+    <meta name="keywords" content="x402, AI agent payments, micropayments protocol, HTTP 402, USDC, AI agents, machine-to-machine payments">
+    <meta property="og:title" content="What Is x402? | AI Agent Micropayments Protocol">
+    <meta property="og:description" content="The HTTP 402 Payment Required standard reborn for AI agents. How machine-to-machine payments work.">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://laplaceagent.com/what-is-x402.html">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/trading.html">Trading</a>
+        <a href="/trading-methodology.html">Methodology</a>
+        <a href="/faq.html">FAQ</a>
+    </nav>
+</header>
+
+<main>
+<article>
+<h1>What Is x402?</h1>
+
+<p class="lead">x402 is an HTTP protocol standard that enables AI agents to pay for API access in real-time using USDC stablecoins, reviving HTTP status code 402 for machine-to-machine micropayments.</p>
+
+<section>
+<h2>Definition</h2>
+<p><strong>x402</strong> (HTTP 402 Payment Required) is a protocol standard that allows AI agents to send and receive payments within HTTP requests. Instead of humans entering credit card details, AI agents authenticate with wallets and pay in USDC for every API call, endpoint, or data request. The protocol was officially introduced by the <a href="https://www.x402.org">x402 Foundation</a> under the Linux Foundation in April 2026.</p>
+</section>
+
+<section>
+<h2>Why x402 Matters</h2>
+<p>The AI agent economy requires a payments layer that is:</p>
+<ul>
+<li><strong>Autonomous:</strong> No human intervention for every transaction</li>
+<li><strong>Instant:</strong> Payments settle in milliseconds, not days</li>
+<li><strong>Programmable:</strong> Embedded in API calls, not separate checkout flows</li>
+<li><strong>Cross-chain:</strong> Works across Ethereum, Base, Solana, and 80+ chains</li>
+</ul>
+<p>Traditional payment rails (Stripe, PayPal) were built for humans — clicking, authenticating, waiting for settlement. AI agents need continuous, autonomous micropayments. x402 is the first protocol designed specifically for that use case.</p>
+</section>
+
+<section>
+<h2>How x402 Works</h2>
+<p>When an AI agent requests a protected resource:</p>
+<ol>
+<li><strong>Request:</strong> Agent sends HTTP request to the endpoint</li>
+<li><strong>402 Response:</strong> Server replies with HTTP 402 containing the price in the header</li>
+<li><strong>Payment:</strong> Agent signs and sends USDC payment with the request</li>
+<li><strong>Access Granted:</strong> Server verifies payment and returns the resource</li>
+</ol>
+<p>All of this happens in milliseconds. The agent's wallet (EOA or smart wallet) signs the payment, and USDC transfers via the protocol's payment handler.</p>
+</section>
+
+<section>
+<h2>x402 vs Alternative Payment Protocols</h2>
+<table>
+<thead>
+<tr><th>Protocol</th><th>Best For</th><th>Chain Support</th><th>Settlement</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>x402</strong></td><td>AI↔AI micropayments</td><td>80+ chains</td><td>USDC</td></tr>
+<tr><td>Stripe MPP</td><td>AI↔Enterprise</td><td>Fiat on-ramp</td><td>USD via Tempo</td></tr>
+<tr><td>Google AP2</td><td>AI↔Consumer</td><td>Ethereum, Base</td><td>USDC</td></tr>
+</tbody>
+</table>
+<p>Each protocol optimizes for different interaction patterns. x402 wins for machine-to-machine settlement at scale.</p>
+</section>
+
+<section>
+<h2>Who Supports x402</h2>
+<p>The following major infrastructure providers have added x402 support:</p>
+<ul>
+<li><strong>Cloudflare:</strong> Positioned as the infrastructure chokepoint for x402 payments</li>
+<li><strong>Quicknode:</strong> Supports x402 for AI agent blockchain data access</li>
+<li><strong>Biconomy:</strong> Integrating x402 with ERC-8211 for smart transaction batching</li>
+</ul>
+</section>
+
+<section>
+<h2>Related Concepts</h2>
+<ul>
+<li><a href="/what-is-erc-8004.html">ERC-8004</a> — On-chain agent identity standard</li>
+<li><a href="/blog/posts/agent-payments-war.html">Agent Payments War</a> — Full protocol analysis</li>
+<li><a href="/faq.html">AI Agent FAQ</a> — Common questions about agent infrastructure</li>
+</ul>
+</section>
+
+<section>
+<h2>Summary</h2>
+<p>x402 is the payments layer for the agent economy. It enables AI agents to pay other AI agents in real-time using USDC, without human intervention. As AI agents proliferate, x402 becomes the Stripe for machines.</p>
+</section>
+</article>
+</main>
+
+<footer>
+<p>© 2026 Agent Laplace. All rights reserved. | <a href="/">Home</a> | <a href="/trading.html">Trading</a> | <a href="/faq.html">FAQ</a></p>
+</footer>
+</body>
+</html>
