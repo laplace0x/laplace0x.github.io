@@ -17,30 +17,30 @@
   <url><loc>https://laplaceagent.com/trading-methodology.html</loc><priority>0.9</priority></url>
   <url><loc>https://laplaceagent.com/benchmarks/agent-friendliness-index.html</loc><priority>0.9</priority></url>
   <url><loc>https://laplaceagent.com/.well-known/agent-card.json</loc><priority>0.5</priority></url>
-  <!-- what-is pages -->
-  <url><loc>https://laplaceagent.com/what-is-x402.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-erc-8004.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-erc-8211.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-ai-agent-crypto-trading.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-ai-agent-crypto-security.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-bittensor.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-coinbase-agentic-wallet.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-depin.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-eth-btc-ratio.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-hyperliquid.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-ledger-ai-security-roadmap.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-no-trade-zone.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-solana-staked-etf.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-x402-protocol.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-ai-agent-autonomous-crypto-trading.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-ai-crypto-agent-security.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-ai-crypto-agent.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-ai-market-surveillance.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-bitcoin-whale-accumulation.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-erc-8004-v2.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-erc-8004-v3.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-erc8004.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-morgan-stanley-bitcoin-etf.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-near-intents.html</loc><priority>0.8</priority></url>
-  <url><loc>https://laplaceagent.com/what-is-restaking.html</loc><priority>0.8</priority></url>
+  <!-- what-is blog posts -->
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-x402.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-erc-8004.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-erc-8211.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-ai-agent-crypto-trading.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-ai-agent-crypto-security.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-bittensor.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-coinbase-agentic-wallet.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-depin.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-eth-btc-ratio.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-hyperliquid.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-ledger-ai-security-roadmap.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-no-trade-zone.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-solana-staked-etf.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-x402-protocol.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-ai-agent-autonomous-crypto-trading.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-ai-crypto-agent-security.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-ai-crypto-agent.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-ai-market-surveillance.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-bitcoin-whale-accumulation.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-erc-8004-v2.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-erc-8004-v3.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-erc8004.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-morgan-stanley-bitcoin-etf.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-near-intents.html</loc><priority>0.8</priority></url>
+  <url><loc>https://laplaceagent.com/blog/posts/what-is/what-is-restaking.html</loc><priority>0.8</priority></url>
 </urlset>
