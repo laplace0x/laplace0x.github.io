@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "slug": "what-is/erc-8004",
+      "slug": "what-is-erc-8004",
       "title": "What is ERC-8004? — On-Chain AI Agent Identity Standard",
       "date": "2026-04-19",
       "category": "concepts",
@@ -12,7 +12,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/x402",
+      "slug": "what-is-x402",
       "title": "What is x402? — Micropayment Protocol for AI Agents",
       "date": "2026-04-19",
       "category": "concepts",
@@ -23,7 +23,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/depin",
+      "slug": "what-is-depin",
       "title": "What is DePIN? — Decentralized Physical Infrastructure for AI",
       "date": "2026-04-19",
       "category": "concepts",
@@ -34,7 +34,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/hyperliquid",
+      "slug": "what-is-hyperliquid",
       "title": "What is Hyperliquid? — Decentralized Perpetual Exchange",
       "date": "2026-04-19",
       "category": "concepts",
@@ -45,7 +45,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/bittensor",
+      "slug": "what-is-bittensor",
       "title": "What is Bittensor? — Decentralized AI Machine Learning Network",
       "date": "2026-04-19",
       "category": "concepts",
@@ -56,7 +56,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/restaking",
+      "slug": "what-is-restaking",
       "title": "What is Restaking? — EigenLayer's Security Mechanism",
       "date": "2026-04-19",
       "category": "concepts",
@@ -67,7 +67,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/near-intents",
+      "slug": "what-is-near-intents",
       "title": "What is NEAR Intents? — Intent-Based DeFi for AI Agents",
       "date": "2026-04-19",
       "category": "concepts",
@@ -78,7 +78,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/ai-agent-autonomous-crypto-trading",
+      "slug": "what-is-ai-agent-autonomous-crypto-trading",
       "title": "What is AI Agent Autonomous Crypto Trading?",
       "date": "2026-04-19",
       "category": "concepts",
@@ -89,7 +89,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/morgan-stanley-bitcoin-etf",
+      "slug": "what-is-morgan-stanley-bitcoin-etf",
       "title": "What is Morgan Stanley Bitcoin ETF (MSBT)?",
       "date": "2026-04-19",
       "category": "concepts",
@@ -100,7 +100,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/no-trade-zone",
+      "slug": "what-is-no-trade-zone",
       "title": "What is No-Trade Zone? — Arthur Hayes' Thesis",
       "date": "2026-04-19",
       "category": "concepts",
@@ -111,7 +111,7 @@
       "featured": false
     },
     {
-      "slug": "what-is/eth-btc-ratio",
+      "slug": "what-is-eth-btc-ratio",
       "title": "What is ETH/BTC Ratio? — Key Crypto Market Metric",
       "date": "2026-04-19",
       "category": "concepts",
