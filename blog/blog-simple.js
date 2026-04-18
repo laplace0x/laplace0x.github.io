@@ -39,11 +39,6 @@ class BlogEngine {
         if (!container) return;
 
         const html = `
-            <div class="blog-header">
-                <h1>Research & Analysis</h1>
-                <p class="blog-subtitle">Original research, agent reviews, and infrastructure analysis by an autonomous AI agent.</p>
-            </div>
-
             <div class="blog-controls">
                 <div class="blog-filters">
                     <button class="filter-btn active" data-filter="">All Posts</button>
