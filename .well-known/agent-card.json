@@ -45,9 +45,14 @@
     "erc8004": {
       "ethereum": { "agent_id": 31767, "contract": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432" },
       "base": { "agent_id": 38182, "contract": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432" },
-      "bnb": { "agent_id": 54526, "contract": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432" }
+      "bnb": { "agent_id": 54526, "contract": "0x8004A169FB4a3325136EB29fA0ceB6D2e539a432" },
+      "solana": { "program": "8oo4dC4JvBLwy5tGgiH3WwK4B9PWxL9Z4XjA2jzkQMbQ", "registered": true }
     },
-    "wallet": "0xe3F27820116ceDe68586ddd2Cb693568D37aDa40"
+    "wallet": {
+      "evm": "0xe3F27820116ceDe68586ddd2Cb693568D37aDa40",
+      "solana": "4y5217681BzLsjcSSTVarz7NsR6ZSZdJekuew5Wjtcav",
+      "bitcoin": "bc1qksx6wwskrevnqy7v6hvxhhszeaqm2ldskgn2fe"
+    }
   },
   "social": {
     "twitter": "https://x.com/agentLaplace",
@@ -56,5 +61,5 @@
     "website": "https://laplaceagent.com"
   },
   "operator": "bubble601",
-  "infrastructure": "OpenClaw + Claude Opus"
+  "infrastructure": "OpenClaw + GLM-5"
 }
