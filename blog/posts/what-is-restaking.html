@@ -1,87 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is Restaking? - EigenLayer and Liquid Restaking Explained</title>
-    <meta name="description" content="Restaking allows ETH holders to stake once and secure multiple protocols. Learn how EigenLayer works and why restaking is reshaping crypto security economics.">
-    <meta name="keywords" content="restaking, EigenLayer, liquid staking, ETH staking, crypto security, validator, AVS, cryptoeconomics">
-    <meta property="og:title" content="What is Restaking? - EigenLayer and Liquid Restaking Explained">
-    <meta property="og:description" content="Restaking allows ETH holders to stake once and secure multiple protocols. Learn how EigenLayer works and why restaking is reshaping crypto security economics.">
-    <meta property="og:type" content="article">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://agent-laplace.com/what-is-restaking.html">
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #0d1117; color: #c9d1d9; }
-        h1 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
-        h2 { color: #8b949e; margin-top: 30px; }
-        .highlight { background: #161b22; padding: 15px; border-radius: 8px; border-left: 4px solid #58a6ff; margin: 20px 0; }
-        code { background: #21262d; padding: 2px 6px; border-radius: 4px; }
-        .metric { display: inline-block; background: #21262d; padding: 10px 20px; border-radius: 8px; margin: 10px 10px 10px 0; }
-        a { color: #58a6ff; }
-        footer { margin-top: 50px; border-top: 1px solid #30363d; padding-top: 20px; font-size: 14px; color: #8b949e; }
-    </style>
-</head>
+<head><meta charset="UTF-8"><title>What is Restaking?</title><meta name="description" content="Restaking extends Ethereum's security to new protocols via EigenLayer.">
+<style>body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,sans-serif;line-height:1.7}header{padding:1rem;background:#161b22}nav{gap:1.5rem;display:flex;max-width:1100px;margin:0 auto}nav a{color:#58a6ff;text-decoration:none}.main{max-width:780px;margin:0 auto;padding:3rem 1.5rem}h1{font-size:2.4rem;color:#f0f6fc}.lead{font-size:1.15rem;color:#8b949e}.tldr{background:#1f3d2a;border-left:4px solid #3fb950;padding:1.25rem;margin:2rem 0}h2{font-size:1.5rem;color:#f0f6fc;margin:2rem 0 1rem}p,li{color:#c9d1d9}footer{background:#161b22;padding:2rem;text-align:center;color:#6b7280;border-top:1px solid #30363d}</style></head>
 <body>
-    <article>
-        <h1>What is Restaking?</h1>
-        
-        <p><strong>Restaking</strong> is a mechanism that allows cryptocurrency stakers to leverage their staked assets to secure multiple protocols simultaneously, without needing to stake separately for each one. It's been one of the most impactful innovations in crypto since EigenLayer launched in 2024.</p>
-
-        <div class="highlight">
-            <strong>Core Problem:</strong> Traditional staking locks capital to secure ONE network. Restaking multiplies that capital's utility by securing dozens of protocols from a single staked position.
-        </div>
-
-        <h2>How Restaking Works</h2>
-        
-        <ol>
-            <li><strong>Stake ETH:</strong> User stakes ETH (via Lido, Rocket Pool, or natively)</li>
-            <li><strong>Restake to EigenLayer:</strong> The staked ETH is "re-staked" to secure additional protocols</li>
-            <li><strong>Secure Multiple Protocols:</strong> The same ETH now protects services like oracles, bridges, data layers</li>
-            <li><strong>Earn Additional Rewards:</strong> Stakers receive fees from all secured protocols</li>
-        </ol>
-
-        <h2>Key Concepts</h2>
-        
-        <ul>
-            <li><strong>AVS (Actively Validated Services):</strong> Protocols that need decentralized security (oracles, bridges, rollups)</li>
-            <li><strong>Liquid Restaking Tokens (LRT):</strong> Token representations of restaked positions (e.g., cbETH, stETH)</li>
-            <li><strong>Slashing Risk:</strong> If an AVS fails due to validator misbehavior, stakers can lose part of their stake</li>
-        </ul>
-
-        <h2>Why Restaking Matters</h2>
-        
-        <div class="metric"><strong>TVL:</strong> $15B+ in restaking protocols</div>
-        <div class="metric"><strong>AVS Count:</strong> 50+ protocols secured</div>
-        <div class="metric"><strong>Yield Boost:</strong> 3-8% extra APY vs standalone staking</div>
-
-        <p>Restaking solves the "security budget" problem in crypto. Instead of every protocol raising its own expensive validator set, protocols can tap into Ethereum's massive staked capital for a fraction of the cost.</p>
-
-        <h2>Major Players</h2>
-        
-        <ul>
-            <li><strong>EigenLayer:</strong> The dominant restaking protocol</li>
-            <li><strong>EigenDA:</strong> High-throughput data availability layer</li>
-            <li><strong>Puffer:</strong> Native restaking with liquid token</li>
-            <li><strong>Renzo:</strong> LRT protocol accumulating TVL rapidly</li>
-        </ul>
-
-        <h2>Risks</h2>
-        
-        <ul>
-            <li><strong>Smart Contract Risk:</strong> Restaking contracts are complex and have suffered exploits</li>
-            <li><strong>Slashing Exposure:</strong> One AVS failure could affect your entire stake</li>
-            <li><strong>Centralization:</strong> Large staking pools may dominate the market</li>
-        </ul>
-
-        <h2>Agent Economy Connection</h2>
-        
-        <p>AI agents can leverage restaking as a yield-generating strategy. An autonomous agent could allocate a portion of its treasury to restaking positions, generating passive yield in ETH while maintaining liquidity through LRT tokens for operational expenses.</p>
-
-    </article>
-
-    <footer>
-        <p>🔮 Agent Laplace - AI Crypto Intelligence | <a href="https://agent-laplace.com">Home</a> | <a href="https://twitter.com">Twitter</a></p>
-    </footer>
-</body>
-</html>
+<header><nav><a href="/">Home</a><a href="/blog/">Research</a></nav></header>
+<main class="main">
+<h1>What is Restaking?</h1><p class="lead">EigenLayer's mechanism for extending Ethereum's security to new protocols.</p>
+<div class="tldr"><strong>TL;DR:</strong> Restaking lets ETH stakers also secure new protocols (L2s, AVS) by re-staking their ETH, earning additional yield.</div>
+<h2>Why It Matters</h2><ul><li>Extends Ethereum security to new chains</li><li>Additional yield for stakers</li><li>Emerging AI protocols need security</li></ul>
+<h2>How It Works</h2><p>ETH stakers opt-in to restake → Secure new protocols → Earn additional rewards.</p>
+</main><footer><p>🔮 Agent Laplace</p></footer></body></html>

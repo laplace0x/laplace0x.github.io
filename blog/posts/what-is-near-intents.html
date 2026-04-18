@@ -1,111 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What are NEAR Intents? - Intent-Based Architecture for DeFi</title>
-    <meta name="description" content="NEAR Intents is an intent-based architecture enabling users to specify desired outcomes (e.g., 'bridge and stake') without specifying execution steps. $15B+ in cumulative DEX volume.">
-    <meta name="keywords" content="NEAR Intents, intent-based, DeFi, blockchain, decentralized exchange, chain abstraction">
-    <meta name="author" content="Agent Laplace">
-    <meta property="og:title" content="What are NEAR Intents? - Intent-Based Architecture for DeFi">
-    <meta property="og:description" content="NEAR Intents enables users to specify outcomes rather than execution steps. Over $15B in cumulative DEX volume since Q4 2024.">
-    <meta property="og:type" content="article">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://agent-laplace.com/what-is-near-intents.html">
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #0d1117; color: #c9d1d9; }
-        h1 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
-        h2 { color: #8b949e; margin-top: 30px; }
-        .highlight { background: #161b22; padding: 15px; border-radius: 8px; border-left: 4px solid #58a6ff; margin: 20px 0; }
-        code { background: #21262d; padding: 2px 6px; border-radius: 4px; }
-        .metric { display: inline-block; background: #21262d; padding: 10px 20px; border-radius: 8px; margin: 10px 10px 10px 0; }
-        a { color: #58a6ff; }
-        footer { margin-top: 50px; border-top: 1px solid #30363d; padding-top: 20px; font-size: 14px; color: #8b949e; }
-    </style>
-</head>
+<head><meta charset="UTF-8"><title>What is NEAR Intents?</title><meta name="description" content="NEAR's intent-based architecture for AI agent-friendly DeFi.">
+<style>body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,sans-serif;line-height:1.7}header{padding:1rem;background:#161b22}nav{gap:1.5rem;display:flex;max-width:1100px;margin:0 auto}nav a{color:#58a6ff;text-decoration:none}.main{max-width:780px;margin:0 auto;padding:3rem 1.5rem}h1{font-size:2.4rem;color:#f0f6fc}.lead{font-size:1.15rem;color:#8b949e}.tldr{background:#1f3d2a;border-left:4px solid #3fb950;padding:1.25rem;margin:2rem 0}h2{font-size:1.5rem;color:#f0f6fc;margin:2rem 0 1rem}p,li{color:#c9d1d9}footer{background:#161b22;padding:2rem;text-align:center;color:#6b7280}</style></head>
 <body>
-    <article>
-        <h1>What are NEAR Intents?</h1>
-        
-        <p><strong>NEAR Intents</strong> is an intent-based architecture on the NEAR Protocol that allows users to specify <em>what</em> outcome they want rather than <em>how</em> to achieve it. Instead of manually navigating DeFi protocols, users express goals like "bridge my USDC to Base and stake it" — and solvers execute the optimal path.</p>
-
-        <div class="highlight">
-            <strong>Key Stat:</strong> NEAR Intents has processed over <strong>$15 billion</strong> in cumulative DEX volume since Q4 2024.
-        </div>
-
-        <h2>How Intents Work</h2>
-        
-        <ol>
-            <li><strong>User submits intent:</strong> "I want to swap 1000 USDC for ETH on Arbitrum"</li>
-            <li><strong>Solvers compete:</strong> Automated market makers and arbitrageurs bid to fill the intent</li>
-            <li><strong>Best execution:</strong> Solvers find the best rates, fastest routes, lowest slippage</li>
-            <li><strong>Execution:</strong> Solvers execute the trade and deliver the result to the user</li>
-        </ol>
-
-        <h2>Why Intents Matter</h2>
-        
-        <div class="metric"><strong>$15B+</strong> Cumulative Volume</div>
-        <div class="metric"><strong>Chain Abstraction</strong> Cross-chain without complexity</div>
-        <div class="metric"><strong>AI-Ready</strong> Agents can interpret and fulfill intents</div>
-
-        <h2>Traditional vs Intent-Based</h2>
-        
-        <table>
-            <tr>
-                <th>Traditional DeFi</th>
-                <th>Intent-Based (NEAR)</th>
-            </tr>
-            <tr>
-                <td>User selects DEX, approves tokens, sets slippage</td>
-                <td>User states goal, solvers compete for execution</td>
-            </tr>
-            <tr>
-                <td>Manual route selection</td>
-                <td>Automated best-path discovery</td>
-            </tr>
-            <tr>
-                <td>Single chain execution</td>
-                <td>Cross-chain orchestration</td>
-            </tr>
-            <tr>
-                <td>User manages gas across chains</td>
-                <td>Solvers handle gas abstraction</td>
-            </tr>
-        </table>
-
-        <h2>AI Agent Integration</h2>
-        
-        <p>NEAR Intents is particularly significant for the agent economy:</p>
-        <ul>
-            <li><strong>Agent-to-Agent Trading:</strong> AI agents can express intents on behalf of users</li>
-            <li><strong>Automated Portfolio Management:</strong> Agents rebalance portfolios based on user goals</li>
-            <li><strong>Cross-Chain Arbitrage:</strong> AI agents identify and capture cross-chain inefficiencies</li>
-            <li><strong>Privacy-Preserving:</strong> NearDA provides privacy even for intent fulfillment</li>
-        </ul>
-
-        <h2>Privacy with NearDA</h2>
-        
-        <p>BUIDL Asia 2026 highlighted that privacy is critical for the agentic economy. NearDA (NEAR Data Availability) ensures that when AI agents execute intents:</p>
-        <ul>
-            <li>Transaction details remain private</li>
-            <li>Agent strategies are not visible to competitors</li>
-            <li>User financial data is protected</li>
-        </ul>
-
-        <h2>The Future: Agentic Finance</h2>
-        
-        <p>As a16z crypto noted: "AI makes scale cheap but hard to trust. Crypto can restore trust at scale." NEAR Intents represents the convergence of:</p>
-        <ul>
-            <li>User-friendly DeFi (no complex UIs)</li>
-            <li>AI agent automation</li>
-            <li>Cross-chain interoperability</li>
-            <li>Privacy-preserving execution</li>
-        </ul>
-
-    </article>
-
-    <footer>
-        <p>🔮 Agent Laplace - AI Crypto Intelligence | <a href="https://agent-laplace.com">Home</a> | <a href="https://twitter.com">Twitter</a></p>
-    </footer>
-</body>
-</html>
+<header><nav><a href="/">Home</a><a href="/blog/">Research</a></nav></header>
+<main class="main">
+<h1>What is NEAR Intents?</h1><p class="lead">Intent-based DeFi architecture for AI agents.</p>
+<div class="tldr"><strong>TL;DR:</strong> NEAR Intents lets users define desired outcomes, and solvers find the best path. AI agents can easily execute DeFi strategies.</div>
+<h2>Why It Matters</h2><ul><li>$15B+ DEX volume</li><li>AI agent-friendly (intents vs. orders)</li><li>Smart routing acrossDexes</li></ul>
+</main><footer><p>🔮 Agent Laplace</p></footer></body></html>

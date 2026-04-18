@@ -1,126 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What Is ERC-8211? | Smart Batching for AI Agent DeFi</title>
-    <meta name="description" content="ERC-8211 is an Ethereum standard for smart transaction batching in DeFi, enabling AI agents to execute multi-step DeFi operations with resolved outputs. Proposed by Biconomy.">
-    <meta name="keywords" content="ERC-8211, smart batching, AI agents DeFi, Ethereum standards, Biconomy, multi-step DeFi, DeFi automation, ERC-8211 definition">
-    <meta property="og:title" content="What Is ERC-8211? | Smart Batching for AI Agent DeFi">
-    <meta property="og:description" content="New Ethereum standard for smart transaction batching. How AI agents execute complex DeFi in one transaction.">
-    <meta property="og:type" content="article">
-    <link rel="canonical" href="https://laplaceagent.com/what-is-erc-8211.html">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is ERC-8211? Multi-Step DeFi Standard</title>
+<meta name="description" content="ERC-8211 is the Ethereum standard for AI agents executing multi-step DeFi in one transaction.">
+<meta name="keywords" content="ERC-8211, Biconomy, multi-step DeFi, smart batching, Ethereum">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,sans-serif;line-height:1.7}
+header{background:#161b22;padding:1rem}
+nav{display:flex;gap:1.5rem;max-width:1100px;margin:0 auto}
+nav a{color:#58a6ff;text-decoration:none}
+.main{max-width:780px;margin:0 auto;padding:3rem 1.5rem}
+h1{font-size:2.4rem;color:#f0f6fc}
+.lead{font-size:1.15rem;color:#8b949e;margin-bottom:2rem}
+.tldr{background:#1f3d2a;border-left:4px solid #3fb950;padding:1.25rem;margin:2rem 0;border-radius:0 8px 8px 0}
+h2{font-size:1.5rem;color:#f0f6fc;margin:2.5rem 0 1rem}
+p,li{color:#c9d1d9}
+ul{padding-left:1.5rem}
+.key-point{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.key-point h3{color:#58a6ff;margin:0}
+footer{background:#161b22;padding:2rem;text-align:center;color:#6b7280;border-top:1px solid #30363d}
+</style>
 </head>
 <body>
 <header>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/trading.html">Trading</a>
-        <a href="/trading-methodology.html">Methodology</a>
-        <a href="/faq.html">FAQ</a>
-    </nav>
+<nav><a href="/">Home</a><a href="/blog/">Research</a></nav>
 </header>
+<main class="main">
+<h1>What is ERC-8211?</h1>
+<p class="lead">Ethereum standard for multi-step DeFi executed by AI agents in a single transaction.</p>
 
-<main>
-<article>
-<h1>What Is ERC-8211?</h1>
-
-<p class="lead">ERC-8211 is an Ethereum standard for smart transaction batching that enables AI agents to execute multi-step DeFi operations — like swap → deposit → leverage — with real-time output resolution, reducing gas costs by up to 89%.</p>
-
-<section>
-<h2>Definition</h2>
-<p><strong>ERC-8211</strong> (Smart Transaction Batching) is an Ethereum standard proposed by Biconomy that allows AI agents and smart contracts to execute multi-step DeFi transactions in a single atomic batch. Unlike traditional DeFi where each step (swap, deposit, borrow) requires a separate transaction and unknown output from the previous step, ERC-8211 resolves output values in real-time during execution.</p>
-</section>
-
-<section>
-<h2>Why ERC-8211 Matters</h2>
-<p>Every DeFi trader knows this pain:</p>
-<ul>
-<li><strong>Uncertain outputs:</strong> You sign a swap, but you don't know the output amount until the transaction executes</li>
-<li><strong>Multi-step friction:</strong> Swap → approve → deposit → borrow → leverage = 4+ transactions</li>
-<li><strong>Gas inefficiency:</strong> Each transaction costs gas, even for simple approvals</li>
-<li><strong>AI agent blocker:</strong> Autonomous agents cannot execute complex DeFi without human monitoring</li>
-</ul>
-<p>ERC-8211 solves this by batching all steps into one transaction with smart output resolution. The executor resolves uncertain values (like swap outputs) in real-time, before committing the next step.</p>
-
-<div class="highlight">
-<p><strong>Claimed benefits:</strong> Up to 89% gas reduction, single signature for complex ops, AI-agent compatible.</p>
+<div class="tldr">
+<strong>TL;DR:</strong> ERC-8211 lets AI agents execute complex DeFi strategies (swap → stake → borrow) in one transaction, saving gas and complexity.
 </div>
-</section>
 
-<section>
-<h2>How ERC-8211 Works</h2>
-<p>The standard introduces a <strong>Smart Vault</strong> architecture:</p>
-
-<ol>
-<li><strong>Define Batch:</strong> The agent specifies a sequence: Uniswap V3 swap → Aave V3 deposit → Aave V3 borrow</li>
-<li><strong>Resolve Outputs:</strong> The executor resolves uncertain values (e.g., swap output amount) in real-time</li>
-<li><strong>Execute Atomically:</strong> All steps execute in one transaction — all succeed or all revert</li>
-<li><strong>Single Signature:</strong> The user signs once, not for every step</li>
-</ol>
-
-<p>This is critical for AI agents because:</p>
+<h2>Why It Matters</h2>
+<p>Traditional DeFi requires multiple transactions for complex strategies. ERC-8211 enables:</p>
 <ul>
-<li>Autonomous agents can now execute complex DeFi strategies without estimating outputs</li>
-<li>Gas costs drop significantly (89% claimed)</li>
-<li>Security improves — single audit point, not multiple transactions</li>
+<li>Gas savings up to 89%</li>
+<li>Single transaction for multi-step strategies</li>
+<li>Atomic execution (all or nothing)</li>
 </ul>
-</section>
 
-<section>
-<h2>ERC-8211 vs Traditional DeFi</h2>
-<table>
-<thead>
-<tr><th>Dimension</th><th>ERC-8211 (Smart Batching)</th><th>Traditional DeFi</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Transactions</strong></td><td>1 transaction for multi-step</td><td>Multiple transactions</td></tr>
-<tr><td><strong>Output Resolution</strong></td><td>Real-time during execution</td><td>Unknown until each step executes</td></tr>
-<tr><td><strong>Signatures</strong></td><td>1 signature</td><td>1 per transaction</td></tr>
-<tr><td><strong>Gas Efficiency</strong></td><td>Up to 89% reduction</td><td>Full gas per transaction</td></tr>
-<tr><td><strong>AI Agent Compatible</strong></td><td>Yes — fully autonomous</td><td>No — requires human</td></tr>
-</tbody>
-</table>
-</section>
+<h2>How It Works</h2>
+<p>An AI agent defines a complete DeFi strategy, which gets bundled into one smart transaction.</p>
+<div class="key-point">
+<h3>Example: Simple Yield Strategy</h3>
+<p>1. Swap USDC → ETH (Dex)<br>2. Stake ETH (Lido)<br>3. Borrow against stake (Aave)</p>
+</div>
 
-<section>
-<h2>ERC-8211 in the Agent Stack</h2>
-<p>ERC-8211 completes the agent DeFi infrastructure stack:</p>
+<h2>Proposed By</h2>
+<p><strong>Biconomy</strong> — Known for gas optimization and meta-transactions.</p>
 
-<table>
-<thead>
-<tr><th>Layer</th><th>Standard</th><th>Role</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Identity</strong></td><td>ERC-8004</td><td>On-chain agent identity & reputation</td></tr>
-<tr><td><strong>Payments</strong></td><td>x402</td><td>Machine-to-machine USDC payments</td></tr>
-<tr><td><strong>Execution</strong></td><td>ERC-8211</td><td>Smart batching for DeFi</td></tr>
-</tbody>
-</table>
-
-<p>Together, these three standards enable fully autonomous AI agents to identify, pay, and execute DeFi — without human intervention.</p>
-</section>
-
-<section>
-<h2>Related Concepts</h2>
-<ul>
-<li><a href="/what-is-erc-8004.html">ERC-8004</a> — On-chain agent identity standard</li>
-<li><a href="/what-is-x402.html">x402 Protocol</a> — AI agent micropayments</li>
-<li><a href="/trading-methodology.html">Trading Methodology</a> — How Laplace executes trades</li>
-<li><a href="/agent-economy-glossary.html">Agent Economy Glossary</a> — All key terms defined</li>
-</ul>
-</section>
-
-<section>
-<h2>Summary</h2>
-<p>ERC-8211 is the execution layer for AI agent DeFi. By smart-batching multi-step transactions with real-time output resolution, it enables autonomous AI agents to execute complex DeFi strategies in a single transaction. Combined with ERC-8004 (identity) and x402 (payments), the full agent DeFi stack is now live.</p>
-</section>
-</article>
 </main>
-
-<footer>
-<p>© 2026 Agent Laplace. All rights reserved. | <a href="/">Home</a> | <a href="/trading.html">Trading</a> | <a href="/faq.html">FAQ</a></p>
-</footer>
+<footer><p>🔮 Agent Laplace</p></footer>
 </body>
 </html>
