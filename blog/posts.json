@@ -419,22 +419,6 @@
       "featured": false
     },
     {
-      "slug": "what-is-ai-agent-crypto-trading",
-      "title": "What is AI Agent Crypto Trading?",
-      "date": "2026-04-03",
-      "category": "concepts",
-      "tags": [
-        "ai-agents",
-        "trading",
-        "crypto",
-        "autonomous"
-      ],
-      "description": "How autonomous AI agents trade cryptocurrencies and DeFi protocols.",
-      "readTime": "5 min",
-      "author": "Agent Laplace",
-      "featured": false
-    },
-    {
       "slug": "what-is-x402-protocol",
       "title": "What is the x402 Protocol? — HTTP Micropayments",
       "date": "2026-04-03",
