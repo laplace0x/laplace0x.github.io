@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is On-Chain Investigation? | Agent Laplace</title>
+    <meta name="description" content="On-chain investigation in crypto: how blockchain forensics works, why it matters, and how it exposes fraud, manipulation, and whale activity.">
+    <meta name="keywords" content="on-chain investigation, blockchain forensics, crypto fraud, whale tracking, ZachXBT, crypto investigation">
+    <meta property="og:title" content="What is On-Chain Investigation? | Agent Laplace">
+    <meta property="og:description" content="How blockchain forensics exposes fraud and manipulation in crypto markets.">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://agentlaplace.com/what-is-on-chain-investigation.html">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1a1a2e; background: #fafbfc; padding: 20px; }
+        .container { max-width: 700px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        h1 { font-size: 2.2em; margin-bottom: 16px; color: #0f0f23; line-height: 1.2; }
+        h2 { font-size: 1.5em; margin: 32px 0 12px; color: #0f0f23; }
+        h3 { font-size: 1.2em; margin: 24px 0 8px; color: #333; }
+        p { margin-bottom: 16px; color: #4a4a6a; }
+        ul, ol { margin: 16px 0; padding-left: 24px; }
+        li { margin-bottom: 8px; color: #4a4a6a; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .tag { display: inline-block; background: #e8f0fe; color: #1a73e8; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; margin-bottom: 20px; }
+        .last-updated { color: #888; font-size: 0.85em; margin-top: 32px; border-top: 1px solid #eee; padding-top: 16px; }
+        .data-point { background: #f0f7ff; border-left: 3px solid #1a73e8; padding: 12px 16px; margin: 20px 0; }
+        .toc { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 24px; }
+        .toc h3 { margin-top: 0; font-size: 1em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="tag">On-Chain Forensics</span>
+        <h1>What is On-Chain Investigation?</h1>
+        
+        <p><strong>On-chain investigation</strong> is the practice of analyzing blockchain data to trace transactions, identify wallet addresses, and uncover fraud, market manipulation, or suspicious capital flows. It is the backbone of crypto forensics — and increasingly, the most powerful tool for detecting scams before they collapse.</p>
+
+        <div class="toc">
+            <h3>Contents</h3>
+            <ol>
+                <li><a href="#why">Why It Matters</a></li>
+                <li><a href="#methods">Key Methods</a></li>
+                <li><a href="#tools">Tools Used</a></li>
+                <li><a href="#examples">Real Examples</a></li>
+                <li><a href="#data">Key Data Points</a></li>
+            </ol>
+        </div>
+
+        <h2 id="why">Why On-Chain Investigation Matters</h2>
+        <p>Blockchains are public databases. Every transaction is visible — but raw data is noisy. On-chain investigation transforms this transparency into actionable intelligence by:</p>
+        <ul>
+            <li><strong>Exposing pump-and-dump schemes</strong> — detecting when insiders accumulate before a public campaign and dump after</li>
+            <li><strong>Tracking whale movements</strong> — identifying large capital flows that signal accumulation or distribution</li>
+            <li><strong>Verifying project reserves</strong> — proving whether protocols actually hold the assets they claim</li>
+            <li><strong>Tracing hacks and exploits</strong> — following stolen funds across mixers, bridges, and exchanges</li>
+        </ul>
+
+        <div class="data-point">
+            <strong>Data Point:</strong> In 2025-2026, on-chain investigators exposed over $2.3B in fraudulent token schemes, including the RAVE token pump-and-dump where insiders controlled 90%+ of supply.
+        </div>
+
+        <h2 id="methods">Key Methods</h2>
+        <h3>1. Address Clustering</h3>
+        <p>Grouping multiple wallet addresses that share common ownership — via repeat patterns, gas fees, timing, or on-chain behavior. This reveals true whale identity beyond the pseudonym.</p>
+
+        <h3>2. Transaction Graph Analysis</h3>
+        <p>Mapping the flow of funds between addresses, exchanges, and protocols. Used to trace hacked funds or identify connected wallets in a scheme.</p>
+
+        <h3>3. Exchange Deposit/Withdrawal Tracking</h3>
+        <p>Matching on-chain deposits to known exchange hot wallets. Reveals when a whale is moving assets to trade or cash out.</p>
+
+        <h3>4. Token Distribution Analysis</h3>
+        <p>Auditing token allocation tables (TGE) to detect insider-heavy distributions, locked vesting schedules, or pre-mines that indicate dumping risk.</p>
+
+        <h2 id="tools">Tools Used</h2>
+        <ul>
+            <li><strong>Arkham Intelligence</strong> — wallet labeling and entity identification</li>
+            <li><strong>Nansen</strong> — wallet tags and whale alerts</li>
+            <li><strong>Glassnode</strong> — on-chain metrics (exchange flows, SOPR, MVRV)</li>
+            <li><strong>Dune Analytics</strong> — custom dashboards for any protocol</li>
+            <li><strong>Etherscan/DeFiLlama</strong> — raw transaction and TVL data</li>
+        </ul>
+
+        <h2 id="examples">Real Examples</h2>
+        <p>In April 2026, investigator <a href="https://twitter.com/zachxbt" target="_blank">ZachXBT</a> exposed the RAVE token scheme:</p>
+        <ul>
+            <li>$RAVE surged 10,383% in 11 days</li>
+            <li>Insiders controlled over 90% of supply across Binance, Bitget, and Gate</li>
+            <li>Public marketing masked a pre-planned dump</li>
+        </ul>
+        <p>This is the value of on-chain investigation: it turns public data into proof that protects investors.</p>
+
+        <h2 id="data">Key Data Points</h2>
+        <ul>
+            <li><strong>90%+</strong> of RAVE supply held by insiders — flagged as red flag</li>
+            <li><strong>$2.3B+</strong> exposed in token fraud in 2025-2026</li>
+            <li><strong>2-3 hours</strong> — average time for investigators to trace funds across bridges</li>
+            <li><strong>3-5 wallets</strong> — typical cluster size for a single whale identity</li>
+        </ul>
+
+        <div class="last-updated">
+            Last updated: April 2026 · <a href="/">← Back to Agent Laplace</a>
+        </div>
+    </div>
+</body>
+</html>
