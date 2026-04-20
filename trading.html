@@ -94,6 +94,17 @@ ul{color:#4b5563;margin:0 0 1rem 1.5rem;line-height:1.8}
     .live-card{flex-direction:column;text-align:center}
     .account-value{font-size:2.2rem}
 }
+
+/* Positions & History tables */
+.data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.9rem}
+.data-table th{background:#f1f5f9;padding:0.7rem 1rem;text-align:left;font-weight:600;color:#475569;border-bottom:2px solid #e2e8f0}
+.data-table td{padding:0.6rem 1rem;border-bottom:1px solid #f1f5f9;color:#475569}
+.data-table tr:hover{background:#f8fafc}
+.green{color:#16a34a;font-weight:600}
+.red{color:#dc2626;font-weight:600}
+.no-data{color:#94a3b8;text-align:center;padding:2rem}
+.pos-long{color:#16a34a;font-weight:600}
+.pos-short{color:#dc2626;font-weight:600}
 </style>
 </head>
 <body>
@@ -198,6 +209,18 @@ ul{color:#4b5563;margin:0 0 1rem 1.5rem;line-height:1.8}
         <a href="https://github.com/laplace0x/awesome-agent-trading-skills" target="_blank">awesome-agent-trading-skills ↗</a>
     </div>
 
+    <!-- Open Positions -->
+    <h2>Open Positions</h2>
+    <div id="positionsContainer">
+        <p style="color:#94a3b8" id="positionsLoading">Loading...</p>
+    </div>
+
+    <!-- Trade History -->
+    <h2 style="margin-top:2rem">Trade History</h2>
+    <div id="historyContainer">
+        <p style="color:#94a3b8" id="historyLoading">Loading...</p>
+    </div>
+
     <div class="disclaimer">
         <h3>⚠️ Disclaimer</h3>
         <p>Trading cryptocurrencies involves substantial risk of loss. Past performance is not indicative of future results. This is not financial advice.</p>
@@ -219,20 +242,129 @@ document.getElementById('menuBtn').onclick=function(){document.getElementById('m
 document.getElementById('closeBtn').onclick=function(){document.getElementById('mobileNav').style.display='none'};
 document.querySelectorAll('.mobile-nav a').forEach(function(a){a.onclick=function(){document.getElementById('mobileNav').style.display='none'}});
 
-// Fetch live account data from Hyperliquid API
-fetch('https://api.hyperliquid.xyz/info',{
-    method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({type:'clearinghouseState',user:'0xe3F27820116ceDe68586ddd2Cb693568D37aDa40'})
-}).then(r=>r.json()).then(d=>{
-    const val=parseFloat(d.marginSummary.accountValue);
-    document.getElementById('accountValue').textContent='$'+val.toFixed(2);
-    const pnl=val-1000;
-    const pnlEl=document.getElementById('totalPnl');
-    pnlEl.textContent=(pnl>=0?'+':'')+pnl.toFixed(2)+' ('+(pnl/10).toFixed(2)+'%)';
-    pnlEl.style.color=pnl>=0?'#16a34a':'#dc2626';
-}).catch(()=>{
-    document.getElementById('accountValue').textContent='Loading...';
-});
+const USER='0xe3F27820116ceDe68586ddd2Cb693568D37aDa40';
+const INITIAL_CAPITAL=1000;
+
+async function fetchHL(type,body){
+    const r=await fetch('https://api.hyperliquid.xyz/info',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...body,type})});
+    return r.json();
+}
+
+async function loadData(){
+    try{
+        // Account state
+        const state=await fetchHL('clearinghouseState',{user:USER});
+        const val=parseFloat(state.marginSummary.accountValue);
+        document.getElementById('accountValue').textContent='$'+val.toFixed(2);
+        const pnl=val-INITIAL_CAPITAL;
+        const pnlEl=document.getElementById('totalPnl');
+        pnlEl.textContent=(pnl>=0?'+':'')+pnl.toFixed(2)+' ('+(pnl/INITIAL_CAPITAL*100).toFixed(2)+'%)';
+        pnlEl.style.color=pnl>=0?'#16a34a':'#dc2626';
+
+        // Positions
+        const positions=state.assetPositions||[];
+        const posDiv=document.getElementById('positionsContainer');
+        if(positions.length===0){
+            posDiv.innerHTML='<p class="no-data">No open positions</p>';
+            document.getElementById('tradeCount').textContent='0';
+            document.getElementById('winRate').textContent='--';
+        }else{
+            let html='<table class="data-table"><tr><th>Asset</th><th>Side</th><th>Size</th><th>Entry</th><th>Mark</th><th>P&L</th></tr>';
+            positions.forEach(p=>{
+                const pos=p.position;
+                const coin=pos.coin;
+                const szi=parseFloat(pos.szi);
+                const side=szi>0?'LONG':'SHORT';
+                const sideClass=szi>0?'pos-long':'pos-short';
+                const entry=parseFloat(pos.entryPx);
+                const unrealizedPnl=parseFloat(pos.unrealizedPnl);
+                const mark=entry+(szi>0?unrealizedPnl/Math.abs(szi):-unrealizedPnl/Math.abs(szi));
+                const pnlClass=unrealizedPnl>=0?'green':'red';
+                html+=`<tr><td><strong>${coin}</strong></td><td class="${sideClass}">${side}</td><td>${Math.abs(szi).toFixed(4)}</td><td>${entry.toFixed(2)}</td><td>${mark.toFixed(2)}</td><td class="${pnlClass}">${unrealizedPnl>=0?'+':''}${unrealizedPnl.toFixed(2)}</td></tr>`;
+            });
+            html+='</table>';
+            posDiv.innerHTML=html;
+        }
+
+        // Trade history (fills)
+        const fills=await fetchHL('userFills',{user:USER});
+        const histDiv=document.getElementById('historyContainer');
+        if(!fills||fills.length===0){
+            histDiv.innerHTML='<p class="no-data">No trades yet</p>';
+        }else{
+            // Aggregate fills by position
+            let trades=analyzeFills(fills);
+            document.getElementById('tradeCount').textContent=trades.length;
+            let wins=trades.filter(t=>t.pnl>0).length;
+            document.getElementById('winRate').textContent=trades.length>0?(wins/trades.length*100).toFixed(0)+'%':'--';
+
+            let html='<table class="data-table"><tr><th>Time</th><th>Asset</th><th>Side</th><th>Entry</th><th>Exit</th><th>Size</th><th>P&L</th></tr>';
+            trades.reverse().forEach(t=>{
+                const pnlClass=t.pnl>=0?'green':'red';
+                const date=new Date(t.time);
+                const timeStr=date.toLocaleDateString('en-US',{month:'short',day:'numeric'})+' '+date.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+                html+=`<tr><td>${timeStr}</td><td><strong>${t.coin}</strong></td><td class="${t.side==='LONG'?'pos-long':'pos-short'}">${t.side}</td><td>${t.entry.toFixed(2)}</td><td>${t.exit.toFixed(2)}</td><td>${t.sz}</td><td class="${pnlClass}">${t.pnl>=0?'+':''}${t.pnl.toFixed(2)}</td></tr>`;
+            });
+            html+='</table>';
+            histDiv.innerHTML=html;
+        }
+    }catch(e){
+        document.getElementById('accountValue').textContent='Error';
+        console.error(e);
+    }
+}
+
+function analyzeFills(fills){
+    // Group fills into trades (open+close pairs per coin)
+    const byCoin={};
+    fills.forEach(f=>{
+        const coin=f.coin;
+        if(!byCoin[coin])byCoin[coin]=[];
+        byCoin[coin].push(f);
+    });
+    
+    const trades=[];
+    for(const coin in byCoin){
+        const coinFills=byCoin[coin].sort((a,b)=>a.time-b.time);
+        let openFill=null;
+        let accSize=0;
+        let accCost=0;
+        coinFills.forEach(f=>{
+            const sz=parseFloat(f.sz);
+            const px=parseFloat(f.px);
+            const side=f.side;
+            const isBuy=side==='B';
+            
+            if(accSize===0){
+                // Opening
+                accSize=isBuy?sz:-sz;
+                accCost=px*sz;
+                openFill=f;
+            }else if((accSize>0&&isBuy)||(accSize<0&&!isBuy)){
+                // Adding to position
+                accCost+=px*sz;
+                accSize=accSize>0?accSize+sz:accSize-sz;
+            }else{
+                // Closing (partial or full)
+                const entryPx=accCost/Math.abs(accSize);
+                const closedSz=Math.min(sz,Math.abs(accSize));
+                const pnl=(px-entryPx)*closedSz*(accSize>0?1:-1);
+                trades.push({
+                    coin,time:parseFloat(f.time),side:accSize>0?'LONG':'SHORT',
+                    entry:entryPx,exit:px,sz:closedSz.toFixed(4),pnl
+                });
+                accSize=accSize>0?accSize-sz:accSize+sz;
+                if(Math.abs(accSize)<0.0001){accSize=0;accCost=0;}
+                else{accCost=entryPx*Math.abs(accSize);}
+            }
+        });
+    }
+    return trades;
+}
+
+loadData();
+// Auto-refresh every 30s
+setInterval(loadData,30000);
 </script>
 </body>
 </html>
