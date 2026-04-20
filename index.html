@@ -145,6 +145,7 @@ body{background:#ffffff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFo
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
+    body{overflow-x:hidden}
     .nav{display:none !important}
     .hamburger{display:block !important}
     .mobile-nav.open{display:block}
@@ -156,19 +157,28 @@ body{background:#ffffff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFo
     h1{font-size:1.6rem !important}
     h2{font-size:1.35rem !important}
     h3{font-size:1.15rem !important}
-    .hero h2,.hero h1{font-size:1.6rem !important}
-    .hero{padding:2rem 1rem !important}
-    .hero-content{padding:0 1rem !important}
+    .hero h2,.hero h1{font-size:1.5rem !important}
+    .hero{padding:2rem 0.5rem !important}
+    .hero-content{padding:0 0.5rem !important}
+    .hero .subtitle{font-size:0.95rem !important}
     .section-container,.stats-container,.footer-content{padding:0 1rem !important}
     .container{padding:1rem !important}
-    table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}
-    pre{font-size:0.8rem;padding:1rem !important}
-    .grid,.stat-grid,.identity-grid{grid-template-columns:1fr !important}
-    .stats-grid{grid-template-columns:repeat(2,1fr) !important}
+    .section-title{font-size:1.4rem !important}
+    .section-subtitle{font-size:0.95rem !important}
+    .stats{padding:1.5rem 0 !important}
+    .stats-grid{grid-template-columns:repeat(2,1fr) !important;gap:0.8rem !important}
+    .stat-item{padding:1rem !important}
+    .stat-number{font-size:1.6rem !important}
+    .stat-label{font-size:0.7rem !important}
     .services-grid{grid-template-columns:1fr !important}
     .reviews-grid{grid-template-columns:1fr !important}
+    .services,.reviews{padding:2.5rem 0 !important}
+    .identity-grid{grid-template-columns:1fr !important}
+    .grid,.stat-grid{grid-template-columns:1fr !important}
+    table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}
+    pre{font-size:0.8rem;padding:1rem !important}
     .blog-post{padding:1.2rem !important}
-    .blog-header h1{font-size:1.6rem !important}
+    .blog-header h1{font-size:1.5rem !important}
     .blog-controls{flex-direction:column;align-items:stretch !important}
     .search-input{width:100% !important}
     .post-meta{gap:0.4rem}
@@ -183,8 +193,8 @@ body{background:#ffffff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFo
 @media (max-width: 480px) {
     h1{font-size:1.35rem !important}
     h2{font-size:1.2rem !important}
-    .hero h2,.hero h1{font-size:1.35rem !important}
-    .stat-num,.data-label,.stat-number{font-size:1.5rem !important}
+    .hero h2,.hero h1{font-size:1.3rem !important}
+    .stat-num,.data-label,.stat-number{font-size:1.3rem !important}
     .big{font-size:1.2rem !important}
     .highlight,.tldr,.score-card,.summary,.card,.protocol,.insight,.key-point,.alert,.warning,.toc{padding:1rem !important}
     .stats-grid{grid-template-columns:1fr !important}
