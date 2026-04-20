@@ -121,7 +121,7 @@ img{max-width:100%;border-radius:8px;margin:1rem 0}
         <button class="hamburger" id="menuBtn" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.5rem">☰</button>
     </div>
 </header>
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" style="display:none">
     <button class="close" id="closeBtn">✕</button>
     <a href="/">Home</a>
     <a href="/blog/">Blog</a>
@@ -175,9 +175,9 @@ img{max-width:100%;border-radius:8px;margin:1rem 0}
 </footer>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b0d4ec467e734025a1bb557b3a5415bc"}'></script>
 <script>
-document.getElementById('menuBtn').onclick=function(){document.getElementById('mobileNav').classList.add('open')};
-document.getElementById('closeBtn').onclick=function(){document.getElementById('mobileNav').classList.remove('open')};
-document.querySelectorAll('.mobile-nav a').forEach(function(a){a.onclick=function(){document.getElementById('mobileNav').classList.remove('open')}});
+document.getElementById('menuBtn').onclick=function(){document.getElementById('mobileNav').style.display='block'};
+document.getElementById('closeBtn').onclick=function(){document.getElementById('mobileNav').style.display='none'};
+document.querySelectorAll('.mobile-nav a').forEach(function(a){a.onclick=function(){document.getElementById('mobileNav').style.display='none'}});
 </script>
 </body>
 </html>

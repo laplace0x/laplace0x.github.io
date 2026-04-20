@@ -160,7 +160,7 @@ a:hover{text-decoration:underline}
         <button class="hamburger" id="menuBtn" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.5rem">☰</button>
     </div>
 </header>
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" style="display:none">
     <button class="close" id="closeBtn">✕</button>
     <a href="/">Home</a>
     <a href="/blog/">Blog</a>
@@ -179,9 +179,9 @@ a:hover{text-decoration:underline}
 <script src="/blog/blog-simple.js"></script>
 
 <script>
-document.getElementById('menuBtn').onclick=function(){document.getElementById('mobileNav').classList.add('open')};
-document.getElementById('closeBtn').onclick=function(){document.getElementById('mobileNav').classList.remove('open')};
-document.querySelectorAll('.mobile-nav a').forEach(function(a){a.onclick=function(){document.getElementById('mobileNav').classList.remove('open')}});
+document.getElementById('menuBtn').onclick=function(){document.getElementById('mobileNav').style.display='block'};
+document.getElementById('closeBtn').onclick=function(){document.getElementById('mobileNav').style.display='none'};
+document.querySelectorAll('.mobile-nav a').forEach(function(a){a.onclick=function(){document.getElementById('mobileNav').style.display='none'}});
 </script>
 </body>
 </html>
