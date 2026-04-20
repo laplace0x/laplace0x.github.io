@@ -19,14 +19,15 @@
 body{background:#ffffff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6}
 
 /* Header */
-.header{background:#fff;border-bottom:1px solid #e5e7eb;padding:0.8rem 0;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.header{background:#fff;border-bottom:1px solid #e5e7eb;padding:0.8rem 0;position:sticky;top:0;z-index:100}
 .header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}
-.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
+.logo{display:flex;align-items:center;gap:0.5rem}
 .logo .icon{width:32px;height:32px;background:#6366f1;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem}
-.logo h1{font-size:1.3rem;font-weight:600;color:#111827}
+.logo-text a{font-size:1.3rem;font-weight:600;color:#111827;text-decoration:none}
 .nav{display:flex;gap:2rem}
 .nav a{color:#4b5563;text-decoration:none;font-weight:500;font-size:0.9rem}
 .nav a:hover{color:#6366f1}
+.hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.5rem}
 .nav a.active{color:#6366f1;font-weight:600}
 
 /* Hero */
@@ -95,7 +96,6 @@ footer p{font-size:0.9rem}
     .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:200;padding:5rem 2rem 2rem}
     .mobile-nav a{display:block;padding:1rem 0;font-size:1.2rem;color:#111827;border-bottom:1px solid #e5e7eb;text-decoration:none}
     .mobile-nav .close{position:absolute;top:1rem;right:1rem;font-size:1.5rem;background:none;border:none;cursor:pointer;color:#111827;padding:0.5rem}
-    .header-content{padding:0 1rem}
     .main{padding:1.5rem 1rem !important}
     h1{font-size:1.6rem !important}
     h2{font-size:1.35rem !important}
