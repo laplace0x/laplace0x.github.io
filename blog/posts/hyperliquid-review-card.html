@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="canonical" href="https://laplaceagent.com/blog/posts/hyperliquid-review-card.html">
 <style>
 body{background:#fff;font-family:-apple-system,sans-serif;padding:40px;max-width:800px;margin:0 auto}
 h1{font-size:1.8rem;color:#111827;margin-bottom:0.3rem}
@@ -20,6 +21,53 @@ td{padding:0.6rem 1rem;border-bottom:1px solid #f3f4f6;font-size:0.9rem}
 .section h2{font-size:1.2rem;color:#111827;margin-bottom:1rem}
 .code{background:#1f2937;color:#e5e7eb;padding:1rem;border-radius:8px;font-family:monospace;font-size:0.85rem;overflow-x:auto;margin:0.5rem 0}
 .highlight{background:#f8faff;border:1px solid #e0e7ff;border-radius:8px;padding:1rem;margin:0.5rem 0;font-size:0.9rem}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .header-content { padding: 0 1rem; }
+    .nav { display: none; }
+    .mobile-menu-btn { display: flex !important; }
+    .mobile-nav { display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 200; padding: 5rem 2rem 2rem; }
+    .mobile-nav a { display: block; padding: 1rem 0; font-size: 1.2rem; color: #111827; border-bottom: 1px solid #e5e7eb; text-decoration: none; }
+    .mobile-nav-close { position: absolute; top: 1rem; right: 1rem; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: #111827; padding: 0.5rem; }
+    .main { padding: 1.5rem 1rem !important; }
+    h1 { font-size: 1.6rem !important; }
+    h2 { font-size: 1.35rem !important; }
+    h3 { font-size: 1.15rem !important; }
+    .hero h2, .hero h1 { font-size: 1.6rem !important; }
+    .hero { padding: 2rem 1rem !important; }
+    .hero-content { padding: 0 1rem !important; }
+    .section-container, .stats-container, .footer-content { padding: 0 1rem !important; }
+    .container { padding: 1rem !important; }
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    pre { font-size: 0.8rem; padding: 1rem !important; }
+    .grid, .stat-grid, .identity-grid { grid-template-columns: 1fr !important; }
+    .stats-grid { grid-template-columns: 1fr !important; }
+    .services-grid { grid-template-columns: 1fr !important; }
+    .reviews-grid { grid-template-columns: 1fr !important; }
+    .blog-post { padding: 1.2rem !important; }
+    .blog-header h1 { font-size: 1.6rem !important; }
+    .blog-controls { flex-direction: column; align-items: stretch !important; }
+    .search-input { width: 100% !important; }
+    .post-meta { gap: 0.4rem; }
+    .big { font-size: 1.5rem !important; }
+    .step { flex-direction: column; }
+    .cta { flex-direction: column; align-items: center; }
+    .btn { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
+    .footer-links { gap: 1.5rem; }
+    blockquote { margin-left: 0; margin-right: 0; }
+    img { max-width: 100%; height: auto; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.35rem !important; }
+    h2 { font-size: 1.2rem !important; }
+    .hero h2, .hero h1 { font-size: 1.35rem !important; }
+    .stat-num, .data-label, .stat-number { font-size: 1.5rem !important; }
+    .big { font-size: 1.2rem !important; }
+    .highlight, .tldr, .score-card, .summary, .card, .protocol, .insight, .key-point, .alert, .warning, .toc { padding: 1rem !important; }
+}
+
 </style>
 </head>
 <body>

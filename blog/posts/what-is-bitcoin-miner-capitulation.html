@@ -26,8 +26,7 @@ body{background:#fff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,
 .footer-content{max-width:1200px;margin:0 auto;padding:0 2rem}
 .footer-links{display:flex;justify-content:center;gap:3rem;margin-bottom:2rem;flex-wrap:wrap}
 .footer-links a{color:#d1d5db;text-decoration:none;font-weight:500}
-.footer-links a:hover{color:#fff}
-@media(max-width:768px){.nav{display:none}.header-content{padding:0 1rem}}
+.footer-links a:hover{color:#fff}.header-content{padding:0 1rem}}
 .main{max-width:800px;margin:0 auto;padding:3rem 2rem}
 h1{font-size:2.2rem;font-weight:700;color:#111827;margin-bottom:0.5rem}
 h2{font-size:1.6rem;font-weight:700;color:#111827;margin:2.5rem 0 1rem}
@@ -60,6 +59,53 @@ td{padding:0.75rem 1rem;border-bottom:1px solid #f3f4f6;color:#374151}
 .metric{background:#f8faff;border:1px solid #e0e7ff;border-radius:8px;padding:1.25rem;text-align:center}
 .step{display:flex;gap:1rem;margin:1rem 0;align-items:flex-start}
 .step-num{background:#6366f1;color:#fff;width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600;flex-shrink:0}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .header-content { padding: 0 1rem; }
+    .nav { display: none; }
+    .mobile-menu-btn { display: flex !important; }
+    .mobile-nav { display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 200; padding: 5rem 2rem 2rem; }
+    .mobile-nav a { display: block; padding: 1rem 0; font-size: 1.2rem; color: #111827; border-bottom: 1px solid #e5e7eb; text-decoration: none; }
+    .mobile-nav-close { position: absolute; top: 1rem; right: 1rem; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: #111827; padding: 0.5rem; }
+    .main { padding: 1.5rem 1rem !important; }
+    h1 { font-size: 1.6rem !important; }
+    h2 { font-size: 1.35rem !important; }
+    h3 { font-size: 1.15rem !important; }
+    .hero h2, .hero h1 { font-size: 1.6rem !important; }
+    .hero { padding: 2rem 1rem !important; }
+    .hero-content { padding: 0 1rem !important; }
+    .section-container, .stats-container, .footer-content { padding: 0 1rem !important; }
+    .container { padding: 1rem !important; }
+    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+    pre { font-size: 0.8rem; padding: 1rem !important; }
+    .grid, .stat-grid, .identity-grid { grid-template-columns: 1fr !important; }
+    .stats-grid { grid-template-columns: 1fr !important; }
+    .services-grid { grid-template-columns: 1fr !important; }
+    .reviews-grid { grid-template-columns: 1fr !important; }
+    .blog-post { padding: 1.2rem !important; }
+    .blog-header h1 { font-size: 1.6rem !important; }
+    .blog-controls { flex-direction: column; align-items: stretch !important; }
+    .search-input { width: 100% !important; }
+    .post-meta { gap: 0.4rem; }
+    .big { font-size: 1.5rem !important; }
+    .step { flex-direction: column; }
+    .cta { flex-direction: column; align-items: center; }
+    .btn { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
+    .footer-links { gap: 1.5rem; }
+    blockquote { margin-left: 0; margin-right: 0; }
+    img { max-width: 100%; height: auto; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.35rem !important; }
+    h2 { font-size: 1.2rem !important; }
+    .hero h2, .hero h1 { font-size: 1.35rem !important; }
+    .stat-num, .data-label, .stat-number { font-size: 1.5rem !important; }
+    .big { font-size: 1.2rem !important; }
+    .highlight, .tldr, .score-card, .summary, .card, .protocol, .insight, .key-point, .alert, .warning, .toc { padding: 1rem !important; }
+}
+
 </style>
 <script type="application/ld+json">
 {
