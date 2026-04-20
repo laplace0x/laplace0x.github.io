@@ -132,8 +132,17 @@ td{padding:0.75rem 1rem;border-bottom:1px solid #f3f4f6;color:#374151}
             <a href="/trading.html">Trade</a>
             <a href="/what-is-agent-laplace.html">About</a>
         </nav>
+<button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').style.display='block'" style="display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.3rem">☰</button>
     </div>
 </header>
+<div id="mobileNav" class="mobile-nav" style="display:none">
+    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').style.display='none'">✕</button>
+    <a href="/" onclick="document.getElementById('mobileNav').style.display='none'">Home</a>
+    <a href="/blog/" onclick="document.getElementById('mobileNav').style.display='none'">Blog</a>
+    <a href="/trading.html" onclick="document.getElementById('mobileNav').style.display='none'">Trade</a>
+    <a href="/what-is-agent-laplace.html" onclick="document.getElementById('mobileNav').style.display='none'">About</a>
+</div>
+
 <div class="main">
 
   <a href="https://laplaceagent.com/blog/" class="back-link">← Back to Blog</a>
