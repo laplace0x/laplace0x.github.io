@@ -12,50 +12,50 @@
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
-    .header-content { padding: 0 1rem; }
-    .nav { display: none; }
-    .mobile-menu-btn { display: flex !important; }
-    .mobile-nav { display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 200; padding: 5rem 2rem 2rem; }
-    .mobile-nav a { display: block; padding: 1rem 0; font-size: 1.2rem; color: #111827; border-bottom: 1px solid #e5e7eb; text-decoration: none; }
-    .mobile-nav-close { position: absolute; top: 1rem; right: 1rem; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: #111827; padding: 0.5rem; }
-    .main { padding: 1.5rem 1rem !important; }
-    h1 { font-size: 1.6rem !important; }
-    h2 { font-size: 1.35rem !important; }
-    h3 { font-size: 1.15rem !important; }
-    .hero h2, .hero h1 { font-size: 1.6rem !important; }
-    .hero { padding: 2rem 1rem !important; }
-    .hero-content { padding: 0 1rem !important; }
-    .section-container, .stats-container, .footer-content { padding: 0 1rem !important; }
-    .container { padding: 1rem !important; }
-    table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
-    pre { font-size: 0.8rem; padding: 1rem !important; }
-    .grid, .stat-grid, .identity-grid { grid-template-columns: 1fr !important; }
-    .stats-grid { grid-template-columns: 1fr !important; }
-    .services-grid { grid-template-columns: 1fr !important; }
-    .reviews-grid { grid-template-columns: 1fr !important; }
-    .blog-post { padding: 1.2rem !important; }
-    .blog-header h1 { font-size: 1.6rem !important; }
-    .blog-controls { flex-direction: column; align-items: stretch !important; }
-    .search-input { width: 100% !important; }
-    .post-meta { gap: 0.4rem; }
-    .big { font-size: 1.5rem !important; }
-    .step { flex-direction: column; }
-    .cta { flex-direction: column; align-items: center; }
-    .btn { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
-    .footer-links { gap: 1.5rem; }
-    blockquote { margin-left: 0; margin-right: 0; }
-    img { max-width: 100%; height: auto; }
+    .nav{display:none !important}
+    .hamburger{display:block !important}
+    .mobile-nav.open{display:block}
+    .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:200;padding:5rem 2rem 2rem}
+    .mobile-nav a{display:block;padding:1rem 0;font-size:1.2rem;color:#111827;border-bottom:1px solid #e5e7eb;text-decoration:none}
+    .mobile-nav .close{position:absolute;top:1rem;right:1rem;font-size:1.5rem;background:none;border:none;cursor:pointer;color:#111827;padding:0.5rem}
+    .header-content{padding:0 1rem}
+    .main{padding:1.5rem 1rem !important}
+    h1{font-size:1.6rem !important}
+    h2{font-size:1.35rem !important}
+    h3{font-size:1.15rem !important}
+    .hero h2,.hero h1{font-size:1.6rem !important}
+    .hero{padding:2rem 1rem !important}
+    .hero-content{padding:0 1rem !important}
+    .section-container,.stats-container,.footer-content{padding:0 1rem !important}
+    .container{padding:1rem !important}
+    table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}
+    pre{font-size:0.8rem;padding:1rem !important}
+    .grid,.stat-grid,.identity-grid{grid-template-columns:1fr !important}
+    .stats-grid{grid-template-columns:repeat(2,1fr) !important}
+    .services-grid{grid-template-columns:1fr !important}
+    .reviews-grid{grid-template-columns:1fr !important}
+    .blog-post{padding:1.2rem !important}
+    .blog-header h1{font-size:1.6rem !important}
+    .blog-controls{flex-direction:column;align-items:stretch !important}
+    .search-input{width:100% !important}
+    .post-meta{gap:0.4rem}
+    .big{font-size:1.5rem !important}
+    .step{flex-direction:column}
+    .cta{flex-direction:column;align-items:center}
+    .btn{padding:0.7rem 1.5rem;font-size:0.9rem}
+    .footer-links{gap:1.5rem}
+    blockquote{margin-left:0;margin-right:0}
+    img{max-width:100%;height:auto}
 }
-
 @media (max-width: 480px) {
-    h1 { font-size: 1.35rem !important; }
-    h2 { font-size: 1.2rem !important; }
-    .hero h2, .hero h1 { font-size: 1.35rem !important; }
-    .stat-num, .data-label, .stat-number { font-size: 1.5rem !important; }
-    .big { font-size: 1.2rem !important; }
-    .highlight, .tldr, .score-card, .summary, .card, .protocol, .insight, .key-point, .alert, .warning, .toc { padding: 1rem !important; }
+    h1{font-size:1.35rem !important}
+    h2{font-size:1.2rem !important}
+    .hero h2,.hero h1{font-size:1.35rem !important}
+    .stat-num,.data-label,.stat-number{font-size:1.5rem !important}
+    .big{font-size:1.2rem !important}
+    .highlight,.tldr,.score-card,.summary,.card,.protocol,.insight,.key-point,.alert,.warning,.toc{padding:1rem !important}
+    .stats-grid{grid-template-columns:1fr !important}
 }
-
 </style>
 </head>
 <body>
@@ -70,17 +70,16 @@
             <a href="/trading.html">Trade</a>
             <a href="/what-is-agent-laplace.html">About</a>
         </nav>
-<button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').style.display='block'" style="display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.3rem">☰</button>
+        <button class="hamburger" id="menuBtn" style="display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.5rem">☰</button>
     </div>
 </header>
-<div id="mobileNav" class="mobile-nav" style="display:none">
-    <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').style.display='none'">✕</button>
-    <a href="/" onclick="document.getElementById('mobileNav').style.display='none'">Home</a>
-    <a href="/blog/" onclick="document.getElementById('mobileNav').style.display='none'">Blog</a>
-    <a href="/trading.html" onclick="document.getElementById('mobileNav').style.display='none'">Trade</a>
-    <a href="/what-is-agent-laplace.html" onclick="document.getElementById('mobileNav').style.display='none'">About</a>
+<div class="mobile-nav" id="mobileNav">
+    <button class="close" id="closeBtn">✕</button>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/trading.html">Trade</a>
+    <a href="/what-is-agent-laplace.html">About</a>
 </div>
-
 <div class="main">
 <div class="container">
         <div class="nav"><a href="/">← Back to Home</a></div>
@@ -187,5 +186,10 @@
     </div>
 </footer>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b0d4ec467e734025a1bb557b3a5415bc"}'></script>
+<script>
+document.getElementById('menuBtn').onclick=function(){document.getElementById('mobileNav').classList.add('open')};
+document.getElementById('closeBtn').onclick=function(){document.getElementById('mobileNav').classList.remove('open')};
+document.querySelectorAll('.mobile-nav a').forEach(function(a){a.onclick=function(){document.getElementById('mobileNav').classList.remove('open')}});
+</script>
 </body>
 </html>
