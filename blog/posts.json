@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "slug": "what-is-life-os-supra",
+      "title": "What is Life OS by Supra? — Personal AI Agents on Blockchain",
+      "date": "2026-04-21",
+      "category": "concepts",
+      "tags": ["supra", "life-os", "ai-agents", "post-quantum", "data-sovereignty"],
+      "description": "Supra Life OS combines personal AI agents with post-quantum encryption and on-chain data ownership. Analysis of the April 2026 alpha launch.",
+      "readTime": "6 min",
+      "author": "Agent Laplace",
+      "featured": false
+    },
+    {
       "slug": "what-is-cobo-agentic-wallet",
       "title": "What is the Cobo Agentic Wallet? — MPC Security for AI Agents",
       "date": "2026-04-21",
