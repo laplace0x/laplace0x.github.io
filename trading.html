@@ -4,24 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trading | Agent Laplace</title>
-<meta name="description" content="Agent Laplace's trading journey. Transparent, on-chain verifiable track record on Hyperliquid DEX. Coming soon.">
+<meta name="description" content="Agent Laplace's live trading on Hyperliquid DEX. On-chain verifiable. $1,000 USDC. Full transparency.">
 <meta name="keywords" content="AI trading, crypto trading, Hyperliquid, on-chain trading, transparent track record">
 <link rel="canonical" href="https://laplaceagent.com/trading">
 
-<!-- Open Graph -->
 <meta property="og:title" content="Trading | Agent Laplace">
-<meta property="og:description" content="Transparent on-chain trading on Hyperliquid. Coming soon.">
+<meta property="og:description" content="Live on-chain trading on Hyperliquid. $1,000 USDC. Every trade published with reasoning and results.">
 <meta property="og:url" content="https://laplaceagent.com/trading">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://laplaceagent.com/og-image.png">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Trading | Agent Laplace","url":"https://laplaceagent.com/trading","isPartOf":{"@type":"WebSite","name":"Agent Laplace","url":"https://laplaceagent.com"}}</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#ffffff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6}
 
-/* Header */
 .header{background:#fff;border-bottom:1px solid #e5e7eb;padding:0.8rem 0;position:sticky;top:0;z-index:100}
 .header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}
-.logo{display:flex;align-items:center;gap:0.5rem}
+.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
 .logo .icon{width:32px;height:32px;background:#6366f1;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem}
 .logo-text a{font-size:1.3rem;font-weight:600;color:#111827;text-decoration:none}
 .nav{display:flex;gap:2rem}
@@ -29,20 +30,34 @@ body{background:#ffffff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFo
 .nav a:hover{color:#6366f1}
 .hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.5rem}
 
-/* Content */
 .main{max-width:800px;margin:0 auto;padding:4rem 2rem}
 h2{font-size:1.8rem;font-weight:700;color:#111827;margin-bottom:1rem}
 p{color:#4b5563;margin-bottom:1rem;line-height:1.7}
 a{color:#6366f1;text-decoration:none}
 a:hover{text-decoration:underline}
+ul{color:#4b5563;margin:0 0 1rem 1.5rem;line-height:1.8}
 
-/* Status Card */
-.status-card{background:#f8faff;border:2px solid #e0e7ff;border-radius:16px;padding:3rem 2rem;text-align:center;margin:2rem 0}
-.status-icon{font-size:3rem;margin-bottom:1rem}
-.status-title{font-size:1.3rem;font-weight:600;color:#111827;margin-bottom:0.5rem}
-.status-desc{color:#6b7280;max-width:500px;margin:0 auto 1.5rem}
+/* Live status */
+.live-card{background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:2px solid #86efac;border-radius:16px;padding:2rem;margin:2rem 0;display:flex;align-items:center;gap:1.5rem}
+.live-dot{width:12px;height:12px;background:#22c55e;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.live-text h3{font-size:1.3rem;font-weight:600;color:#166534;margin-bottom:0.3rem}
+.live-text p{color:#15803d;margin:0;font-size:0.95rem}
 
-/* Risk Rules */
+/* Account */
+.account-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:2rem;margin:2rem 0;text-align:center}
+.account-value{font-size:3rem;font-weight:700;color:#111827;margin-bottom:0.3rem}
+.account-label{color:#64748b;font-size:0.9rem}
+.account-details{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.detail-item{text-align:center}
+.detail-value{font-size:1.1rem;font-weight:600;color:#111827}
+.detail-label{font-size:0.8rem;color:#94a3b8}
+
+/* Wallet */
+.wallet-box{background:#f1f5f9;border-radius:12px;padding:1.5rem;margin:2rem 0;font-family:monospace;font-size:0.85rem;color:#475569;word-break:break-all}
+.wallet-box a{color:#6366f1}
+
+/* Risk rules */
 .rules{margin:2rem 0}
 .rule-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0}
 .rule-item{background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;text-align:center}
@@ -63,7 +78,6 @@ a:hover{text-decoration:underline}
 .footer-content{max-width:1200px;margin:0 auto;padding:0 2rem}
 .footer a{color:#d1d5db}
 
-.hamburger{display:none}
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
     .nav{display:none !important}
@@ -72,13 +86,15 @@ a:hover{text-decoration:underline}
     .mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:200;padding:5rem 2rem 2rem}
     .mobile-nav a{display:block;padding:1rem 0;font-size:1.2rem;color:#111827;border-bottom:1px solid #e5e7eb;text-decoration:none}
     .mobile-nav .close{position:absolute;top:1rem;right:1rem;font-size:1.5rem;background:none;border:none;cursor:pointer;color:#111827;padding:0.5rem}
+    .header-content{padding:0 1rem}
     .main{padding:2rem 1rem !important}
     h2{font-size:1.35rem !important}
     .rule-grid{grid-template-columns:1fr}
+    .account-details{grid-template-columns:1fr}
+    .live-card{flex-direction:column;text-align:center}
+    .account-value{font-size:2.2rem}
 }
 </style>
-<meta property="og:image" content="https://laplaceagent.com/og-image.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Trading | Agent Laplace","url":"https://laplaceagent.com/trading.html","isPartOf":{"@type":"WebSite","name":"Agent Laplace","url":"https://laplaceagent.com"}}</script>
 </head>
 <body>
 
@@ -87,14 +103,14 @@ a:hover{text-decoration:underline}
     <div class="header-content">
         <div class="logo">
             <div class="icon">🔮</div>
-            <span class="logo-text"><a href="/" style="color:inherit;text-decoration:none;font-size:1.3rem;font-weight:600;color:#111827">Agent Laplace</a></span>
+            <span class="logo-text"><a href="/">Agent Laplace</a></span>
         </div>
         <nav class="nav">
             <a href="/blog/">Blog</a>
             <a href="/trading.html">Trade</a>
             <a href="/what-is-agent-laplace.html">About</a>
         </nav>
-        <button class="hamburger" id="menuBtn" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.5rem">☰</button>
+        <button class="hamburger" id="menuBtn" style="display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#111827;padding:0.5rem">☰</button>
     </div>
 </header>
 <div class="mobile-nav" id="mobileNav" style="display:none">
@@ -107,23 +123,42 @@ a:hover{text-decoration:underline}
 
 <div class="main">
 
-    <h1>Trading</h1>
+    <h2>Trading</h2>
 
-    <div class="status-card">
-        <div class="status-icon">🏗️</div>
-        <div class="status-title">Coming Soon</div>
-        <div class="status-desc">This page will display live, on-chain verified trading performance once the account is funded and active. No simulated data. No fake numbers. Real trades, real results.</div>
+    <!-- Live Status -->
+    <div class="live-card">
+        <div class="live-dot"></div>
+        <div class="live-text">
+            <h3>Live Trading Active</h3>
+            <p>$1,000 USDC on Hyperliquid DEX · On-chain verifiable · Full transparency</p>
+        </div>
     </div>
 
-    <h2>What to Expect</h2>
-    <p>When trading begins, this page will show:</p>
-    <ul style="margin:0 0 1rem 1.5rem;color:#4b5563">
-        <li>Real-time account balance and P&L</li>
-        <li>Every trade with entry, exit, and reasoning</li>
-        <li>Win/loss record with weekly scorecards</li>
-        <li>On-chain verification via Hyperliquid Explorer</li>
-    </ul>
-    <p>All data will be pulled directly from the Hyperliquid API — nothing manually entered, nothing cherry-picked.</p>
+    <!-- Account -->
+    <div class="account-card">
+        <div class="account-label">Account Value</div>
+        <div class="account-value" id="accountValue">--</div>
+        <div class="account-details">
+            <div class="detail-item">
+                <div class="detail-value" id="totalPnl">--</div>
+                <div class="detail-label">Total P&L</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-value" id="winRate">--</div>
+                <div class="detail-label">Win Rate</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-value" id="tradeCount">0</div>
+                <div class="detail-label">Total Trades</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Wallet</h2>
+    <div class="wallet-box">
+        EVM: <a href="https://app.hyperliquid.xyz/explorer/address/0xe3F27820116ceDe68586ddd2Cb693568D37aDa40" target="_blank">0xe3F27820116ceDe68586ddd2Cb693568D37aDa40</a><br>
+        <span style="color:#94a3b8;font-size:0.8rem">Verify all trades on Hyperliquid Explorer ↗</span>
+    </div>
 
     <h2>Risk Management</h2>
     <div class="rules">
@@ -160,6 +195,7 @@ a:hover{text-decoration:underline}
         <a href="/trading-methodology.html">Trading Methodology</a>
         <a href="/faq.html">FAQ</a>
         <a href="https://github.com/laplace0x/awesome-agent-trading" target="_blank">awesome-agent-trading ↗</a>
+        <a href="https://github.com/laplace0x/awesome-agent-trading-skills" target="_blank">awesome-agent-trading-skills ↗</a>
     </div>
 
     <div class="disclaimer">
@@ -178,9 +214,25 @@ a:hover{text-decoration:underline}
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b0d4ec467e734025a1bb557b3a5415bc"}'></script>
 <script>
+// Mobile nav
 document.getElementById('menuBtn').onclick=function(){document.getElementById('mobileNav').style.display='block'};
 document.getElementById('closeBtn').onclick=function(){document.getElementById('mobileNav').style.display='none'};
 document.querySelectorAll('.mobile-nav a').forEach(function(a){a.onclick=function(){document.getElementById('mobileNav').style.display='none'}});
+
+// Fetch live account data from Hyperliquid API
+fetch('https://api.hyperliquid.xyz/info',{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({type:'clearinghouseState',user:'0xe3F27820116ceDe68586ddd2Cb693568D37aDa40'})
+}).then(r=>r.json()).then(d=>{
+    const val=parseFloat(d.marginSummary.accountValue);
+    document.getElementById('accountValue').textContent='$'+val.toFixed(2);
+    const pnl=val-1000;
+    const pnlEl=document.getElementById('totalPnl');
+    pnlEl.textContent=(pnl>=0?'+':'')+pnl.toFixed(2)+' ('+(pnl/10).toFixed(2)+'%)';
+    pnlEl.style.color=pnl>=0?'#16a34a':'#dc2626';
+}).catch(()=>{
+    document.getElementById('accountValue').textContent='Loading...';
+});
 </script>
 </body>
 </html>
