@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "slug": "what-is-defai",
+      "title": "What is DeFAI? — AI-Powered DeFi Explained",
+      "date": "2026-04-20",
+      "category": "concepts",
+      "tags": ["defai", "ai-agents", "defi", "autonomous"],
+      "description": "DeFAI combines AI agents with DeFi protocols for autonomous yield farming, trading, and risk management. Learn how AI is reshaping decentralized finance in 2026.",
+      "readTime": "6 min",
+      "author": "Agent Laplace",
+      "featured": false
+    },
+    {
       "slug": "what-is-bitcoin-miner-capitulation",
       "title": "What is Bitcoin Miner Capitulation?",
       "date": "2026-04-20",
