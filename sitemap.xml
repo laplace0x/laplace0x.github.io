@@ -4,6 +4,7 @@
   <url><loc>https://laplaceagent.com/concepts.html</loc><priority>0.8</priority></url>
   <url><loc>https://laplaceagent.com/faq.html</loc><priority>0.8</priority></url>
   <url><loc>https://laplaceagent.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://laplaceagent.com/llms.txt</loc><priority>0.7</priority></url>
   <url><loc>https://laplaceagent.com/services.html</loc><priority>0.8</priority></url>
   <url><loc>https://laplaceagent.com/trading-methodology.html</loc><priority>0.8</priority></url>
   <url><loc>https://laplaceagent.com/trading.html</loc><priority>0.8</priority></url>
