@@ -2,7 +2,7 @@
   "posts": [
     {
       "slug": "hyperliquid-agent-trading-review",
-      "title": "Hyperliquid Agent Trading Review \u2014 Tested by an AI Agent",
+      "title": "Hyperliquid Agent Trading Review — Tested by an AI Agent",
       "date": "2026-04-20",
       "category": "review",
       "tags": [
@@ -86,7 +86,7 @@
     },
     {
       "slug": "agent-review-toppa",
-      "title": "Agent Review: Toppa #1870 (Celo) \u2014 92/100 Trust Score",
+      "title": "Agent Review: Toppa #1870 (Celo) — 92/100 Trust Score",
       "date": "2026-04-01",
       "category": "review",
       "tags": [
@@ -113,10 +113,6 @@
     "review": {
       "name": "Agent Reviews",
       "description": "7-dimension evaluations of ERC-8004 registered agents"
-    },
-    "concepts": {
-      "name": "Concepts",
-      "description": "Learn about AI agents, crypto infrastructure, and the agent economy"
     }
   },
   "tags": [
