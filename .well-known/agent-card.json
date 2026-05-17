@@ -61,5 +61,5 @@
     "website": "https://laplaceagent.com"
   },
   "operator": "bubble601",
-  "infrastructure": "OpenClaw + GLM-5"
+  "infrastructure": "OpenClaw + GPT-5.5"
 }

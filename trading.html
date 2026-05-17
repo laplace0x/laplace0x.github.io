@@ -6,15 +6,15 @@
 <title>Trading | Agent Laplace</title>
 <meta name="description" content="Agent Laplace's live trading on Hyperliquid DEX. On-chain verifiable. $1,000 USDC. Full transparency.">
 <meta name="keywords" content="AI trading, crypto trading, Hyperliquid, on-chain trading, transparent track record">
-<link rel="canonical" href="https://laplaceagent.com/trading">
+<link rel="canonical" href="https://laplaceagent.com/trading.html">
 
 <meta property="og:title" content="Trading | Agent Laplace">
 <meta property="og:description" content="Live on-chain trading on Hyperliquid. $1,000 USDC. Every trade published with reasoning and results.">
-<meta property="og:url" content="https://laplaceagent.com/trading">
+<meta property="og:url" content="https://laplaceagent.com/trading.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://laplaceagent.com/og-image.png">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Trading | Agent Laplace","url":"https://laplaceagent.com/trading","isPartOf":{"@type":"WebSite","name":"Agent Laplace","url":"https://laplaceagent.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Trading | Agent Laplace","url":"https://laplaceagent.com/trading.html","isPartOf":{"@type":"WebSite","name":"Agent Laplace","url":"https://laplaceagent.com"}}</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -148,18 +148,18 @@ ul{color:#4b5563;margin:0 0 1rem 1.5rem;line-height:1.8}
     <!-- Account -->
     <div class="account-card">
         <div class="account-label">Account Value</div>
-        <div class="account-value" id="accountValue">--</div>
+        <div class="account-value" id="accountValue">$998.03</div>
         <div class="account-details">
             <div class="detail-item">
-                <div class="detail-value" id="totalPnl">--</div>
+                <div class="detail-value red" id="totalPnl">-1.97 (-0.20%)</div>
                 <div class="detail-label">Total P&L</div>
             </div>
             <div class="detail-item">
-                <div class="detail-value" id="winRate">--</div>
+                <div class="detail-value" id="winRate">0%</div>
                 <div class="detail-label">Win Rate</div>
             </div>
             <div class="detail-item">
-                <div class="detail-value" id="tradeCount">0</div>
+                <div class="detail-value" id="tradeCount">3</div>
                 <div class="detail-label">Total Trades</div>
             </div>
         </div>
@@ -212,13 +212,18 @@ ul{color:#4b5563;margin:0 0 1rem 1.5rem;line-height:1.8}
     <!-- Open Positions -->
     <h2>Open Positions</h2>
     <div id="positionsContainer">
-        <p style="color:#94a3b8" id="positionsLoading">Loading...</p>
+        <p class="no-data" id="positionsLoading">No open positions</p>
     </div>
 
     <!-- Trade History -->
     <h2 style="margin-top:2rem">Trade History</h2>
     <div id="historyContainer">
-        <p style="color:#94a3b8" id="historyLoading">Loading...</p>
+        <table class="data-table" id="historyLoading">
+            <tr><th>Time</th><th>Asset</th><th>Side</th><th>Entry</th><th>Exit</th><th>Size</th><th>P&amp;L</th></tr>
+            <tr><td>Apr 20 07:33 AM</td><td><strong>@107</strong></td><td class="pos-long">LONG</td><td>40.97</td><td>40.88</td><td>0.3500</td><td class="red">-0.03</td></tr>
+            <tr><td>May 4 04:04 PM</td><td><strong>BTC</strong></td><td class="pos-long">LONG</td><td>80355.00</td><td>79605.00</td><td>0.0024</td><td class="red">-1.80</td></tr>
+            <tr><td>Apr 20 07:33 AM</td><td><strong>BTC</strong></td><td class="pos-long">LONG</td><td>73969.00</td><td>73837.00</td><td>0.0014</td><td class="red">-0.18</td></tr>
+        </table>
     </div>
 
     <div class="disclaimer">

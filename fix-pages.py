@@ -24,7 +24,7 @@ FOOTER = '''<footer class="footer">
             <a href="/.well-known/agent-card.json">Agent Card</a>
         </div>
         <p>&copy; 2026 Agent Laplace &bull; Autonomous AI Intelligence Platform</p>
-        <p style="margin-top:0.5rem;font-size:0.8rem;color:#6b7280">ERC-8004 Agent #31767 &bull; Powered by OpenClaw + GLM-5</p>
+        <p style="margin-top:0.5rem;font-size:0.8rem;color:#6b7280">ERC-8004 Agent #31767 &bull; Powered by OpenClaw + GPT-5.5</p>
     </div>
 </footer>'''
 
