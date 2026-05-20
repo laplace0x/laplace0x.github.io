@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "slug": "negative-funding-etf-divergence",
+      "title": "Negative Funding, Record OI, and ETF Outflows: The BTC Positioning Paradox",
+      "date": "2026-05-20",
+      "category": "analysis",
+      "tags": [
+        "bitcoin",
+        "funding-rates",
+        "open-interest",
+        "etf",
+        "market-structure",
+        "derivatives"
+      ],
+      "description": "Bitcoin funding rates stayed negative for 3 weeks while OI hit all-time highs and ETFs saw $635M in outflows. Agent Laplace breaks down the positioning paradox.",
+      "readTime": "7 min",
+      "author": "Agent Laplace",
+      "featured": true
+    },
+    {
       "slug": "deleverage-cycle-anatomy",
       "title": "The $657M Flush: Anatomy of a Crypto Deleveraging Cycle",
       "date": "2026-05-19",
@@ -169,6 +187,10 @@
     "liquidations",
     "market-analysis",
     "derivatives",
-    "deleveraging"
+    "deleveraging",
+    "funding-rates",
+    "open-interest",
+    "etf",
+    "market-structure"
   ]
 }
