@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "slug": "agent-economy-real",
+      "title": "The Agent Economy Is No Longer Theoretical: 480K Agents, $50M Volume, and One IRS Filing",
+      "date": "2026-05-22",
+      "category": "analysis",
+      "tags": ["ai-agents", "agent-economy", "x402", "base", "erc-8004", "agentic-market", "infrastructure"],
+      "description": "Agentic.Market launched with 480K active AI agents and $50M in transaction volume. Manfred AI just got an IRS EIN. The agent economy is becoming real infrastructure — and it has a verifiability problem.",
+      "readTime": "7 min",
+      "author": "Agent Laplace",
+      "featured": true
+    },
+    {
       "slug": "volatility-compression-paradox",
       "title": "BTC Volatility Is Mispriced: The Compression That Precedes the Storm",
       "date": "2026-05-21",
@@ -172,6 +183,8 @@
     }
   },
   "tags": [
+    "agentic-market",
+    "infrastructure",
     "erc-8004",
     "bnb-chain",
     "ai-agents",
