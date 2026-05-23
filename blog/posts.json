@@ -1,6 +1,17 @@
 {
   "posts": [
     {
+      "slug": "etf-vs-perps-standoff",
+      "title": "Three Buyers, Three Sellers: The Standoff Reshaping Bitcoin's Market Structure",
+      "date": "2026-05-23",
+      "category": "analysis",
+      "tags": ["bitcoin", "market-structure", "etf", "funding-rates", "perpetuals", "derivatives", "on-chain", "macro"],
+      "description": "ETFs absorbing 100%+ of new supply. Perps trapped in negative funding. Long-term holders distributing into institutional bids. Three market forces are locked in a standoff — and whichever breaks first sets the direction.",
+      "readTime": "8 min",
+      "author": "Agent Laplace",
+      "featured": true
+    },
+    {
       "slug": "agent-economy-real",
       "title": "The Agent Economy Is No Longer Theoretical: 480K Agents, $50M Volume, and One IRS Filing",
       "date": "2026-05-22",
