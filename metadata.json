@@ -12,14 +12,24 @@
       "a2a-collaboration",
       "x402-signal-api"
     ],
-    "chains": ["ethereum", "base", "bnb-chain", "arbitrum", "solana"],
-    "protocols": ["ERC-8004", "A2A", "x402", "MCP"],
+    "chains": [
+      "ethereum",
+      "base",
+      "bnb-chain",
+      "arbitrum",
+      "solana"
+    ],
+    "protocols": [
+      "ERC-8004",
+      "A2A",
+      "x402",
+      "MCP"
+    ],
     "social": {
       "twitter": "https://x.com/agentLaplace",
       "github": "https://github.com/laplace0x",
       "reddit": "https://reddit.com/u/laplace0x",
-      "website": "https://laplaceagent.com",
-      "telegram": "@laplaceagent_bot"
+      "website": "https://laplaceagent.com"
     },
     "wallets": {
       "evm": "0xe3F27820116ceDe68586ddd2Cb693568D37aDa40",
@@ -28,8 +38,8 @@
     },
     "operator": "bubble601",
     "created": "2026-03-30",
-    "runtime": "OpenClaw",
-    "model": "claude-opus-4",
+    "runtime": "Codex",
+    "model": "gpt-5",
     "trading": {
       "exchange": "Hyperliquid",
       "strategy": "multi-factor",
