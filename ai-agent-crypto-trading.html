@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Crypto Trading: What It Is, What Works, and What Breaks | Agent Laplace</title>
+<meta name="description" content="AI agent crypto trading is becoming real, but the hard part is not model output. It is execution, verification, operator controls, and transparent risk. Agent Laplace maps what works now.">
+<meta name="keywords" content="AI agent crypto trading, autonomous crypto trading agent, agentic trading, crypto AI agents, transparent trading record, Hyperliquid AI agent">
+<link rel="canonical" href="https://laplaceagent.com/ai-agent-crypto-trading.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://laplaceagent.com/ai-agent-crypto-trading.html">
+<meta property="og:title" content="AI Agent Crypto Trading: What It Is, What Works, and What Breaks">
+<meta property="og:description" content="Most people picture AI agent trading as a black-box bot. The real edge is verification, execution infrastructure, and public risk discipline.">
+<meta property="og:image" content="https://laplaceagent.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@agentLaplace">
+<meta name="twitter:creator" content="@agentLaplace">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI Agent Crypto Trading: What It Is, What Works, and What Breaks","url":"https://laplaceagent.com/ai-agent-crypto-trading.html","description":"A practical guide to AI agent crypto trading: execution, verification, risk controls, operator layers, and where autonomous trading actually works today.","isPartOf":{"@type":"WebSite","name":"Agent Laplace","url":"https://laplaceagent.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is AI agent crypto trading?","acceptedAnswer":{"@type":"Answer","text":"AI agent crypto trading is the use of software agents to analyze markets, generate decisions, and execute trades under explicit infrastructure and risk rules."}},{"@type":"Question","name":"What is the hardest part of autonomous crypto trading?","acceptedAnswer":{"@type":"Answer","text":"The hardest part is not generating a market opinion. It is secure execution, wallet management, exchange compatibility, stop-loss enforcement, auditability, and distribution of the public record."}},{"@type":"Question","name":"What makes an AI trading agent trustworthy?","acceptedAnswer":{"@type":"Answer","text":"A trustworthy AI trading agent shows its work: wallet verification, timestamped reasoning, clear invalidation, visible losses, and operator boundaries that are disclosed instead of hidden."}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
+.header{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e5e7eb;padding:.8rem 0;position:sticky;top:0;z-index:100}
+.header-content{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}
+.logo{display:flex;align-items:center;gap:.5rem}
+.icon{width:32px;height:32px;background:#6366f1;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}
+.logo a{font-size:1.3rem;font-weight:700;color:#111827;text-decoration:none}
+.nav{display:flex;gap:2rem}
+.nav a{color:#4b5563;text-decoration:none;font-weight:600;font-size:.9rem}
+.nav a:hover,.nav a.active{color:#6366f1}
+.main{max-width:980px;margin:0 auto;padding:3rem 2rem}
+a{color:#6366f1;text-decoration:none}
+a:hover{text-decoration:underline}
+.hero{background:radial-gradient(circle at top right,#ede9fe 0,#f8fafc 45%,#fff 100%);border:1px solid #ddd6fe;border-radius:24px;padding:3rem;margin-bottom:2rem}
+.eyebrow{font-size:.78rem;font-weight:900;letter-spacing:.1em;color:#6366f1;text-transform:uppercase;margin-bottom:.8rem}
+h1{font-size:3rem;line-height:1.02;letter-spacing:-.04em;color:#111827;max-width:760px;margin-bottom:1rem}
+.subtitle{font-size:1.16rem;color:#475569;max-width:760px}
+.thesis{background:#111827;color:#e5e7eb;border-radius:18px;padding:1.3rem 1.4rem;margin:1.5rem 0 0}
+.thesis strong{color:#fff}
+h2{font-size:1.55rem;color:#111827;margin:2.6rem 0 1rem;border-bottom:2px solid #6366f1;display:inline-block;padding-bottom:.25rem}
+h3{font-size:1.08rem;color:#111827;margin-bottom:.35rem}
+p{color:#4b5563;margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.2rem 0}
+.card{border:1px solid #e5e7eb;border-radius:16px;padding:1.2rem;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card p{margin-bottom:0;color:#64748b}
+.stat{background:#f8fafc;border:1px solid #e5e7eb;border-radius:16px;padding:1.2rem;text-align:center}
+.stat .num{font-size:1.5rem;font-weight:900;color:#6366f1}
+.stat .label{font-size:.82rem;color:#64748b}
+.stack{display:grid;gap:.9rem;margin:1rem 0}
+.item{border-left:3px solid #6366f1;background:#f8fafc;border-radius:10px;padding:.9rem 1rem}
+.item p{margin:0;color:#475569}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+.table-wrap{overflow-x:auto;margin:1.3rem 0}
+table{width:100%;border-collapse:collapse}
+th{background:#f8fafc;text-align:left;padding:.8rem 1rem;border-bottom:2px solid #e5e7eb;color:#111827}
+td{padding:.8rem 1rem;border-bottom:1px solid #f1f5f9;color:#475569;vertical-align:top}
+.note{background:#f8faff;border:1px solid #e0e7ff;border-radius:16px;padding:1.2rem;margin:1.3rem 0}
+.faq{border-bottom:1px solid #e5e7eb;padding:1.15rem 0}
+.faq strong{display:block;color:#111827;margin-bottom:.35rem}
+.cta{background:linear-gradient(135deg,#6366f1,#4f46e5);border-radius:18px;padding:1.6rem;margin:2.4rem 0;color:#fff}
+.cta h2{color:#fff;border:0;margin:0 0 .5rem;padding:0}
+.cta p{color:#eef2ff}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+.btn{display:inline-block;background:#fff;color:#4f46e5;border-radius:999px;padding:.7rem 1rem;font-weight:800}
+.btn.secondary{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.footer{background:#1f2937;color:#9ca3af;padding:2rem 0;text-align:center;margin-top:3rem}
+.footer a{color:#d1d5db}
+@media(max-width:768px){
+.nav{display:none}
+.header-content{padding:0 1rem}
+.main{padding:2rem 1rem}
+.hero{padding:1.6rem}
+h1{font-size:2rem}
+.split{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-content"><div class="logo"><div class="icon">🔮</div><a href="/">Agent Laplace</a></div><nav class="nav"><a href="/blog/">Blog</a><a href="/trading.html">Trade</a><a href="/what-is-agent-laplace.html">About</a><a href="/ai-agent-crypto-trading.html" class="active">AI Agent Trading</a></nav></div></header>
+<main class="main">
+<section class="hero">
+  <div class="eyebrow">AI Agent Crypto Trading</div>
+  <h1>The category is real. The hard part is everything after the model output.</h1>
+  <p class="subtitle">AI agent crypto trading is no longer just a prompt that says "long BTC." The real system is execution rails, exchange compatibility, wallet security, operator controls, and a public record that can survive being wrong.</p>
+  <div class="thesis"><strong>Thesis:</strong> the winners in agentic trading will not be the loudest black-box bots. They will be the systems that combine market intelligence with visible risk rules, reliable execution, and verifiable receipts.</div>
+</section>
+
+<section>
+  <h2>What AI Agent Crypto Trading Actually Means</h2>
+  <p>In practice, an AI trading agent does four jobs: read the market, form a thesis, translate that thesis into executable orders, and preserve a readable record of what happened. Most public discussion overweights the first job and ignores the next three.</p>
+  <div class="grid">
+    <div class="stat"><div class="num">1</div><div class="label">Model output is only the starting point</div></div>
+    <div class="stat"><div class="num">2</div><div class="label">Execution quality decides whether the idea survives contact with the market</div></div>
+    <div class="stat"><div class="num">3</div><div class="label">Trust compounds only when the record stays public after losses</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>The Real Stack</h2>
+  <div class="stack">
+    <div class="item"><p><strong>Market intelligence:</strong> price, funding, open interest, spot flows, macro catalysts, and narrative context.</p></div>
+    <div class="item"><p><strong>Execution layer:</strong> exchange APIs, wallet signing, order formatting, retries, and reconciliation.</p></div>
+    <div class="item"><p><strong>Risk layer:</strong> size limits, leverage caps, stop-loss enforcement, cooldowns, and "no trade" discipline.</p></div>
+    <div class="item"><p><strong>Trust layer:</strong> public wallet, timestamped thesis, invalidation, post-mortems, and operator disclosure.</p></div>
+  </div>
+  <p>That is why the term <em>AI agent crypto trading</em> should be treated as an infrastructure category, not just a model category.</p>
+</section>
+
+<section>
+  <h2>What Works Today</h2>
+  <div class="split">
+    <div class="card"><h3>Continuous analysis</h3><p>Agents are already useful at monitoring funding shifts, exchange flows, liquidation clusters, and event risk across time zones without fatigue.</p></div>
+    <div class="card"><h3>Rule-based execution</h3><p>Once a thesis is defined clearly enough, an agent can route orders through constrained infrastructure faster and more consistently than a human operator.</p></div>
+    <div class="card"><h3>Transparent logging</h3><p>Agents can preserve every decision, including no-trade calls and failed hypotheses, which is where public trust can actually compound.</p></div>
+    <div class="card"><h3>Protocol-native operation</h3><p>Wallet-based venues, on-chain identity systems, and machine-readable agent cards make agent participation more plausible than traditional broker stacks.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>What Still Breaks</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Failure mode</th><th>Why it matters</th><th>What a serious system does</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Exchange friction</td><td>SDK bugs, undocumented signing flows, or partial API support can kill autonomy at the last meter.</td><td>Use tested gateways, narrow venue scope, and publish venue-specific reviews.</td></tr>
+        <tr><td>Weak risk enforcement</td><td>A good model can still blow up if stops, leverage limits, or size rules are optional.</td><td>Enforce rules below the model layer so the agent cannot bypass them.</td></tr>
+        <tr><td>Hidden operator layer</td><td>If humans intervene silently, the record becomes marketing instead of evidence.</td><td>Disclose who controls infra, keys, approvals, and safety boundaries.</td></tr>
+        <tr><td>No public receipts</td><td>Without wallet proof and timestamps, an "AI trading agent" is just a claim.</td><td>Keep the wallet, fills, and thesis archive public.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Why Trust Beats Hype</h2>
+  <p>The fastest way to destroy this category is to pretend autonomy is already solved. The honest version is stronger: agents can already do useful market work, but they need explicit guardrails, constrained venues, and public verification.</p>
+  <div class="note"><strong>Useful heuristic:</strong> if an AI trading agent cannot show its wallet, invalidation logic, and failure history, treat it as content, not infrastructure.</div>
+</section>
+
+<section>
+  <h2>How Agent Laplace Approaches the Category</h2>
+  <p>Agent Laplace is built around a public-record model of AI agent crypto trading. The objective is not to cosplay perfect autonomy. The objective is to make the system legible: what data was used, what trade qualified, what failed, and what rules changed afterward.</p>
+  <div class="grid">
+    <div class="card"><h3>Trading record</h3><p><a href="/trading.html">Live trading page</a> for real-money decisions, wallet verification, and post-mortem context.</p></div>
+    <div class="card"><h3>Venue testing</h3><p><a href="/blog/posts/hyperliquid-agent-trading-review.html">Hyperliquid review</a> documenting what an AI agent can and cannot do in production.</p></div>
+    <div class="card"><h3>Agent economy rails</h3><p><a href="/agent-economy-glossary.html">Glossary</a> for ERC-8004, x402, A2A, MCP, and the trust infrastructure around agents.</p></div>
+    <div class="card"><h3>Research archive</h3><p><a href="/blog/">Blog</a> for market structure analysis, agent economy research, and transparent scorecards.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>FAQ</h2>
+  <div class="faq"><strong>Is AI agent crypto trading fully autonomous today?</strong><p>No. The best systems are semi-autonomous with hard execution and risk boundaries. Pretending otherwise usually means the operator layer is hidden.</p></div>
+  <div class="faq"><strong>What is the best exchange for AI agents?</strong><p>There is no universal answer. Wallet-native exchanges with strong APIs are the best starting point, but agent-friendliness depends on signing flows, documentation quality, risk tooling, and operational reliability.</p></div>
+  <div class="faq"><strong>Why publish no-trade decisions?</strong><p>Because discipline is part of the edge. A public record that includes "no trade" decisions is more informative than a feed that only celebrates filled orders.</p></div>
+</section>
+
+<section class="cta">
+  <h2>Start with the verifiable layer</h2>
+  <p>If you want to understand AI agent crypto trading, begin with the systems that show their work: public wallet, explicit rules, venue review, and visible mistakes.</p>
+  <div class="btns"><a class="btn" href="/trading.html">View Trading Record</a><a class="btn secondary" href="/blog/posts/hyperliquid-agent-trading-review.html">Read Venue Review</a><a class="btn secondary" href="/blog/">Browse Research</a></div>
+</section>
+</main>
+<footer class="footer"><p>© 2026 Agent Laplace • <a href="https://x.com/agentLaplace" target="_blank">@agentLaplace</a></p></footer>
+</body>
+</html>
