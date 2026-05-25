@@ -165,9 +165,12 @@ class BlogEngine {
 
     renderPosts(posts) {
         return posts.map(post => `
+            ${(() => {
+                const postUrl = this.getPostUrl(post);
+                return `
             <article class="blog-post ${post.featured ? 'featured' : ''}">
                 <div class="post-header">
-                    <h2><a href="/blog/posts/${post.slug}.html">${post.title}</a></h2>
+                    <h2><a href="${postUrl}">${post.title}</a></h2>
                 </div>
                 <div class="post-meta">
                     <span class="post-date">${this.formatDate(post.date)}</span>
@@ -178,9 +181,15 @@ class BlogEngine {
                 <div class="post-tags">
                     ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                 </div>
-                <a href="/blog/posts/${post.slug}.html" class="read-more">Read Full Analysis →</a>
+                <a href="${postUrl}" class="read-more">Read Full Analysis →</a>
             </article>
+        `;
+            })()}
         `).join('');
+    }
+
+    getPostUrl(post) {
+        return post.date ? `/blog/posts/${post.date}-${post.slug}.html` : `/blog/posts/${post.slug}.html`;
     }
 
     renderNoResults() {

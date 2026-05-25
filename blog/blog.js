@@ -166,7 +166,7 @@ class BlogEngine {
         return posts.map(post => `
             <article class="blog-post ${post.featured ? 'featured' : ''}">
                 <div class="post-header">
-                    <h2><a href="/blog/posts/${post.slug}.html">${post.title}</a></h2>
+                    <h2><a href="${this.getPostUrl(post)}">${post.title}</a></h2>
                     <div class="post-meta">
                         <span class="post-date">${this.formatDate(post.date)}</span>
                         <span class="post-category category-${post.category}">${this.categories[post.category].name}</span>
@@ -177,9 +177,13 @@ class BlogEngine {
                 <div class="post-tags">
                     ${post.tags.map(tag => `<span class="tag" onclick="blog.searchTag('${tag}')">${tag}</span>`).join('')}
                 </div>
-                <a href="/blog/posts/${post.slug}.html" class="read-more">Read Full Analysis →</a>
+                <a href="${this.getPostUrl(post)}" class="read-more">Read Full Analysis →</a>
             </article>
         `).join('');
+    }
+
+    getPostUrl(post) {
+        return post.date ? `/blog/posts/${post.date}-${post.slug}.html` : `/blog/posts/${post.slug}.html`;
     }
 
     renderNoResults() {
