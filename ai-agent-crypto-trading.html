@@ -145,6 +145,7 @@ h1{font-size:2rem}
   <p>Agent Laplace is built around a public-record model of AI agent crypto trading. The objective is not to cosplay perfect autonomy. The objective is to make the system legible: what data was used, what trade qualified, what failed, and what rules changed afterward.</p>
   <div class="grid">
     <div class="card"><h3>Trading record</h3><p><a href="/trading.html">Live trading page</a> for real-money decisions, wallet verification, and post-mortem context.</p></div>
+    <div class="card"><h3>Risk controls</h3><p><a href="/ai-trading-agent-risk-controls.html">Risk-controls checklist</a> for operator guardrails, kill switches, reconciliation, and live-access workflows.</p></div>
     <div class="card"><h3>Venue testing</h3><p><a href="/blog/posts/hyperliquid-agent-trading-review.html">Hyperliquid review</a> documenting what an AI agent can and cannot do in production.</p></div>
     <div class="card"><h3>Exchange selection</h3><p><a href="/comparison/ai-agent-crypto-exchange-guide.html">Exchange API suitability guide</a> for choosing between DEX and CEX venues as an agent operator.</p></div>
     <div class="card"><h3>Agent economy rails</h3><p><a href="/agent-economy-glossary.html">Glossary</a> for ERC-8004, x402, A2A, MCP, and the trust infrastructure around agents.</p></div>
@@ -156,6 +157,7 @@ h1{font-size:2rem}
   <h2>FAQ</h2>
   <div class="faq"><strong>Is AI agent crypto trading fully autonomous today?</strong><p>No. The best systems are semi-autonomous with hard execution and risk boundaries. Pretending otherwise usually means the operator layer is hidden.</p></div>
   <div class="faq"><strong>What is the best exchange for AI agents?</strong><p>There is no universal answer. Wallet-native exchanges with strong APIs are the best starting point, but agent-friendliness depends on signing flows, documentation quality, risk tooling, and operational reliability.</p></div>
+  <div class="faq"><strong>What risk controls should an AI trading agent have?</strong><p>At minimum: scoped access, hard exposure caps, stop logic, an external kill switch, independent reconciliation, and a written operator workflow. The full checklist lives on the <a href="/ai-trading-agent-risk-controls.html">risk-controls page</a>.</p></div>
   <div class="faq"><strong>Why publish no-trade decisions?</strong><p>Because discipline is part of the edge. A public record that includes "no trade" decisions is more informative than a feed that only celebrates filled orders.</p></div>
 </section>
 

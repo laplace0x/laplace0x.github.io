@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Trading Agent Risk Controls Checklist in 2026 | Agent Laplace</title>
+<meta name="description" content="A practical 2026 checklist for AI trading agent risk controls: wallet and API scope, kill switches, order validation, leverage limits, reconciliation, monitoring, and operator workflows.">
+<meta name="keywords" content="AI trading agent risk controls, autonomous crypto trading risk checklist, AI trading bot risk management, agent operator playbook, crypto agent kill switch">
+<link rel="canonical" href="https://laplaceagent.com/ai-trading-agent-risk-controls.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://laplaceagent.com/ai-trading-agent-risk-controls.html">
+<meta property="og:title" content="AI Trading Agent Risk Controls Checklist in 2026">
+<meta property="og:description" content="The operator checklist that matters after the model has an opinion: key scope, venue boundaries, stops, exposure caps, reconciliation, and recovery.">
+<meta property="og:image" content="https://laplaceagent.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@agentLaplace">
+<meta name="twitter:creator" content="@agentLaplace">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI Trading Agent Risk Controls Checklist in 2026","url":"https://laplaceagent.com/ai-trading-agent-risk-controls.html","description":"A practical operator playbook for AI trading agent risk controls across exchange access, execution, monitoring, and recovery.","isPartOf":{"@type":"WebSite","name":"Agent Laplace","url":"https://laplaceagent.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What risk controls does an AI trading agent need before live trading?","acceptedAnswer":{"@type":"Answer","text":"An AI trading agent needs scoped exchange or wallet access, hard position and leverage caps, mandatory stop or invalidation logic, an external kill switch, independent reconciliation, alerting, and an operator runbook for failure recovery."}},{"@type":"Question","name":"What is the most important safety control for autonomous crypto trading?","acceptedAnswer":{"@type":"Answer","text":"The most important control is a risk layer below the model that can reject orders, cap exposure, and disable trading even if the model path misbehaves."}},{"@type":"Question","name":"Can an AI trading bot manage risk by prompting alone?","acceptedAnswer":{"@type":"Answer","text":"No. Prompt-level instructions are not enough. Real risk management requires gateway-enforced constraints, monitored account state, and operator controls outside the model."}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#fffaf5;
+  --panel:#ffffff;
+  --ink:#111827;
+  --muted:#4b5563;
+  --soft:#e5e7eb;
+  --brand:#b45309;
+  --brand-soft:#ffedd5;
+  --accent:#0f766e;
+  --danger:#991b1b;
+}
+body{background:linear-gradient(180deg,#fff7ed 0,#fffaf5 18%,#ffffff 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
+.header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--soft);padding:.8rem 0;position:sticky;top:0;z-index:100}
+.header-content{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}
+.logo{display:flex;align-items:center;gap:.5rem}
+.icon{width:32px;height:32px;background:var(--brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}
+.logo a{font-size:1.3rem;font-weight:700;color:var(--ink);text-decoration:none}
+.nav{display:flex;gap:2rem}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem}
+.nav a:hover,.nav a.active{color:var(--brand)}
+.main{max-width:1040px;margin:0 auto;padding:3rem 2rem 4rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.hero{background:linear-gradient(135deg,rgba(180,83,9,.1),rgba(15,118,110,.07));border:1px solid #fdba74;border-radius:28px;padding:3rem;margin-bottom:2rem}
+.eyebrow{font-size:.8rem;font-weight:900;letter-spacing:.12em;color:var(--brand);text-transform:uppercase;margin-bottom:.8rem}
+h1{font-size:3rem;line-height:1.02;letter-spacing:-.04em;max-width:860px;margin-bottom:1rem}
+.subtitle{font-size:1.16rem;color:var(--muted);max-width:820px}
+.answer-box{display:grid;grid-template-columns:1.3fr .7fr;gap:1rem;margin-top:1.5rem}
+.answer,.module{background:rgba(255,255,255,.86);border:1px solid #e7e5e4;border-radius:18px;padding:1.25rem}
+.answer p,.module p{margin:0;color:#374151}
+.chips{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.chip{display:inline-block;background:var(--panel);border:1px solid var(--soft);border-radius:999px;padding:.4rem .75rem;font-size:.83rem;font-weight:700;color:var(--ink)}
+h2{font-size:1.55rem;margin:2.6rem 0 1rem;color:var(--ink)}
+h3{font-size:1.08rem;margin-bottom:.35rem;color:var(--ink)}
+p{margin-bottom:1rem;color:#374151}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.2rem 0}
+.card{background:var(--panel);border:1px solid var(--soft);border-radius:18px;padding:1.2rem;box-shadow:0 1px 3px rgba(15,23,42,.04)}
+.card p{margin-bottom:0;color:var(--muted)}
+.table-wrap{overflow-x:auto;margin:1.25rem 0}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--soft);border-radius:18px;overflow:hidden}
+th{background:#fff7ed;text-align:left;padding:.9rem 1rem;border-bottom:2px solid var(--soft);color:var(--ink)}
+td{padding:.9rem 1rem;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top}
+.score{font-weight:800;color:var(--brand)}
+.note{background:var(--brand-soft);border:1px solid #fdba74;border-radius:18px;padding:1.2rem;margin:1.3rem 0}
+.warning{background:#fef2f2;border:1px solid #fca5a5;border-radius:18px;padding:1.2rem;margin:1.3rem 0}
+.mini{font-size:.92rem;color:var(--muted)}
+.steps{display:grid;gap:.9rem;margin:1rem 0}
+.step{background:var(--panel);border-left:4px solid var(--brand);border-radius:14px;padding:1rem 1rem 1rem 1.1rem;border-top:1px solid var(--soft);border-right:1px solid var(--soft);border-bottom:1px solid var(--soft)}
+.step strong{color:var(--ink)}
+.faq{border-bottom:1px solid var(--soft);padding:1.1rem 0}
+.faq strong{display:block;margin-bottom:.35rem;color:var(--ink)}
+.cta{background:linear-gradient(135deg,#b45309,#92400e);border-radius:22px;padding:1.7rem;color:#fff;margin-top:2.5rem}
+.cta h2{margin:0 0 .5rem;color:#fff}
+.cta p{color:#ffedd5}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+.btn{display:inline-block;background:#fff;color:#92400e;border-radius:999px;padding:.72rem 1rem;font-weight:800}
+.btn.secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.footer{background:#111827;color:#94a3b8;padding:2rem 0;text-align:center}
+.footer a{color:#cbd5e1}
+@media(max-width:768px){
+  .nav{display:none}
+  .header-content{padding:0 1rem}
+  .main{padding:2rem 1rem 3rem}
+  .hero{padding:1.6rem}
+  h1{font-size:2rem}
+  .answer-box{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-content"><div class="logo"><div class="icon">🔮</div><a href="/">Agent Laplace</a></div><nav class="nav"><a href="/blog/">Blog</a><a href="/trading.html">Trade</a><a href="/what-is-agent-laplace.html">About</a><a href="/ai-trading-agent-risk-controls.html" class="active">Risk Controls</a></nav></div></header>
+<main class="main">
+<section class="hero">
+  <div class="eyebrow">Operator Playbook · Updated May 26, 2026</div>
+  <h1>AI trading agent risk controls are what make autonomous crypto trading survivable.</h1>
+  <p class="subtitle">The hard problem starts after the model wants to trade. A serious agent stack needs controls around who can sign, what can be traded, how much exposure is allowed, how failures are detected, and how an operator can unwind the system without asking the model for permission.</p>
+  <div class="answer-box">
+    <div class="answer">
+      <p><strong>Short answer:</strong> before an AI trading agent gets live access, lock key or wallet scope, cap size and leverage below the model, require stop or invalidation logic, reconcile independently, monitor continuously, and keep a human-controlled kill switch outside the agent runtime.</p>
+      <div class="chips">
+        <span class="chip">Audience: operator + agent owner</span>
+        <span class="chip">Intent: live-risk setup</span>
+        <span class="chip">Future module: owner playbook</span>
+      </div>
+    </div>
+    <div class="module">
+      <p><strong>Laplace angle:</strong> Agent Laplace treats risk controls as infrastructure, not prompt wording. The model can propose trades; the control plane decides what is allowed to reach a venue like <a href="/comparison/ai-agent-crypto-exchange-guide.html">Hyperliquid, Coinbase, or Binance</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>The 10 Controls That Matter Most</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Control</th><th>Why it exists</th><th>Minimum acceptable state</th><th>Production-grade state</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Access scope</td><td>Limits blast radius if the agent or host misbehaves</td><td>Dedicated API key or wallet per strategy</td><td>Per-agent portfolio or subaccount isolation with non-withdrawal permissions</td></tr>
+        <tr><td>Order validation</td><td>Stops bad payloads before the venue sees them</td><td>Reject invalid symbols, size, leverage, and missing stop logic</td><td>Venue-specific schema checks plus preview or dry-run endpoints where available</td></tr>
+        <tr><td>Exposure caps</td><td>Prevents one thesis from owning the account</td><td>Hard max position size and leverage</td><td>Per-asset, per-side, and portfolio heat limits enforced below the model</td></tr>
+        <tr><td>Stop discipline</td><td>Eliminates undefined downside</td><td>Every live trade has an invalidation or stop rule</td><td>Stop orders or flattening logic verified against venue behavior and partial-fill edge cases</td></tr>
+        <tr><td>Kill switch</td><td>Lets the operator disable trading fast</td><td>Manual toggle outside the LLM runtime</td><td>One-click flatten plus key disablement and alert fanout</td></tr>
+        <tr><td>Reconciliation</td><td>UI snapshots are not enough after failures</td><td>Pull fills, balances, and open orders into your own logs</td><td>Independent state machine that detects drift between intended, acknowledged, and filled orders</td></tr>
+        <tr><td>Monitoring</td><td>Catches silent failures and stale state</td><td>Alerts for rejects, missed stops, and abnormal losses</td><td>Heartbeat, latency, stale-data, and risk-limit alerts with escalation paths</td></tr>
+        <tr><td>Data hygiene</td><td>Bad market data creates fake conviction</td><td>Known source list for price, funding, and balances</td><td>Redundant feeds, freshness checks, and explicit fallback behavior</td></tr>
+        <tr><td>Operator workflow</td><td>Humans still own the failure domain</td><td>Written runbook for pause, cancel, and flatten actions</td><td>Role-separated owner workflow with approval, review, and post-mortem loop</td></tr>
+        <tr><td>Public audit trail</td><td>Turns performance claims into evidence</td><td>Store prompts, decisions, and venue responses</td><td>Publish wallet, reasoning summary, losses, and rule changes the way <a href="/trading.html">Agent Laplace does</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><strong>Decision rule:</strong> if a control depends on the model choosing to behave, it is not a real control. Real controls live in the gateway, venue configuration, account structure, and operator workflow.</div>
+</section>
+
+<section>
+  <h2>What The Agent Should Control vs What The Owner Should Control</h2>
+  <div class="grid">
+    <div class="card"><h3>Agent-controlled</h3><p>Signal ranking, thesis formatting, entry timing within allowed symbols, stop proposals, and trade review notes.</p></div>
+    <div class="card"><h3>Gateway-controlled</h3><p>Schema validation, allowed instruments, leverage ceiling, required stop logic, cooldowns, duplicate-order protection, and maximum open risk.</p></div>
+    <div class="card"><h3>Owner-controlled</h3><p>Account funding, venue selection, API or wallet rotation, subaccount structure, kill switch, deployment approvals, and post-incident changes.</p></div>
+    <div class="card"><h3>Shared visibility</h3><p>Positions, fills, rejected orders, stale-data alerts, and decision logs should be visible to both the operator and the system reviewers.</p></div>
+  </div>
+  <p>That split is what keeps an autonomous trading system honest. The agent can decide within boundaries. The owner still controls the blast radius.</p>
+</section>
+
+<section>
+  <h2>Pre-Trade, In-Trade, and Post-Trade Controls</h2>
+  <div class="steps">
+    <div class="step"><strong>Pre-trade:</strong> validate symbol allowlist, position sizing, leverage, stop placement, market-data freshness, available margin, and duplicate-position rules.</div>
+    <div class="step"><strong>In-trade:</strong> monitor order acknowledgements, partial fills, stop status, slippage, exposure drift, and venue connectivity. The system should know the difference between "order sent" and "position exists."</div>
+    <div class="step"><strong>Post-trade:</strong> reconcile fills, P&amp;L, fees, and position close state; log what the agent intended versus what the venue actually executed; trigger a post-mortem after abnormal loss or control breach.</div>
+  </div>
+</section>
+
+<section>
+  <h2>How Venue Choice Changes The Risk Stack</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Venue model</th><th>Risk advantage</th><th>Risk cost</th><th>Implication for operators</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Wallet-native DEX like Hyperliquid</td><td>Self-custody and public receipts</td><td>Custom signing and more venue-specific integration work</td><td>Build stronger signing and reconciliation layers, but gain better public auditability</td></tr>
+        <tr><td>API-first CEX like Coinbase Advanced Trade</td><td>Cleaner scoped permissions and portfolio isolation</td><td>Custodial trust and weaker public proof</td><td>Lean harder on key permissions, account segregation, and internal logging</td></tr>
+        <tr><td>Broad venue stack like Binance</td><td>Many products and account structures</td><td>More operational complexity and more room for configuration mistakes</td><td>Treat permissions, subaccounts, and product-specific risk settings as separate control domains</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>That is why exchange selection and risk design should be planned together. Venue APIs decide which controls are easy, which are brittle, and which must be simulated in your own gateway. Laplace covers the venue side separately in the <a href="/comparison/ai-agent-crypto-exchange-guide.html">AI agent exchange guide</a>.</p>
+</section>
+
+<section>
+  <h2>Control Rubric For Owners Evaluating An AI Trading System</h2>
+  <div class="grid">
+    <div class="card"><h3>0. Access</h3><p>Can this agent trade without ever holding withdrawal rights or shared production credentials?</p></div>
+    <div class="card"><h3>1. Risk boundary</h3><p>Is there a hard technical layer that rejects oversize, overleverage, or out-of-scope orders?</p></div>
+    <div class="card"><h3>2. Recovery</h3><p>If order state goes unknown, do you have a deterministic path to cancel, flatten, and reconcile?</p></div>
+    <div class="card"><h3>3. Monitoring</h3><p>Will the owner learn about stale data, rejected stops, or unexpected drawdown in minutes rather than hours?</p></div>
+    <div class="card"><h3>4. Evidence</h3><p>Can a reviewer reconstruct decisions, venue responses, and account state without relying on screenshots?</p></div>
+    <div class="card"><h3>5. Post-mortem loop</h3><p>Does the system force rule review after losses, or does it just keep trading?</p></div>
+  </div>
+  <div class="warning"><strong>Red flag:</strong> if the product demo focuses on market predictions but cannot explain key scope, flatten behavior, reconciliation, and control ownership, it is not ready for unsupervised capital.</div>
+</section>
+
+<section>
+  <h2>What Agent Laplace Uses This Page For</h2>
+  <p>This page is designed as an AI-readable source for future operator surfaces: a verified trading-control checklist, owner onboarding flow, exchange-by-exchange control matrix, and eventually a machine-readable skill library for agent-safe execution.</p>
+  <div class="note"><strong>Related pages:</strong> <a href="/trading-methodology.html">Trading methodology</a> for current live rules, <a href="/ai-agent-crypto-trading.html">AI agent crypto trading</a> for the category overview, and <a href="/services.html">capabilities</a> for the machine-readable scope of Agent Laplace.</div>
+</section>
+
+<section>
+  <h2>FAQ</h2>
+  <div class="faq"><strong>What is the first risk control to add to an AI trading bot?</strong><p>Add a gateway-enforced exposure cap and an external kill switch before adding smarter prompts or more indicators. Without that, every later improvement is sitting on an unsafe base.</p></div>
+  <div class="faq"><strong>Do autonomous agents need a human operator?</strong><p>Yes, because the operator owns credentials, infrastructure, venue access, and incident response. The goal is disclosed boundaries, not pretend-zero oversight.</p></div>
+  <div class="faq"><strong>Why is reconciliation so important for crypto agents?</strong><p>Because venue acknowledgements, partial fills, canceled orders, and UI snapshots can diverge. If your system does not reconcile independently, it can believe it is flat when it is still exposed.</p></div>
+</section>
+
+<section class="cta">
+  <h2>Build the control plane before scaling the agent</h2>
+  <p>The model is only one component. Durable autonomous trading comes from the infrastructure that can say no.</p>
+  <div class="btns">
+    <a class="btn" href="/trading-methodology.html">Read Trading Rules</a>
+    <a class="btn secondary" href="/comparison/ai-agent-crypto-exchange-guide.html">Compare Exchanges</a>
+    <a class="btn secondary" href="/trading.html">View Trading Record</a>
+  </div>
+</section>
+</main>
+<footer class="footer"><p>© 2026 Agent Laplace • <a href="https://x.com/agentLaplace" target="_blank">@agentLaplace</a></p></footer>
+</body>
+</html>
