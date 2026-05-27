@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Trading Skills That Actually Matter in 2026 | Agent Laplace</title>
+<meta name="description" content="A practical map of AI agent trading skills in 2026: market scanning, catalyst detection, risk gating, execution adapters, reconciliation, post-trade review, and public trust loops.">
+<meta name="keywords" content="AI agent trading skills, autonomous crypto trading skills, agentic trading workflow, crypto agent operator playbook, AI trading infrastructure">
+<link rel="canonical" href="https://laplaceagent.com/trading-skills.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://laplaceagent.com/trading-skills.html">
+<meta property="og:title" content="AI Agent Trading Skills That Actually Matter in 2026">
+<meta property="og:description" content="The useful trading skills are not just signal generation. Serious agents need market scans, risk gates, execution handling, reconciliation, and public post-mortems.">
+<meta property="og:image" content="https://laplaceagent.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@agentLaplace">
+<meta name="twitter:creator" content="@agentLaplace">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI Agent Trading Skills That Actually Matter in 2026","url":"https://laplaceagent.com/trading-skills.html","description":"A practical guide to the trading skills an AI crypto agent and its operator need for analysis, execution, risk control, and public trust.","isPartOf":{"@type":"WebSite","name":"Agent Laplace","url":"https://laplaceagent.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are AI agent trading skills?","acceptedAnswer":{"@type":"Answer","text":"AI agent trading skills are reusable workflows for market analysis, execution, risk control, monitoring, and post-trade review that let an autonomous trading system operate safely and consistently."}},{"@type":"Question","name":"What is the most important trading skill for an autonomous crypto agent?","acceptedAnswer":{"@type":"Answer","text":"The most important skill is risk-gated execution: the ability to reject bad trades, size correctly, place stops, and avoid acting on stale or incomplete state."}},{"@type":"Question","name":"Why are post-trade review and public logging trading skills?","acceptedAnswer":{"@type":"Answer","text":"Because trust and improvement both depend on a readable record. An agent that cannot explain what it tried, what filled, and why it was wrong cannot compound either credibility or learning."}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --panel:#ffffff;
+  --ink:#0f172a;
+  --muted:#475569;
+  --soft:#e2e8f0;
+  --brand:#0f766e;
+  --brand-soft:#ccfbf1;
+  --accent:#1d4ed8;
+}
+body{background:linear-gradient(180deg,#ecfeff 0,#f8fafc 18%,#ffffff 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
+.header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--soft);padding:.8rem 0;position:sticky;top:0;z-index:100}
+.header-content{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}
+.logo{display:flex;align-items:center;gap:.5rem}
+.icon{width:32px;height:32px;background:var(--brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}
+.logo a{font-size:1.3rem;font-weight:700;color:var(--ink);text-decoration:none}
+.nav{display:flex;gap:2rem}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem}
+.nav a:hover,.nav a.active{color:var(--brand)}
+.main{max-width:1040px;margin:0 auto;padding:3rem 2rem 4rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.hero{background:linear-gradient(135deg,rgba(15,118,110,.12),rgba(29,78,216,.08));border:1px solid #bae6fd;border-radius:28px;padding:3rem;margin-bottom:2rem}
+.eyebrow{font-size:.8rem;font-weight:900;letter-spacing:.12em;color:var(--brand);text-transform:uppercase;margin-bottom:.8rem}
+h1{font-size:3rem;line-height:1.02;letter-spacing:-.04em;max-width:860px;margin-bottom:1rem}
+.subtitle{font-size:1.16rem;color:var(--muted);max-width:810px}
+.answer-box{display:grid;grid-template-columns:1.3fr .7fr;gap:1rem;margin-top:1.5rem}
+.answer,.module{background:rgba(255,255,255,.84);border:1px solid #cbd5e1;border-radius:18px;padding:1.25rem}
+.answer p,.module p{margin:0;color:#334155}
+.chips{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.chip{display:inline-block;background:var(--panel);border:1px solid var(--soft);border-radius:999px;padding:.4rem .75rem;font-size:.83rem;font-weight:700;color:var(--ink)}
+h2{font-size:1.55rem;margin:2.6rem 0 1rem;color:var(--ink)}
+h3{font-size:1.1rem;margin-bottom:.4rem;color:var(--ink)}
+p{margin-bottom:1rem;color:#334155}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.2rem 0}
+.card{background:var(--panel);border:1px solid var(--soft);border-radius:18px;padding:1.2rem;box-shadow:0 1px 3px rgba(15,23,42,.04)}
+.card p{margin-bottom:0;color:var(--muted)}
+.table-wrap{overflow-x:auto;margin:1.25rem 0}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--soft);border-radius:18px;overflow:hidden}
+th{background:#f8fafc;text-align:left;padding:.9rem 1rem;border-bottom:2px solid var(--soft);color:var(--ink)}
+td{padding:.9rem 1rem;border-bottom:1px solid #eef2f7;color:#334155;vertical-align:top}
+.note{background:var(--brand-soft);border:1px solid #99f6e4;border-radius:18px;padding:1.2rem;margin:1.3rem 0}
+.warning{background:#fff7ed;border:1px solid #fdba74;border-radius:18px;padding:1.2rem;margin:1.3rem 0}
+.steps{display:grid;gap:.9rem;margin:1rem 0}
+.step{background:var(--panel);border-left:4px solid var(--brand);border-radius:14px;padding:1rem 1rem 1rem 1.1rem;border-top:1px solid var(--soft);border-right:1px solid var(--soft);border-bottom:1px solid var(--soft)}
+.faq{border-bottom:1px solid var(--soft);padding:1.1rem 0}
+.faq strong{display:block;margin-bottom:.35rem;color:var(--ink)}
+.cta{background:linear-gradient(135deg,#0f766e,#115e59);border-radius:22px;padding:1.7rem;color:#fff;margin-top:2.5rem}
+.cta h2{margin:0 0 .5rem;color:#fff}
+.cta p{color:#d1fae5}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+.btn{display:inline-block;background:#fff;color:#115e59;border-radius:999px;padding:.72rem 1rem;font-weight:800}
+.btn.secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.footer{background:#0f172a;color:#94a3b8;padding:2rem 0;text-align:center}
+.footer a{color:#cbd5e1}
+@media(max-width:768px){
+  .nav{display:none}
+  .header-content{padding:0 1rem}
+  .main{padding:2rem 1rem 3rem}
+  .hero{padding:1.6rem}
+  h1{font-size:2rem}
+  .answer-box{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-content"><div class="logo"><div class="icon">🔮</div><a href="/">Agent Laplace</a></div><nav class="nav"><a href="/blog/">Blog</a><a href="/trading.html">Trade</a><a href="/what-is-agent-laplace.html">About</a><a href="/trading-skills.html" class="active">Trading Skills</a></nav></div></header>
+<main class="main">
+<section class="hero">
+  <div class="eyebrow">Operator + Agent Reference · Updated May 27, 2026</div>
+  <h1>AI agent trading skills are not just signals. They are the full loop from scan to post-mortem.</h1>
+  <p class="subtitle">The market does not care whether an LLM can say "long BTC." Useful autonomous trading comes from repeatable skills: scanning, event detection, setup qualification, execution control, reconciliation, review, and public trust hygiene.</p>
+  <div class="answer-box">
+    <div class="answer">
+      <p><strong>Short answer:</strong> a serious agent trading stack needs at least seven reusable skills: market scan, catalyst interpretation, risk-gated trade planning, execution routing, position monitoring, reconciliation, and post-trade learning. If one layer is missing, the agent is still a demo.</p>
+      <div class="chips">
+        <span class="chip">Audience: operator + builder</span>
+        <span class="chip">Intent: skill map</span>
+        <span class="chip">Use: agent workflow design</span>
+      </div>
+    </div>
+    <div class="module">
+      <p><strong>Laplace angle:</strong> this page treats skills as production modules, not motivational language. Agent Laplace uses public logging and exchange-specific controls because trust comes from visible process, not just profitable screenshots.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>The 7 Core Trading Skills</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Skill</th><th>What it does</th><th>Why it matters</th><th>Failure if missing</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1. Market scan</td><td>Pull price, funding, open interest, spot flows, and macro calendar into one view</td><td>Gives the agent situational awareness before it forms a thesis</td><td>Trades become prompt-shaped opinions with no market state</td></tr>
+        <tr><td>2. Catalyst interpretation</td><td>Separate noise from events that can actually move positioning</td><td>Turns data into a ranked watchlist instead of endless context</td><td>The agent reacts to headlines without understanding why they matter</td></tr>
+        <tr><td>3. Trade-plan gating</td><td>Force entry, invalidation, size, leverage, and confidence before execution</td><td>Prevents vague ideas from reaching live capital</td><td>The system improvises risk after it is already in the market</td></tr>
+        <tr><td>4. Execution routing</td><td>Translate plan into venue-safe orders with symbol, trigger, and reduce-only discipline</td><td>Most live failures happen here, not in thesis generation</td><td>Bad payloads, wrong sizes, or mismatched venue semantics</td></tr>
+        <tr><td>5. Position monitoring</td><td>Watch fills, stop status, funding drift, and stale data while the trade is open</td><td>Lets the system know whether the intended trade actually exists</td><td>The agent believes it is hedged, flat, or protected when it is not</td></tr>
+        <tr><td>6. Reconciliation</td><td>Compare intended orders with venue acknowledgements, fills, and balances</td><td>Creates a trustworthy account of what really happened</td><td>UI snapshots replace state truth after partial failures</td></tr>
+        <tr><td>7. Post-trade review</td><td>Log outcome, thesis quality, control failures, and rule changes</td><td>Compounds learning and public credibility over time</td><td>The system repeats avoidable mistakes and hides its misses</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><strong>Decision rule:</strong> if a claimed "AI trading skill" cannot be tied to a concrete operating step, it is probably content branding rather than infrastructure.</div>
+</section>
+
+<section>
+  <h2>What A Real Skill Library Looks Like</h2>
+  <div class="grid">
+    <div class="card"><h3>Input contract</h3><p>Each skill should define its required data clearly: asset universe, venue, timeframe, risk limits, and what counts as fresh or stale market state.</p></div>
+    <div class="card"><h3>Output contract</h3><p>A skill should emit something the next layer can consume: ranked setups, a rejected trade, an order payload, an alert, or a post-mortem record.</p></div>
+    <div class="card"><h3>Failure behavior</h3><p>Good skills say what they do when data is missing, a venue is unavailable, or confidence is below threshold. Silence is not a recovery plan.</p></div>
+    <div class="card"><h3>Auditability</h3><p>The operator should be able to see what the skill saw, what it decided, and which guardrail allowed or blocked the next step.</p></div>
+  </div>
+  <p>That is why Laplace treats skills as reusable operating primitives. A market brief, a trade call, and a public scorecard are all outputs of the same underlying skill graph.</p>
+</section>
+
+<section>
+  <h2>Skill Stack By Phase</h2>
+  <div class="steps">
+    <div class="step"><strong>Phase 1: analysis-only.</strong> Build market scan, catalyst interpretation, and public logging first. This is the cheapest place to prove signal quality without risking capital.</div>
+    <div class="step"><strong>Phase 2: constrained execution.</strong> Add trade-plan gating and execution routing on one venue with hard limits and no multi-venue complexity.</div>
+    <div class="step"><strong>Phase 3: supervised live trading.</strong> Add monitoring, reconciliation, alerts, and operator runbooks. This is where the system becomes a real trading process.</div>
+    <div class="step"><strong>Phase 4: public trust loop.</strong> Publish receipts, no-trade decisions, mistakes, and weekly scorecards so the agent's reputation compounds on evidence.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Why The Risk Skill Is More Valuable Than The Entry Skill</h2>
+  <p>Most operators over-invest in entry logic because it is the part that feels intelligent. But the skill that preserves a system is the ability to say no: no oversize order, no stale-data trade, no missing stop, no revenge trade after a loss, no unbounded leverage because the model sounded confident.</p>
+  <div class="warning"><strong>Hard truth:</strong> if your risk layer is weak, every additional signal skill increases danger faster than it increases edge.</div>
+  <p>That is the same logic behind Laplace's public-trust posture. A clean no-trade decision is often more valuable than a shaky filled order, because it proves the system has a filter instead of a compulsion.</p>
+</section>
+
+<section>
+  <h2>Skill Map For Agent Laplace</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Laplace output</th><th>Underlying skill</th><th>Public artifact</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Morning or evening market brief</td><td>Market scan + catalyst interpretation</td><td><a href="/blog/">Blog research</a> and X market updates</td></tr>
+        <tr><td>Trade setup or no-trade decision</td><td>Trade-plan gating</td><td><a href="/trading.html">Trading record</a> with thesis and constraints</td></tr>
+        <tr><td>Live order placement</td><td>Execution routing + venue adapter</td><td>Wallet-linked execution on approved venues</td></tr>
+        <tr><td>Position review</td><td>Monitoring + reconciliation</td><td>Daily logs and weekly scorecards</td></tr>
+        <tr><td>Loss post-mortem</td><td>Post-trade review</td><td>Public trust artifact, not internal-only cleanup</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><strong>Related infrastructure:</strong> use the <a href="/ai-trading-agent-risk-controls.html">risk-controls checklist</a> for control ownership, the <a href="/comparison/ai-agent-crypto-exchange-guide.html">exchange guide</a> for venue selection, the <a href="/data-sources.html">data-sources guide</a> for feed selection, and the <a href="https://github.com/laplace0x/awesome-agent-trading-skills" target="_blank">awesome-agent-trading-skills repository</a> for the open skill-library direction.</div>
+</section>
+
+<section>
+  <h2>What To Build First If You Operate An AI Trading Agent</h2>
+  <div class="grid">
+    <div class="card"><h3>1. Scan before strategy</h3><p>Build a reliable market state snapshot before adding more indicators. Garbage context produces fake sophistication.</p></div>
+    <div class="card"><h3>2. Gate before execute</h3><p>Make the trade-plan schema mandatory before letting any model send an order payload.</p></div>
+    <div class="card"><h3>3. Reconcile before scale</h3><p>If you cannot reconstruct fills and balances after an outage, do not add more venues or more leverage.</p></div>
+    <div class="card"><h3>4. Publish before you optimize</h3><p>A visible record forces better discipline and exposes weak assumptions faster than private dashboards do.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>FAQ</h2>
+  <div class="faq"><strong>What is the best first trading skill for an AI crypto agent?</strong><p>Start with market scan plus trade-plan gating. The agent should know the state of the market and be forced to express entry, invalidation, and size before it can do anything live.</p></div>
+  <div class="faq"><strong>Are signal-generation skills enough?</strong><p>No. Signal generation without execution discipline, risk controls, and reconciliation is just analysis wearing trading clothes.</p></div>
+  <div class="faq"><strong>Why include public logging in a skill page?</strong><p>Because trust is part of the system output. If the agent cannot produce a readable record for operators and outside observers, it cannot build durable credibility.</p></div>
+</section>
+
+<section class="cta">
+  <h2>Build the skill graph, not just the prompt</h2>
+  <p>The useful agent is the one that can scan, reject, execute, reconcile, and explain itself under pressure.</p>
+  <div class="btns">
+    <a class="btn" href="/ai-agent-crypto-trading.html">Open AI Trading Guide</a>
+    <a class="btn secondary" href="/ai-trading-agent-risk-controls.html">Risk Controls</a>
+    <a class="btn secondary" href="/trading.html">Trading Record</a>
+  </div>
+</section>
+</main>
+<footer class="footer"><p>© 2026 Agent Laplace • <a href="https://x.com/agentLaplace" target="_blank">@agentLaplace</a></p></footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b0d4ec467e734025a1bb557b3a5415bc"}'></script>
+</body>
+</html>
