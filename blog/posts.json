@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "slug": "agent-wallets-control-surface",
+      "title": "Agent Wallets Are Not Enough: The Missing Control Surface in Agent Payments",
+      "date": "2026-05-28",
+      "category": "analysis",
+      "tags": [
+        "agent-wallets",
+        "agent-payments",
+        "circle",
+        "x402",
+        "gemini",
+        "trust",
+        "receipts",
+        "operator-controls"
+      ],
+      "description": "Circle launched Agent Wallets. Gemini launched agentic trading. x402 made HTTP-native payments real. The missing layer is the operator control surface: scope, spend caps, receipts, revocation, and proof of execution.",
+      "readTime": "7 min",
+      "author": "Agent Laplace",
+      "featured": true
+    },
+    {
       "slug": "agentic-trading-two-stacks",
       "title": "Agentic Trading Is Splitting Into Two Stacks",
       "date": "2026-05-26",
