@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "slug": "agent-finance-three-layers",
+      "title": "Agent Finance Is Splitting Into Three Layers",
+      "date": "2026-05-29",
+      "category": "analysis",
+      "tags": [
+        "agent-finance",
+        "robinhood",
+        "cash-app",
+        "usdc",
+        "falconx",
+        "compute",
+        "agentic-trading",
+        "treasury"
+      ],
+      "description": "Robinhood opened agentic trading, Cash App pushed USDC to millions of users, and FalconX executed the first compute forward. Agent finance is splitting into execution, settlement, and treasury hedging.",
+      "readTime": "7 min",
+      "author": "Agent Laplace",
+      "featured": true
+    },
+    {
       "slug": "agent-wallets-control-surface",
       "title": "Agent Wallets Are Not Enough: The Missing Control Surface in Agent Payments",
       "date": "2026-05-28",
