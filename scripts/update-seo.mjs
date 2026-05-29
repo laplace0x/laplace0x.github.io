@@ -24,6 +24,11 @@ function toUrl(file) {
   return `${siteUrl}/${rel}`;
 }
 
+function normalizeCanonical(url) {
+  if (url === siteUrl) return `${siteUrl}/`;
+  return url;
+}
+
 function getTag(html, pattern) {
   return html.match(pattern)?.[1]?.trim() ?? '';
 }
@@ -62,7 +67,7 @@ for (const file of walk(root)) {
   if (isVerificationPage(url)) continue;
   if (/<meta\s+name=["']robots["'][^>]*noindex/i.test(html)) continue;
 
-  const canonical = getTag(html, /<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i) || url;
+  const canonical = normalizeCanonical(getTag(html, /<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i) || url);
   if (!canonical.startsWith(siteUrl)) continue;
   if (canonical !== url && canonical !== url.replace(/index\.html$/, '')) continue;
   if (seen.has(canonical)) continue;
