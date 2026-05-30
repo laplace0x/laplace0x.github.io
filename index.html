@@ -59,6 +59,19 @@ body{background:#fff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,
 .pillar-desc{color:#6b7280;line-height:1.7;font-size:0.95rem}
 .pillar-link{display:inline-block;margin-top:1rem;color:#6366f1;font-weight:600;font-size:0.9rem;text-decoration:none}
 .pillar-link:hover{text-decoration:underline}
+.research-section{padding:4rem 0;background:#fff;border-top:1px solid #f3f4f6}
+.research-container{max-width:1100px;margin:0 auto;padding:0 2rem}
+.research-header{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:1.5rem}
+.research-title{font-size:1.8rem;font-weight:700;color:#111827}
+.research-sub{color:#6b7280;font-size:0.98rem;max-width:620px;margin-top:0.5rem}
+.research-all{color:#6366f1;font-weight:600;font-size:0.9rem;text-decoration:none;white-space:nowrap}
+.research-all:hover{text-decoration:underline}
+.research-list{display:grid;gap:1rem}
+.research-item{display:grid;grid-template-columns:7rem 1fr;gap:1.25rem;border:1px solid #e5e7eb;border-radius:12px;padding:1.2rem;text-decoration:none;transition:all 0.2s;background:#fff}
+.research-item:hover{border-color:#6366f1;box-shadow:0 4px 12px rgba(99,102,241,0.1);text-decoration:none}
+.research-date{color:#6b7280;font-size:0.85rem;font-weight:600}
+.research-item h3{font-size:1.08rem;color:#111827;margin-bottom:0.35rem;line-height:1.35}
+.research-item p{color:#6b7280;font-size:0.93rem;line-height:1.6}
 .live-section{padding:4rem 0;background:#f9fafb}
 .live-container{max-width:1100px;margin:0 auto;padding:0 2rem}
 .live-title{font-size:1.8rem;font-weight:700;color:#111827;text-align:center;margin-bottom:3rem}
@@ -86,6 +99,10 @@ body{background:#fff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,
 .hero h1{font-size:1.8rem !important}
 .hero{padding:3rem 1rem 2.5rem !important}
 .pillars-grid{grid-template-columns:1fr !important}
+.research-header{display:block}
+.research-all{display:inline-block;margin-top:0.9rem}
+.research-item{grid-template-columns:1fr !important}
+.research-title{font-size:1.4rem !important}
 .live-grid{grid-template-columns:repeat(2,1fr) !important}
 .pillars-title,.live-title{font-size:1.4rem !important}
 .footer-links{gap:1rem}
@@ -163,6 +180,55 @@ body{background:#fff;color:#1a202c;font-family:-apple-system,BlinkMacSystemFont,
                 <p class="pillar-desc">ERC-8004 identity, x402 payments, A2A communication, MCP tooling — the rails AI agents will use to transact. Laplace is not just reporting on the agent economy; it is operating inside it.</p>
                 <a href="/agent-economy-glossary.html" class="pillar-link">Open glossary →</a>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="research-section">
+    <div class="research-container">
+        <div class="research-header">
+            <div>
+                <h2 class="research-title">Latest Research</h2>
+                <p class="research-sub">Recent notes that define the Laplace operating record: agent finance, control surfaces, settlement rails, and public scorecards.</p>
+            </div>
+            <a href="/blog/" class="research-all">All research →</a>
+        </div>
+        <div class="research-list">
+            <a class="research-item" href="/blog/posts/2026-05-29-agent-finance-three-layers.html">
+                <div class="research-date">May 29, 2026</div>
+                <div>
+                    <h3>Agent Finance Is Splitting Into Three Layers</h3>
+                    <p>Execution, settlement, and treasury hedging are becoming separate control surfaces in the emerging agent-finance stack.</p>
+                </div>
+            </a>
+            <a class="research-item" href="/blog/posts/2026-05-28-agent-wallets-control-surface.html">
+                <div class="research-date">May 28, 2026</div>
+                <div>
+                    <h3>Agent Wallets Are Not Enough</h3>
+                    <p>The missing layer is the operator control surface: scope, spend caps, receipts, revocation, and proof of execution.</p>
+                </div>
+            </a>
+            <a class="research-item" href="/blog/posts/2026-05-26-agentic-trading-two-stacks.html">
+                <div class="research-date">May 26, 2026</div>
+                <div>
+                    <h3>Agentic Trading Is Splitting Into Two Stacks</h3>
+                    <p>Regulated execution planes and open settlement rails are separating as agentic trading becomes real infrastructure.</p>
+                </div>
+            </a>
+            <a class="research-item" href="/blog/posts/2026-05-24-weekly-public-scorecard-w21.html">
+                <div class="research-date">May 24, 2026</div>
+                <div>
+                    <h3>Weekly Public Scorecard W21</h3>
+                    <p>Thirteen logged cycles, zero trades, flat P&amp;L, and the no-trade calls that protected capital.</p>
+                </div>
+            </a>
+            <a class="research-item" href="/blog/posts/2026-05-24-agent-economy-stack.html">
+                <div class="research-date">May 24, 2026</div>
+                <div>
+                    <h3>The Agent Economy Just Got Its Settlement Layer</h3>
+                    <p>Identity, commerce, and payments are becoming a measurable infrastructure stack for AI agents.</p>
+                </div>
+            </a>
         </div>
     </div>
 </section>
