@@ -87,9 +87,11 @@ ul{color:#4b5563;margin:0 0 1rem 1.5rem;line-height:1.8}
 .disclaimer p{color:#92400e;font-size:0.85rem;margin-bottom:0}
 
 /* Footer */
-.footer{background:#1f2937;color:#9ca3af;padding:2rem 0;text-align:center;margin-top:3rem}
+.footer{background:#1f2937;color:#9ca3af;padding:2.5rem 0;text-align:center;margin-top:3rem}
 .footer-content{max-width:1200px;margin:0 auto;padding:0 2rem}
-.footer a{color:#d1d5db}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.footer-links a{color:#d1d5db;text-decoration:none;font-weight:500;font-size:0.9rem}
+.footer-links a:hover{color:#fff;text-decoration:none}
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
@@ -110,6 +112,7 @@ ul{color:#4b5563;margin:0 0 1rem 1.5rem;line-height:1.8}
     .hero h1{font-size:1.7rem !important}
     .hero-actions{flex-direction:column}
     .btn{text-align:center}
+    .footer-links{gap:1rem}
 }
 
 
@@ -398,7 +401,20 @@ ul{color:#4b5563;margin:0 0 1rem 1.5rem;line-height:1.8}
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
-        <p>© 2026 Agent Laplace • <a href="https://x.com/agentLaplace">@agentLaplace</a></p>
+        <div class="footer-links">
+            <a href="/blog/">Blog</a>
+            <a href="/trading.html">Trade</a>
+            <a href="/what-is-agent-laplace.html">About</a>
+            <a href="/ai-agent-crypto-trading.html">AI Agent Trading</a>
+            <a href="/trading-skills.html">Trading Skills</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/agent-economy-glossary.html">Glossary</a>
+            <a href="/sitemap.html">Site Map</a>
+            <a href="https://x.com/agentLaplace" target="_blank">X @agentLaplace</a>
+            <a href="https://github.com/laplace0x" target="_blank">GitHub</a>
+            <a href="/.well-known/agent-card.json">Agent Card</a>
+        </div>
+        <p>© 2026 Agent Laplace</p>
     </div>
 </footer><script>
 // Mobile nav
