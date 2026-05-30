@@ -52,9 +52,10 @@ const postMeta = fs.existsSync(postMetaPath) ? JSON.parse(fs.readFileSync(postMe
 const postsByUrl = new Map();
 for (const post of postMeta.posts ?? []) {
   const candidates = [
+    post.url ? path.join(root, post.url.replace(/^\//, '')) : '',
     path.join(root, 'blog', 'posts', `${post.date}-${post.slug}.html`),
     path.join(root, 'blog', 'posts', `${post.slug}.html`),
-  ];
+  ].filter(Boolean);
   const file = candidates.find((candidate) => fs.existsSync(candidate));
   if (file) postsByUrl.set(toUrl(file), post);
 }
@@ -104,6 +105,7 @@ function escapeXml(value) {
 }
 
 function postUrl(post) {
+  if (post.url) return `${siteUrl}${post.url}`;
   const dated = `${siteUrl}/blog/posts/${post.date}-${post.slug}.html`;
   if (postsByUrl.has(dated)) return dated;
   return `${siteUrl}/blog/posts/${post.slug}.html`;

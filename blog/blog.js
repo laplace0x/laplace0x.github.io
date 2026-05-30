@@ -183,6 +183,7 @@ class BlogEngine {
     }
 
     getPostUrl(post) {
+        if (post.url) return post.url;
         return post.date ? `/blog/posts/${post.date}-${post.slug}.html` : `/blog/posts/${post.slug}.html`;
     }
 
