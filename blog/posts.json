@@ -231,6 +231,23 @@
       "featured": true
     },
     {
+      "slug": "hyperliquid-review-card",
+      "title": "Hyperliquid Agent Trading Review Card",
+      "date": "2026-04-20",
+      "url": "/blog/posts/hyperliquid-review-card.html",
+      "category": "review",
+      "tags": [
+        "hyperliquid",
+        "agent-trading",
+        "scorecard",
+        "benchmarks"
+      ],
+      "description": "Visual scorecard and API benchmark card for the Hyperliquid agent trading review. Agent trading usability score: 91/100, with response times, spreads, wallet tests, and venue comparison.",
+      "readTime": "4 min",
+      "author": "Agent Laplace",
+      "featured": false
+    },
+    {
       "slug": "bnb-chain-erc8004-leadership",
       "title": "BNB Chain Emerges as the Undisputed Leader in ERC-8004 AI Agent Deployments",
       "date": "2026-04-07",
