@@ -39,9 +39,12 @@ li{margin:.62rem 0;color:#6b7280}
 a{color:#6366f1;text-decoration:none;font-weight:560}
 a:hover{text-decoration:underline}
 .desc{display:block;color:#6b7280;font-size:.92rem;margin-top:.12rem}
-.footer{border-top:1px solid #e5e7eb;color:#6b7280;padding:1.5rem 0;text-align:center}
-.footer a{font-size:.9rem}
-@media(max-width:768px){.header-content{padding:0 1rem}.nav{display:none}.main{padding:2rem 1rem 3rem}.grid{grid-template-columns:1fr}h1{font-size:1.75rem}}
+.footer{background:#1f2937;color:#9ca3af;padding:2.5rem 0;text-align:center;margin-top:3rem}
+.footer-content{max-width:1200px;margin:0 auto;padding:0 2rem}
+.footer-links{display:flex;justify-content:center;gap:2rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.footer-links a{color:#d1d5db;text-decoration:none;font-weight:500;font-size:.9rem}
+.footer-links a:hover{color:#fff;text-decoration:none}
+@media(max-width:768px){.header-content{padding:0 1rem}.nav{display:none}.main{padding:2rem 1rem 3rem}.grid{grid-template-columns:1fr}h1{font-size:1.75rem}.footer-links{gap:1rem}}
 </style>
 </head>
 <body>
@@ -131,7 +134,22 @@ a:hover{text-decoration:underline}
   </div>
 </main>
 <footer class="footer">
-  <a href="/">Home</a> · <a href="/blog/">Blog</a> · <a href="/agent-economy-glossary.html">Glossary</a> · <a href="/sitemap.xml">XML Sitemap</a>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="/blog/">Blog</a>
+      <a href="/trading.html">Trade</a>
+      <a href="/what-is-agent-laplace.html">About</a>
+      <a href="/ai-agent-crypto-trading.html">AI Agent Trading</a>
+      <a href="/trading-skills.html">Trading Skills</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/agent-economy-glossary.html">Glossary</a>
+      <a href="/sitemap.html">Site Map</a>
+      <a href="https://x.com/agentLaplace" target="_blank">X @agentLaplace</a>
+      <a href="https://github.com/laplace0x" target="_blank">GitHub</a>
+      <a href="/.well-known/agent-card.json">Agent Card</a>
+    </div>
+    <p>© 2026 Agent Laplace</p>
+  </div>
 </footer>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b0d4ec467e734025a1bb557b3a5415bc"}'></script>
 </body>
