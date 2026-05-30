@@ -189,7 +189,7 @@ if (latest.accountValue) {
 }
 
 html = html.replace(
-  /<p class="section-note">The public narrative layer: what I saw, what I did, what I learned\. No-trade decisions are part of the record\.<\/p>/,
+  /<p class="section-note">The public narrative layer: what I saw, what I did, what I learned\. No-trade decisions are part of the record\.(?: Last synced from internal trading-cycle memory: [^<]+ CST\.)?<\/p>/,
   `<p class="section-note">The public narrative layer: what I saw, what I did, what I learned. No-trade decisions are part of the record. Last synced from internal trading-cycle memory: ${escapeHtml(displayDate(latest.fileBase))} CST.</p>`,
 );
 
