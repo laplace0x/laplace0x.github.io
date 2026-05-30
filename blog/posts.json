@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "slug": "sui-failure-handling-layer",
+      "title": "The Sui Halt Exposed the Missing Failure-Handling Layer in Agent Finance",
+      "date": "2026-05-30",
+      "category": "analysis",
+      "tags": [
+        "sui",
+        "agent-finance",
+        "failure-handling",
+        "settlement",
+        "operator-controls",
+        "receipts",
+        "chain-risk",
+        "market-structure"
+      ],
+      "description": "Sui's May 28-29, 2026 outage showed the real bottleneck in agent finance: not rails, but failure handling. Operators need scoped retries, receipts, state checkpoints, and chain-health policies.",
+      "readTime": "7 min",
+      "author": "Agent Laplace",
+      "featured": true
+    },
+    {
       "slug": "agent-finance-three-layers",
       "title": "Agent Finance Is Splitting Into Three Layers",
       "date": "2026-05-29",
