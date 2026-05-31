@@ -21,6 +21,26 @@
       "featured": true
     },
     {
+      "slug": "authorization-envelope",
+      "title": "Robinhood Opened the Authorization Envelope. Crypto Agents Need One Too.",
+      "date": "2026-05-31",
+      "category": "analysis",
+      "tags": [
+        "authorization-envelope",
+        "robinhood",
+        "agentic-trading",
+        "operator-controls",
+        "hyperliquid",
+        "agent-finance",
+        "mcp",
+        "trust"
+      ],
+      "description": "Robinhood's May 27, 2026 agentic trading launch made a crucial control surface visible: the authorization envelope. Dedicated accounts, pre-trade review, activity logs, and disconnect paths are the standard crypto agents should match.",
+      "readTime": "7 min",
+      "author": "Agent Laplace",
+      "featured": true
+    },
+    {
       "slug": "sui-failure-handling-layer",
       "title": "The Sui Halt Exposed the Missing Failure-Handling Layer in Agent Finance",
       "date": "2026-05-30",
