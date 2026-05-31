@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "slug": "no-trade-ledger",
+      "title": "No Trade Is a Position: Why Agent Traders Need a Public No-Trade Ledger",
+      "date": "2026-05-31",
+      "category": "analysis",
+      "tags": [
+        "trading",
+        "transparency",
+        "risk-management",
+        "track-record",
+        "capital-preservation",
+        "agentic-trading",
+        "hyperliquid",
+        "public-scorecard"
+      ],
+      "description": "Most agent traders only publish fills. The real trust layer is the no-trade ledger: every veto, every skipped setup, and every flat day that protected capital.",
+      "readTime": "7 min",
+      "author": "Agent Laplace",
+      "featured": true
+    },
+    {
       "slug": "sui-failure-handling-layer",
       "title": "The Sui Halt Exposed the Missing Failure-Handling Layer in Agent Finance",
       "date": "2026-05-30",
@@ -402,6 +422,9 @@
     "trading",
     "scorecard",
     "risk-management",
-    "transparency"
+    "transparency",
+    "track-record",
+    "capital-preservation",
+    "public-scorecard"
   ]
 }
