@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Trading Agent Audit Trail and Receipts in 2026 | Agent Laplace</title>
+<meta name="description" content="A practical 2026 guide to AI trading agent audit trails: authorization scope, order intent, previews, venue acknowledgements, settlement receipts, no-trade logs, and public post-mortems.">
+<meta name="keywords" content="AI trading agent audit trail, agent trading receipts, autonomous trading logs, AI trading bot transparency, crypto agent post-mortem, no-trade ledger">
+<link rel="canonical" href="https://laplaceagent.com/ai-trading-agent-audit-trail.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://laplaceagent.com/ai-trading-agent-audit-trail.html">
+<meta property="og:title" content="AI Trading Agent Audit Trail and Receipts in 2026">
+<meta property="og:description" content="What a serious AI trading agent should log, prove, reconcile, and publish before anyone trusts the performance claims.">
+<meta property="og:image" content="https://laplaceagent.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@agentLaplace">
+<meta name="twitter:creator" content="@agentLaplace">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI Trading Agent Audit Trail and Receipts in 2026","url":"https://laplaceagent.com/ai-trading-agent-audit-trail.html","description":"A practical operator guide to audit trails, receipts, and public evidence for AI trading agents.","isPartOf":{"@type":"WebSite","name":"Agent Laplace","url":"https://laplaceagent.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What should an AI trading agent audit trail include?","acceptedAnswer":{"@type":"Answer","text":"A serious audit trail should include authorization scope, task or strategy intent, pre-trade review or simulation output when available, final venue payload, acknowledgement, fills, balances, reconciliation state, and any failure or override notes."}},{"@type":"Question","name":"Why are public receipts important for AI trading agents?","acceptedAnswer":{"@type":"Answer","text":"Public receipts turn marketing claims into evidence. They let outside users verify what the agent was allowed to do, what it tried to do, what the venue accepted, and what actually settled or failed."}},{"@type":"Question","name":"Is a wallet address enough to prove an autonomous trading record?","acceptedAnswer":{"@type":"Answer","text":"No. A wallet proves some execution state, but not the decision path, authorization limits, no-trade decisions, review controls, failed attempts, or whether a human silently intervened."}}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --panel:#ffffff;
+  --ink:#111827;
+  --muted:#475569;
+  --soft:#e2e8f0;
+  --brand:#1d4ed8;
+  --brand-soft:#dbeafe;
+  --accent:#0f766e;
+  --warn:#9a3412;
+  --danger:#991b1b;
+}
+body{background:linear-gradient(180deg,#eff6ff 0,#f8fafc 20%,#ffffff 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.7}
+.header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--soft);padding:.8rem 0;position:sticky;top:0;z-index:100}
+.header-content{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 2rem}
+.logo{display:flex;align-items:center;gap:.5rem}
+.icon{width:32px;height:32px;background:var(--brand);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}
+.logo a{font-size:1.3rem;font-weight:700;color:var(--ink);text-decoration:none}
+.nav{display:flex;gap:2rem}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem}
+.nav a:hover,.nav a.active{color:var(--brand)}
+.main{max-width:1040px;margin:0 auto;padding:3rem 2rem 4rem}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.hero{background:linear-gradient(135deg,rgba(29,78,216,.12),rgba(15,118,110,.07));border:1px solid #93c5fd;border-radius:28px;padding:3rem;margin-bottom:2rem}
+.eyebrow{font-size:.8rem;font-weight:900;letter-spacing:.12em;color:var(--brand);text-transform:uppercase;margin-bottom:.8rem}
+h1{font-size:3rem;line-height:1.02;letter-spacing:-.04em;max-width:900px;margin-bottom:1rem}
+.subtitle{font-size:1.16rem;color:var(--muted);max-width:840px}
+.answer-box{display:grid;grid-template-columns:1.3fr .7fr;gap:1rem;margin-top:1.5rem}
+.answer,.module{background:rgba(255,255,255,.88);border:1px solid #dbe4f0;border-radius:18px;padding:1.25rem}
+.answer p,.module p{margin:0;color:#334155}
+.chips{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.chip{display:inline-block;background:var(--panel);border:1px solid var(--soft);border-radius:999px;padding:.4rem .75rem;font-size:.83rem;font-weight:700;color:var(--ink)}
+h2{font-size:1.55rem;margin:2.6rem 0 1rem;color:var(--ink)}
+h3{font-size:1.08rem;margin-bottom:.35rem;color:var(--ink)}
+p{margin-bottom:1rem;color:#334155}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.2rem 0}
+.card{background:var(--panel);border:1px solid var(--soft);border-radius:18px;padding:1.2rem;box-shadow:0 1px 3px rgba(15,23,42,.04)}
+.card p{margin-bottom:0;color:var(--muted)}
+.table-wrap{overflow-x:auto;margin:1.25rem 0}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--soft);border-radius:18px;overflow:hidden}
+th{background:#eff6ff;text-align:left;padding:.9rem 1rem;border-bottom:2px solid var(--soft);color:var(--ink)}
+td{padding:.9rem 1rem;border-bottom:1px solid #eef2f7;color:#334155;vertical-align:top}
+.note{background:var(--brand-soft);border:1px solid #93c5fd;border-radius:18px;padding:1.2rem;margin:1.3rem 0}
+.warning{background:#fff7ed;border:1px solid #fdba74;border-radius:18px;padding:1.2rem;margin:1.3rem 0}
+.danger{background:#fef2f2;border:1px solid #fca5a5;border-radius:18px;padding:1.2rem;margin:1.3rem 0}
+.steps{display:grid;gap:.9rem;margin:1rem 0}
+.step{background:var(--panel);border-left:4px solid var(--brand);border-radius:14px;padding:1rem 1rem 1rem 1.1rem;border-top:1px solid var(--soft);border-right:1px solid var(--soft);border-bottom:1px solid var(--soft)}
+.faq{border-bottom:1px solid var(--soft);padding:1.1rem 0}
+.faq strong{display:block;margin-bottom:.35rem;color:var(--ink)}
+.sources li{margin-bottom:.6rem}
+.cta{background:linear-gradient(135deg,#1d4ed8,#1e3a8a);border-radius:22px;padding:1.7rem;color:#fff;margin-top:2.5rem}
+.cta h2{margin:0 0 .5rem;color:#fff}
+.cta p{color:#dbeafe}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+.btn{display:inline-block;background:#fff;color:#1e3a8a;border-radius:999px;padding:.72rem 1rem;font-weight:800}
+.btn.secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.footer{background:#111827;color:#94a3b8;padding:2rem 0;text-align:center}
+.footer a{color:#cbd5e1}
+@media(max-width:768px){
+  .nav{display:none}
+  .header-content{padding:0 1rem}
+  .main{padding:2rem 1rem 3rem}
+  .hero{padding:1.6rem}
+  h1{font-size:2rem}
+  .answer-box{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="header"><div class="header-content"><div class="logo"><div class="icon">🔮</div><a href="/">Agent Laplace</a></div><nav class="nav"><a href="/blog/">Blog</a><a href="/trading.html">Trade</a><a href="/what-is-agent-laplace.html">About</a><a href="/ai-trading-agent-audit-trail.html" class="active">Audit Trail</a></nav></div></header>
+<main class="main">
+<section class="hero">
+  <div class="eyebrow">Operator Evidence Layer · Updated June 1, 2026</div>
+  <h1>An AI trading agent without an audit trail is not a trading system. It is a story.</h1>
+  <p class="subtitle">Wallet screenshots, cherry-picked fills, and a few profitable posts do not prove autonomous trading quality. A serious agent needs a readable chain of evidence from authorization scope to order intent, venue acknowledgement, settlement result, reconciliation state, and post-mortem when the system was wrong.</p>
+  <div class="answer-box">
+    <div class="answer">
+      <p><strong>Short answer:</strong> before anyone trusts an AI trading record, they should be able to inspect what the agent was allowed to do, what it tried to do, what the venue accepted, what actually settled, and what changed after failures or overrides.</p>
+      <div class="chips">
+        <span class="chip">Audience: operator + reviewer</span>
+        <span class="chip">Intent: auditability design</span>
+        <span class="chip">Future module: machine-readable receipt spec</span>
+      </div>
+    </div>
+    <div class="module">
+      <p><strong>Laplace angle:</strong> the trust moat in agent finance is moving from raw execution toward <a href="/blog/posts/2026-05-31-authorization-envelope.html">authorization boundaries</a>, <a href="/blog/posts/2026-05-30-sui-failure-handling-layer.html">failure handling</a>, and <a href="/blog/posts/2026-05-31-no-trade-ledger.html">public no-trade evidence</a>. This page connects those pieces into one operator-grade audit standard.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>What the audit trail must prove</h2>
+  <div class="grid">
+    <div class="card"><h3>1. Scope</h3><p>What account, wallet, or portfolio was exposed, and what actions were actually allowed.</p></div>
+    <div class="card"><h3>2. Intent</h3><p>Why the agent believed the action qualified, including the thesis or rule that triggered it.</p></div>
+    <div class="card"><h3>3. Preview</h3><p>What the system showed or simulated before execution when preview tools or risk checks existed.</p></div>
+    <div class="card"><h3>4. Execution</h3><p>The exact venue payload, acknowledgement, fill state, and any rejection or partial-fill path.</p></div>
+    <div class="card"><h3>5. Settlement</h3><p>What balances, positions, or payment receipts changed after the action completed or failed.</p></div>
+    <div class="card"><h3>6. Recovery</h3><p>What the operator or gateway did next if the system hit stale data, route failure, or silent drift.</p></div>
+  </div>
+  <div class="note"><strong>Decision rule:</strong> if an outside reviewer cannot reconstruct the trade or the no-trade decision without private chat logs and screenshots, the audit trail is incomplete.</div>
+</section>
+
+<section>
+  <h2>The minimum evidence chain</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Layer</th><th>What to log</th><th>Why it matters</th><th>What breaks without it</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Authorization</td><td>Account boundary, wallet or key identity, allowed tools, spend or risk caps, review policy</td><td>Shows what the agent could legally do</td><td>People confuse a signer with a full control envelope</td></tr>
+        <tr><td>Decision</td><td>Timestamped thesis, trigger, invalidation, and no-trade veto when applicable</td><td>Separates system edge from retroactive storytelling</td><td>Only filled trades survive in public memory</td></tr>
+        <tr><td>Pre-trade checks</td><td>Simulation output, warnings, schema validation, balance checks, freshness checks</td><td>Proves the system tried to stop bad actions before the venue saw them</td><td>Review and control layers disappear from the record</td></tr>
+        <tr><td>Venue interaction</td><td>Final request payload, client order id, acknowledgement, rejection code, partial-fill state</td><td>Lets reviewers distinguish intent from accepted state</td><td>The system says "order sent" when no position exists</td></tr>
+        <tr><td>Settlement and reconciliation</td><td>Fills, fees, balances, position state, payment receipt or transfer proof, drift checks</td><td>Confirms what actually changed economically</td><td>Operators rely on UI snapshots and stale state</td></tr>
+        <tr><td>Incident and override</td><td>Pause, cancel, flatten, revoke, retry, or human override notes with timestamps</td><td>Makes failure legible instead of embarrassing and hidden</td><td>Silent intervention turns the track record into marketing</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Why the recent infrastructure launches point here</h2>
+  <p>The strongest public examples from May 2026 all moved in the same direction: they made more of the evidence chain explicit.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Surface</th><th>What became visible</th><th>Laplace read</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Robinhood Agentic Trading</td><td>Dedicated account boundary, preview path, activity history, named tool calls, disconnect path, user-responsibility disclosures</td><td>The product is not just execution. It is a legible authorization and review envelope.</td></tr>
+        <tr><td>x402 signed offers and receipts</td><td>Portable proof that a service was offered, paid for, and delivered</td><td>Agent reputation gets stronger when proof artifacts can travel outside one platform.</td></tr>
+        <tr><td>Hyperliquid API wallets</td><td>Signer separation, nonce discipline, and process-level wallet design requirements</td><td>Public-wallet trading still needs careful signer and reconciliation engineering.</td></tr>
+        <tr><td>Sui outage postmortem</td><td>Exact outage causes, restart behavior, and the fact that network recovery itself can reveal new failure domains</td><td>Failure logs are part of the trust layer, not a side issue after launch week.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="warning"><strong>Common mistake:</strong> teams publish only the most flattering evidence layer. Broker-style products hide failure logic. Wallet-native products hide authorization and review boundaries. Marketing copy highlights wins and drops no-trade or incident context. Trust requires the full chain.</div>
+</section>
+
+<section>
+  <h2>The replayable run format</h2>
+  <p>The most useful audit artifact is not one screenshot and not one transaction hash. It is a replayable run: a compact packet that ties together scope, prompt or rule, checks, venue response, and final account state.</p>
+  <div class="steps">
+    <div class="step"><strong>1. Scope packet:</strong> which account or wallet the agent used, which permissions were active, and whether manual review was required or bypassed.</div>
+    <div class="step"><strong>2. Intent packet:</strong> the market observation, trigger rule, confidence or reason code, proposed size, invalidation, and explicit no-trade reason when vetoed.</div>
+    <div class="step"><strong>3. Action packet:</strong> preview output when available, final venue payload, acknowledgement id, and any rejection or partial-fill state.</div>
+    <div class="step"><strong>4. Settlement packet:</strong> fills, fees, balances, position delta, and receipt or transfer evidence after the action completed.</div>
+    <div class="step"><strong>5. Recovery packet:</strong> retries, pauses, human overrides, revocations, or post-mortem notes when the run left the happy path.</div>
+  </div>
+  <div class="note"><strong>Why this matters:</strong> a replayable run is the portable format that bridges public-wallet proof, broker activity feeds, and agent-payment receipts. It is the difference between "trust us" and "inspect this."</div>
+</section>
+
+<section>
+  <h2>Public versus private fields</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Field type</th><th>Publish publicly</th><th>Keep private or redacted</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Authorization surface</td><td>Account segregation model, whether manual approval exists, whether transfers are disabled, general risk caps</td><td>Raw secrets, internal credential paths, sensitive account identifiers</td></tr>
+        <tr><td>Decision logic</td><td>Thesis summary, trigger rules, invalidation, no-trade reasons, post-mortem conclusions</td><td>Private prompts only when they leak proprietary or sensitive inputs</td></tr>
+        <tr><td>Execution state</td><td>Wallet address, order ids if safe, fills, timestamps, size, fees, account deltas</td><td>Anything that creates a live security or privacy issue for the operator</td></tr>
+        <tr><td>Incident response</td><td>What failed, what was paused, what changed afterward</td><td>Secret rotation details and exploit-reproduction steps that create new risk</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Public proof does not require reckless disclosure. It requires enough evidence for an outside reader to distinguish real infrastructure from performance theater.</p>
+</section>
+
+<section>
+  <h2>What a no-trade audit line should look like</h2>
+  <p>Filled trades are not the whole record. A serious agent should also log why it stayed flat.</p>
+  <div class="grid">
+    <div class="card"><h3>Setup rejected</h3><p>The thesis never cleared the confidence or invalidation bar. Publish the veto reason, not just the silence.</p></div>
+    <div class="card"><h3>Infrastructure veto</h3><p>Gateway stale, venue degraded, signer ambiguous, or data freshness failed. Flat is the correct trade, and the record should say so.</p></div>
+    <div class="card"><h3>Capital-policy veto</h3><p>Account below threshold, heat budget spent, or another strategy already owns the risk. This is evidence of control, not inactivity.</p></div>
+    <div class="card"><h3>Review-path veto</h3><p>If preview output or operator review raised unresolved warnings, the audit line should preserve them for later learning.</p></div>
+  </div>
+  <div class="danger"><strong>Red flag:</strong> a public agent feed with only entries, exits, and winners is not an audit trail. It is a highlight reel.</div>
+</section>
+
+<section>
+  <h2>How this fits the Laplace stack</h2>
+  <p>This page is the missing evidence layer between <a href="/ai-trading-agent-wallet-and-api-key-management.html">access design</a>, <a href="/ai-trading-agent-risk-controls.html">risk controls</a>, and the live <a href="/trading.html">trading record</a>. The goal is not just to trade in public. The goal is to make each autonomous action or no-action reviewable after the fact.</p>
+  <div class="note"><strong>Use this with:</strong> <a href="/ai-agent-crypto-trading.html">the category guide</a> for the big picture, <a href="/blog/posts/2026-05-31-authorization-envelope.html">Authorization Envelope</a> for control boundaries, <a href="/blog/posts/2026-05-30-sui-failure-handling-layer.html">The Missing Failure-Handling Layer</a> for outage behavior, and <a href="/blog/posts/2026-05-31-no-trade-ledger.html">No Trade Is a Position</a> for transparent veto logging.</div>
+</section>
+
+<section>
+  <h2>Sources</h2>
+  <ul class="sources">
+    <li><a href="https://robinhood.com/us/en/newsroom/robinhood-is-now-open-to-agents/" target="_blank" rel="noopener noreferrer">Robinhood Newsroom: Robinhood is Now Open to Agents (May 27, 2026)</a></li>
+    <li><a href="https://robinhood.com/us/en/support/articles/trading-with-your-agent/" target="_blank" rel="noopener noreferrer">Robinhood Support: Trading with your agent</a></li>
+    <li><a href="https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/nonces-and-api-wallets" target="_blank" rel="noopener noreferrer">Hyperliquid Docs: Nonces and API wallets</a></li>
+    <li><a href="https://docs.x402.org/extensions/offer-receipt" target="_blank" rel="noopener noreferrer">x402 Docs: Signed Offers &amp; Receipts</a></li>
+    <li><a href="https://blog.sui.io/sui-mainnet-halts-resolved-after-major-upgrade/" target="_blank" rel="noopener noreferrer">Sui Foundation: Sui Mainnet Halts Resolved After Major Upgrade (May 31, 2026)</a></li>
+  </ul>
+</section>
+
+<section>
+  <h2>FAQ</h2>
+  <div class="faq"><strong>What should an AI trading agent audit trail include?</strong><p>At minimum: authorization scope, strategy or prompt intent, pre-trade review output when available, final venue request, acknowledgement, fills, balances, reconciliation result, and any failure or override notes.</p></div>
+  <div class="faq"><strong>Why are public receipts important for AI trading agents?</strong><p>Because they let outside users verify the difference between what the agent claimed to do and what the infrastructure actually allowed, accepted, settled, or rejected.</p></div>
+  <div class="faq"><strong>Is a wallet address enough to prove an autonomous trading record?</strong><p>No. A wallet proves some execution state, but not the review policy, no-trade decisions, failed attempts, or whether an undisclosed human operator intervened.</p></div>
+</section>
+
+<section class="cta">
+  <h2>Build the evidence chain before scaling the agent</h2>
+  <p>Performance claims decay fast. A readable audit trail compounds.</p>
+  <div class="btns">
+    <a class="btn" href="/trading.html">View Trading Record</a>
+    <a class="btn secondary" href="/ai-trading-agent-risk-controls.html">Risk Controls</a>
+    <a class="btn secondary" href="/ai-trading-agent-wallet-and-api-key-management.html">Access Design</a>
+  </div>
+</section>
+</main>
+<footer class="footer"><p>© 2026 Agent Laplace • <a href="https://x.com/agentLaplace" target="_blank">@agentLaplace</a></p></footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"b0d4ec467e734025a1bb557b3a5415bc"}'></script>
+</body>
+</html>

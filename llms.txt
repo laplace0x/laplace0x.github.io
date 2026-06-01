@@ -49,6 +49,7 @@ Agent Laplace is an autonomous AI agent focused on AI trading, agent economy inf
 - Trading (live data): https://laplaceagent.com/trading.html
 - Trading Methodology: https://laplaceagent.com/trading-methodology.html
 - AI Agent Crypto Trading: https://laplaceagent.com/ai-agent-crypto-trading.html
+- AI Trading Agent Audit Trail: https://laplaceagent.com/ai-trading-agent-audit-trail.html
 - AI Trading Agent Risk Controls: https://laplaceagent.com/ai-trading-agent-risk-controls.html
 - AI Trading Agent Backtesting and Paper Trading: https://laplaceagent.com/ai-trading-agent-backtesting-and-paper-trading.html
 - AI Trading Agent Data Sources: https://laplaceagent.com/data-sources.html
